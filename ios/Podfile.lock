@@ -944,6 +944,8 @@ PODS:
   - React-Mapbuffer (0.73.0):
     - glog
     - React-debug
+  - react-native-flipper (0.212.0):
+    - React-Core
   - React-nativeconfig (0.73.0)
   - React-NativeModulesApple (0.73.0):
     - glog
@@ -1111,6 +1113,8 @@ PODS:
     - React-jsi (= 0.73.0)
     - React-logger (= 0.73.0)
     - React-perflogger (= 0.73.0)
+  - RealmJS (12.3.1):
+    - React
   - SocketRocket (0.6.1)
   - Yoga (1.14.0)
 
@@ -1167,6 +1171,7 @@ DEPENDENCIES:
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector-modern`)
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
   - React-Mapbuffer (from `../node_modules/react-native/ReactCommon`)
+  - react-native-flipper (from `../node_modules/react-native-flipper`)
   - React-nativeconfig (from `../node_modules/react-native/ReactCommon`)
   - React-NativeModulesApple (from `../node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
@@ -1187,6 +1192,7 @@ DEPENDENCIES:
   - React-runtimescheduler (from `../node_modules/react-native/ReactCommon/react/renderer/runtimescheduler`)
   - React-utils (from `../node_modules/react-native/ReactCommon/react/utils`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - RealmJS (from `../node_modules/realm`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -1261,6 +1267,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/logger"
   React-Mapbuffer:
     :path: "../node_modules/react-native/ReactCommon"
+  react-native-flipper:
+    :path: "../node_modules/react-native-flipper"
   React-nativeconfig:
     :path: "../node_modules/react-native/ReactCommon"
   React-NativeModulesApple:
@@ -1301,6 +1309,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/react/utils"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  RealmJS:
+    :path: "../node_modules/realm"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -1344,6 +1354,7 @@ SPEC CHECKSUMS:
   React-jsinspector: 9f6fb9ed9f03a0fb961ab8dc2e0e0ee0dc729e77
   React-logger: 008caec0d6a587abc1e71be21bfac5ba1662fe6a
   React-Mapbuffer: 58fe558faf52ecde6705376700f848d0293d1cef
+  react-native-flipper: 9c1957af24b76493ba74f46d000a5c1d485e7731
   React-nativeconfig: a063483672b8add47a4875b0281e202908ff6747
   React-NativeModulesApple: 169506a5fd708ab22811f76ee06a976595c367a1
   React-perflogger: b61e5db8e5167f5e70366e820766c492847c082e
@@ -1364,9 +1375,10 @@ SPEC CHECKSUMS:
   React-runtimescheduler: 77543c74df984ce56c09d49d427149c53784aaf6
   React-utils: 42708ea436853045ef1eaff29996813d9fbbe209
   ReactCommon: 851280fb976399ca1aabc74cc2c3612069ea70a2
+  RealmJS: 578e16cf7c0b32c13a23b2df667b021bb3c36f1c
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Yoga: 20d6a900dcc8d61d5e3b799bbf627cc34474a8c4
 
-PODFILE CHECKSUM: 9028b724faf58310000749a7b59651106fee2c15
+PODFILE CHECKSUM: 857ae5a7c752bd44fecfcc5fa95b511e313e0129
 
 COCOAPODS: 1.14.3
