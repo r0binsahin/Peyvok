@@ -3,6 +3,7 @@ import React, {useCallback, useEffect} from 'react';
 import {FlatList, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {RealmContext, Word} from './app/models/Word';
 import {BSON} from 'realm';
+import {AudioPlayer} from './app/components/AudioPlayer';
 
 const {useQuery, useRealm} = RealmContext;
 
@@ -49,17 +50,22 @@ function App(): React.JSX.Element {
   }, []);
 
   return (
-    <View style={styles.container}>
-      {words.length > 0 ? (
-        <FlatList
-          data={words}
-          renderItem={({item}) => <Text>{item.word}</Text>}
-        />
-      ) : (
-        <TouchableOpacity onPress={addWords}>
-          <Text>New word</Text>
-        </TouchableOpacity>
-      )}
+    <View>
+      <View style={styles.container}>
+        {words.length > 0 ? (
+          <FlatList
+            data={words}
+            renderItem={({item}) => <Text>{item.word}</Text>}
+          />
+        ) : (
+          <TouchableOpacity onPress={addWords}>
+            <Text>New word</Text>
+          </TouchableOpacity>
+        )}
+      </View>
+      <View>
+        <AudioPlayer />
+      </View>
     </View>
   );
 }
