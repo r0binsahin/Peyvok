@@ -13,7 +13,7 @@ export const AudioPlayer = () => {
   let isPlayerInitialized = false;
   const tracks = [
     {
-      url: require('../assets/tracks/ajel.mp3'),
+      url: 'https://drive.google.com/uc?export=download&id=1uwMdUYHee9PR9VjQYpRlhY6aSslRJMBG',
     },
   ];
 
