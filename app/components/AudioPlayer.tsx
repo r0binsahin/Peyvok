@@ -1,20 +1,19 @@
+import {useQuery} from '@realm/react';
 import {useEffect, useState} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import TrackPlayer from 'react-native-track-player';
+import {Word} from '../models/Word';
+import {IWord} from '../models/IWord';
 
-interface IAudio {
-  id: number;
-  url: string;
-  title: string;
+interface IAudioPayerProps {
+  words: IWord[];
 }
 
 export const AudioPlayer = () => {
   let isPlayerInitialized = false;
-  const tracks: IAudio[] = [
+  const tracks = [
     {
-      id: 1,
       url: require('../assets/tracks/ajel.mp3'),
-      title: 'ajel',
     },
   ];
 
@@ -37,6 +36,7 @@ export const AudioPlayer = () => {
   useEffect(() => {
     if (!isPlayerInitialized) {
       setupTrackPlayer();
+      console.log(tracks);
     }
   }, []);
   return (
