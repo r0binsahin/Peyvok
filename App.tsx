@@ -16,7 +16,7 @@ function App(): React.JSX.Element {
       mutableSubs.add(realm.objects(Word));
     });
   }, []);
-  /* 
+
   const data = useCallback(() => {
     realm.write(() => {
       realm.create('Word', {
@@ -177,7 +177,7 @@ function App(): React.JSX.Element {
         category: 'geometric forms',
       }) as Word;
     });
-  }, [realm]); */
+  }, [realm]);
 
   useEffect(() => {
     /*     if (words.length === 0) {
