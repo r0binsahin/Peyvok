@@ -9,14 +9,14 @@ import {IWord} from './app/models/IWord';
 function App(): React.JSX.Element {
   const {useQuery, useRealm} = RealmContext;
   const realm = useRealm();
-  const words = useQuery(Word);
+  const words = useQuery(Word) as Realm.Results<Word>;
 
   useEffect(() => {
     realm.subscriptions.update(mutableSubs => {
       mutableSubs.add(realm.objects(Word));
     });
   }, []);
-
+  /* 
   const data = useCallback(() => {
     realm.write(() => {
       realm.create('Word', {
@@ -177,7 +177,7 @@ function App(): React.JSX.Element {
         category: 'geometric forms',
       }) as Word;
     });
-  }, [realm]);
+  }, [realm]); */
 
   useEffect(() => {
     /*     if (words.length === 0) {
@@ -193,7 +193,6 @@ function App(): React.JSX.Element {
             data={words}
             renderItem={({item}) => (
               <View>
-                {/*           <Image source={{uri: item.image}} style={styles.img} /> */}
                 <Text>{item.word}</Text>
               </View>
             )}
@@ -205,7 +204,7 @@ function App(): React.JSX.Element {
         )}
       </View>
       <View>
-        <AudioPlayer />
+        <AudioPlayer words={words} />
       </View>
     </View>
   );

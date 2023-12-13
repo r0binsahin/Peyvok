@@ -1,20 +1,14 @@
-import {useQuery} from '@realm/react';
 import {useEffect, useState} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import TrackPlayer, {Capability} from 'react-native-track-player';
-import {RealmContext, Word} from '../models/Word';
-import {IWord} from '../models/IWord';
+import {Word} from '../models/Word';
 
 interface IAudioPayerProps {
-  words: IWord[];
+  words: Realm.Results<Word>;
 }
 
-export const AudioPlayer = () => {
+export const AudioPlayer = ({words}: IAudioPayerProps) => {
   let isPlayerInitialized = false;
-  const [isPlaying, setIsPlaying] = useState(false);
-  const {useQuery, useRealm} = RealmContext;
-  const realm = useRealm();
-  const words = useQuery(Word);
 
   const setupTrackPlayer = async () => {
     try {
@@ -42,7 +36,6 @@ export const AudioPlayer = () => {
       console.log('Track playing...');
       const stateAfterPlay = await TrackPlayer.getPlaybackState();
       console.log('Player state after play:', stateAfterPlay);
-      setIsPlaying(true);
     } catch (error) {
       console.log('Error playing track:', error);
     }
@@ -51,19 +44,12 @@ export const AudioPlayer = () => {
   const setPlayer = async () => {
     if (!isPlayerInitialized) {
       await setupTrackPlayer();
-      setIsPlaying(false);
     }
   };
 
   useEffect(() => {
     setPlayer();
   }, []);
-
-  useEffect(() => {
-    realm.subscriptions.update(mutableSubs => {
-      mutableSubs.add(realm.objects(Word));
-    });
-  }, [realm]);
 
   return (
     <View style={styles.container}>
