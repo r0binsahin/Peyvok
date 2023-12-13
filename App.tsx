@@ -188,9 +188,9 @@ function App(): React.JSX.Element {
   }, [realm]);
 
   useEffect(() => {
-    if (words.length === 0) {
+    /*     if (words.length === 0) {
       data();
-    }
+    } */
   }, []);
 
   return (
