@@ -33,6 +33,7 @@ export const AudioPlayer = () => {
   const playTrack = async (word: Word) => {
     try {
       await TrackPlayer.stop();
+      await TrackPlayer.reset();
       await TrackPlayer.add({url: word.audio});
       console.log('Track added successfully');
       const stateBeforePlay = await TrackPlayer.getPlaybackState();
@@ -56,11 +57,13 @@ export const AudioPlayer = () => {
 
   useEffect(() => {
     setPlayer();
+  }, []);
 
+  useEffect(() => {
     realm.subscriptions.update(mutableSubs => {
       mutableSubs.add(realm.objects(Word));
     });
-  }, []);
+  }, [realm]);
 
   return (
     <View style={styles.container}>
