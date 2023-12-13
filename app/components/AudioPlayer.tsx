@@ -69,6 +69,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
+    height: '100%',
 
     justifyContent: 'center',
     alignItems: 'center',

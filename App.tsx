@@ -17,7 +17,7 @@ function App(): React.JSX.Element {
   }, []);
 
   return (
-    <View>
+    <View style={styles.container}>
       <View>
         <AudioPlayer words={words} />
       </View>
@@ -27,8 +27,8 @@ function App(): React.JSX.Element {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'rgba(200, 200, 200, 0.5)',
-    alignItems: 'center',
+    height: '100%',
+    backgroundColor: 'red',
     justifyContent: 'center',
   },
 
