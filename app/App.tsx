@@ -7,20 +7,27 @@ import {
   Text,
   TouchableOpacity,
 } from 'react-native';
-import {Category, RealmContext, Word} from './models/Word';
+import {RealmContext, Word, Category} from './models/Word';
 
 import {AudioPlayer} from './components/AudioPlayer';
 import {BSON} from 'realm';
+import CategoryView from './components/CategoryView';
 
 function App(): React.JSX.Element {
-  const {useQuery, useRealm, useObject} = RealmContext;
+  const {useQuery, useRealm} = RealmContext;
   const realm = useRealm();
   const words = useQuery(Word) as Realm.Results<Word>;
+  const cate = useQuery(Category);
 
   useEffect(() => {
     realm.subscriptions.update(mutableSubs => {
       mutableSubs.add(realm.objects(Word));
     });
+    realm.subscriptions.update(mutableSubs => {
+      mutableSubs.add(realm.objects(Category));
+    });
+
+    console.log(cate);
   }, []);
 
   const createWord = useCallback(() => {
@@ -187,11 +194,51 @@ function App(): React.JSX.Element {
     });
   }, [realm]);
 
+  const createCat = useCallback(() => {
+    realm.write(() => {
+      realm.create('Category', {
+        _id: new BSON.ObjectID(),
+        imgURL:
+          'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
+        categoryName: 'colors',
+      });
+      console.log('cat 1');
+      realm.create('Category', {
+        _id: new BSON.ObjectID(),
+        imgURL:
+          'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
+        categoryName: 'animals',
+      });
+      console.log('cat 2');
+      realm.create('Category', {
+        _id: new BSON.ObjectID(),
+        imgURL:
+          'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
+        categoryName: 'fruits',
+      });
+      console.log('cat 3');
+
+      realm.create('Category', {
+        _id: new BSON.ObjectID(),
+        imgURL:
+          'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
+        categoryName: 'shapes',
+      });
+
+      console.log('cat 4');
+    });
+
+    console.log('Adding data to the database...');
+  }, [realm]);
+
   return (
     <View style={styles.container}>
       <ScrollView>
         <TouchableOpacity onPress={createWord}>
           <Text>create words</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={createCat}>
+          <Text>create categ</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => {
@@ -203,6 +250,7 @@ function App(): React.JSX.Element {
         </TouchableOpacity>
 
         <AudioPlayer words={words} />
+        <CategoryView />
       </ScrollView>
     </View>
   );

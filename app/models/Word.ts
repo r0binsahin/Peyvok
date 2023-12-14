@@ -38,5 +38,5 @@ export class Word extends Realm.Object<Word> {
 }
 
 export const RealmContext = createRealmContext({
-  schema: [Word],
+  schema: [Word, Category],
 });
