@@ -1,10 +1,10 @@
-import {useApp} from '@realm/react';
+import {useApp, useRealm} from '@realm/react';
 import {ActivityIndicator, SafeAreaView, Text} from 'react-native';
 import {OpenRealmBehaviorType} from 'realm';
 import Realm from 'realm';
 
 import {useEffect, useState} from 'react';
-import App from '../../App';
+import App from '../App';
 import {RealmContext} from '../models/Word';
 
 const {RealmProvider} = RealmContext;
