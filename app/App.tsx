@@ -15,6 +15,7 @@ import CategoryView from './components/CategoryView';
 
 function App(): React.JSX.Element {
   const {useQuery, useRealm} = RealmContext;
+
   const realm = useRealm();
   const words = useQuery(Word) as Realm.Results<Word>;
   const cate = useQuery(Category);
