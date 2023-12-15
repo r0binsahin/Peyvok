@@ -1,9 +1,9 @@
 import {Text, View} from 'react-native';
 
-export const WordPage = () => {
+export const CategoryScreen = () => {
   return (
     <View>
-      <Text>WordPage</Text>
+      <Text>Category</Text>
     </View>
   );
 };

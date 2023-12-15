@@ -13,6 +13,15 @@ import {AudioPlayer} from './components/AudioPlayer';
 import {BSON} from 'realm';
 import CategoryView from './components/CategoryView';
 import {ICategory} from './models/ICategory';
+import {createStackNavigator} from '@react-navigation/stack';
+import {RootStackParamList} from './navigation/pages/RootStackParams';
+import {HomeScreen} from './navigation/pages/HomeScreen';
+import {InfoScreen} from './navigation/pages/InfoScreen';
+import {CategoryScreen} from './navigation/pages/CategoryScreen';
+import {WordScreen} from './navigation/pages/WordScreen';
+import {NavigationContainer} from '@react-navigation/native';
+
+const Stack = createStackNavigator();
 
 function App(): React.JSX.Element {
   const {useQuery, useRealm} = RealmContext;
@@ -191,7 +200,7 @@ function App(): React.JSX.Element {
   }, []);
 
   return (
-    <View style={styles.container}>
+    /*     <View style={styles.container}>
       <ScrollView>
         <TouchableOpacity onPress={createWord}>
           <Text>create words</Text>
@@ -209,19 +218,35 @@ function App(): React.JSX.Element {
         <AudioPlayer words={words} />
 
         <View style={styles.categoryContainer}>
-          {categories.map(category => (
-            <CategoryView category={category} />
+          {categories.map((category, index) => (
+            <CategoryView key={index} category={category} />
           ))}
         </View>
       </ScrollView>
+    </View> */
+
+    <View style={styles.container}>
+      <NavigationContainer>
+        <Stack.Navigator
+          initialRouteName="HomeScreen"
+          screenOptions={{
+            headerShown: false,
+          }}>
+          <Stack.Screen name="HomeScreen" component={HomeScreen}></Stack.Screen>
+          <Stack.Screen
+            name="CategoryScreen"
+            component={CategoryScreen}></Stack.Screen>
+          <Stack.Screen name="InfoScreen" component={InfoScreen}></Stack.Screen>
+          <Stack.Screen name="WordScreen" component={WordScreen}></Stack.Screen>
+        </Stack.Navigator>
+      </NavigationContainer>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'grey',
-    padding: 40,
+    height: '100%',
   },
 
   categoryContainer: {

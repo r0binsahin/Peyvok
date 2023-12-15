@@ -1,9 +1,9 @@
 import {Text, View} from 'react-native';
 
-export const CategoryPage = () => {
+export const InfoScreen = () => {
   return (
     <View>
-      <Text>Category</Text>
+      <Text>Info</Text>
     </View>
   );
 };

@@ -1,9 +1,9 @@
 import {Text, View} from 'react-native';
 
-export const InfoPage = () => {
+export const WordScreen = () => {
   return (
     <View>
-      <Text>Info</Text>
+      <Text>WordPage</Text>
     </View>
   );
 };
