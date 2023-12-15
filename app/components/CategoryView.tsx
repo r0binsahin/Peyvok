@@ -1,40 +1,50 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import {ICategory} from '../models/ICategory';
 
-const Category = () => {
+interface ICategoryViewProps {
+  category: ICategory;
+}
+
+const CategoryView = ({category}: ICategoryViewProps) => {
   return (
     <View style={styles.imgContainer}>
-      <View style={styles.imgBox}>
-        <Image
-          source={{
-            uri: 'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
-          }}
-          style={styles.img}
-        />
+      <Image
+        style={styles.img}
+        source={{
+          uri: category.imgURL,
+        }}
+      />
+
+      <View style={styles.textBox}>
+        <Text style={styles.text}>{category.categoryName}</Text>
       </View>
-      <Text>Category</Text>
     </View>
   );
 };
 
-export default Category;
+export default CategoryView;
 
 const styles = StyleSheet.create({
   imgContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    marginTop: 60,
+    backgroundColor: '#ff0044',
+    padding: 10,
+    borderRadius: 10,
+    margin: 10,
+  },
 
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'blue',
-  },
-  imgBox: {
-    width: 250,
-    height: 250,
-  },
   img: {
-    width: '100%',
-    height: '100%',
+    width: 125,
+    height: 125,
+    resizeMode: 'cover',
+  },
+  textBox: {
+    display: 'flex',
+    alignItems: 'center',
+  },
+  text: {
+    color: 'white',
+    fontSize: 20,
+    margin: 20,
   },
 });

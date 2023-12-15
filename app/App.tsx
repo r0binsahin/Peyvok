@@ -1,4 +1,5 @@
 import React, {useCallback, useEffect} from 'react';
+import categoryData from '../app/assets/categoryData.json';
 
 import {
   StyleSheet,
@@ -7,29 +8,17 @@ import {
   Text,
   TouchableOpacity,
 } from 'react-native';
-import {RealmContext, Word, Category} from './models/Word';
-
+import {RealmContext, Word} from './models/Word';
 import {AudioPlayer} from './components/AudioPlayer';
 import {BSON} from 'realm';
 import CategoryView from './components/CategoryView';
+import {ICategory} from './models/ICategory';
 
 function App(): React.JSX.Element {
   const {useQuery, useRealm} = RealmContext;
-
   const realm = useRealm();
   const words = useQuery(Word) as Realm.Results<Word>;
-  const cate = useQuery(Category);
-
-  useEffect(() => {
-    realm.subscriptions.update(mutableSubs => {
-      mutableSubs.add(realm.objects(Word));
-    });
-    realm.subscriptions.update(mutableSubs => {
-      mutableSubs.add(realm.objects(Category));
-    });
-
-    console.log(cate);
-  }, []);
+  const categories: ICategory[] = categoryData.categoryData;
 
   const createWord = useCallback(() => {
     realm.write(() => {
@@ -195,42 +184,11 @@ function App(): React.JSX.Element {
     });
   }, [realm]);
 
-  const createCat = useCallback(() => {
-    realm.write(() => {
-      realm.create('Category', {
-        _id: new BSON.ObjectID(),
-        imgURL:
-          'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
-        categoryName: 'colors',
-      });
-      console.log('cat 1');
-      realm.create('Category', {
-        _id: new BSON.ObjectID(),
-        imgURL:
-          'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
-        categoryName: 'animals',
-      });
-      console.log('cat 2');
-      realm.create('Category', {
-        _id: new BSON.ObjectID(),
-        imgURL:
-          'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
-        categoryName: 'fruits',
-      });
-      console.log('cat 3');
-
-      realm.create('Category', {
-        _id: new BSON.ObjectID(),
-        imgURL:
-          'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
-        categoryName: 'shapes',
-      });
-
-      console.log('cat 4');
+  useEffect(() => {
+    realm.subscriptions.update(mutableSubs => {
+      mutableSubs.add(realm.objects(Word));
     });
-
-    console.log('Adding data to the database...');
-  }, [realm]);
+  }, []);
 
   return (
     <View style={styles.container}>
@@ -238,9 +196,7 @@ function App(): React.JSX.Element {
         <TouchableOpacity onPress={createWord}>
           <Text>create words</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={createCat}>
-          <Text>create categ</Text>
-        </TouchableOpacity>
+
         <TouchableOpacity
           onPress={() => {
             realm.write(() => {
@@ -251,7 +207,12 @@ function App(): React.JSX.Element {
         </TouchableOpacity>
 
         <AudioPlayer words={words} />
-        <CategoryView />
+
+        <View style={styles.categoryContainer}>
+          {categories.map(category => (
+            <CategoryView category={category} />
+          ))}
+        </View>
       </ScrollView>
     </View>
   );
@@ -260,9 +221,16 @@ function App(): React.JSX.Element {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'grey',
-    padding: 60,
-    paddingBottom: 0,
-    height: '100%',
+    padding: 40,
+  },
+
+  categoryContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
 });
 export default App;
