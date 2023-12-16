@@ -24,27 +24,6 @@ function App(): React.JSX.Element {
   }, []);
 
   return (
-    /*     <View style={styles.container}>
-      <ScrollView>
-        <TouchableOpacity onPress={createWord}>
-          <Text>create words</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          onPress={() => {
-            realm.write(() => {
-              realm.deleteAll();
-            });
-          }}>
-          <Text>delete</Text>
-        </TouchableOpacity>
-
-        <AudioPlayer words={words} />
-
-     
-      </ScrollView>
-    </View> */
-
     <View style={{flex: 1}}>
       <NavigationContainer>
         <Stack.Navigator

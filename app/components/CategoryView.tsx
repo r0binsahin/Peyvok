@@ -4,18 +4,16 @@ import React, {useEffect} from 'react';
 import {ICategory} from '../models/ICategory';
 
 import {playTrack, setupTrackPlayer} from '../audioFunctions/audioFunctions';
-import {useNavigation} from '@react-navigation/native';
 
-import {RootStackParamList} from '../navigation/pages/RootStackParams';
 import {StackNavigationProp} from '@react-navigation/stack';
-import {Word} from '../models/Word';
+import {RootStackParamList} from '../navigation/pages/RootStackParams';
+import {useNavigation} from '@react-navigation/native';
 
 interface ICategoryViewProps {
   category: ICategory;
-  word: Word;
 }
 
-const CategoryView = ({category, word}: ICategoryViewProps) => {
+const CategoryView = ({category}: ICategoryViewProps) => {
   let isPlayerInitialized = false;
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
 
@@ -34,7 +32,7 @@ const CategoryView = ({category, word}: ICategoryViewProps) => {
       <TouchableOpacity
         onPress={() =>
           navigation.navigate('CategoryScreen', {
-            selectedCategory: word.category,
+            selectedCategory: category.categoryName,
           })
         }>
         <Image
@@ -44,12 +42,13 @@ const CategoryView = ({category, word}: ICategoryViewProps) => {
           }}
         />
       </TouchableOpacity>
+
       <View style={styles.textBox}>
         <TouchableOpacity onPress={() => playTrack(category.categoryAudio)}>
           <Text style={styles.text}>Listen</Text>
         </TouchableOpacity>
 
-        <Text style={styles.text}>{category.categoryName}</Text>
+        <Text style={styles.text}>{category.categoryNameKU}</Text>
       </View>
     </View>
   );
