@@ -1,8 +1,11 @@
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {RootStackParamList} from './RootStackParams';
+
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
+
+import {RootStackParamList} from '../RootStackParams';
 import {RealmContext, Word} from '../../models/Word';
-import {playTrack} from '../../audioFunctions/audioFunctions';
+
+import {playTrack} from '../../utiles/audioFunctions';
 
 type propsType = NativeStackScreenProps<RootStackParamList, 'WordScreen'>;
 
@@ -11,7 +14,6 @@ export const WordScreen = (props: propsType) => {
   const {selectedWord} = route.params;
 
   const {useQuery} = RealmContext;
-
   const filteredWords = useQuery(Word, words => {
     return words.filtered(`word == $0`, selectedWord);
   });
