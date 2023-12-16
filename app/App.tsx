@@ -1,15 +1,18 @@
 import React, {useEffect} from 'react';
 
 import {View} from 'react-native';
-import {RealmContext, Word} from './models/Word';
 
 import {createStackNavigator} from '@react-navigation/stack';
-import {RootStackParamList} from './navigation/pages/RootStackParams';
-import {HomeScreen} from './navigation/pages/HomeScreen';
-import {InfoScreen} from './navigation/pages/InfoScreen';
-import {CategoryScreen} from './navigation/pages/CategoryScreen';
-import {WordScreen} from './navigation/pages/WordScreen';
 import {NavigationContainer} from '@react-navigation/native';
+
+import {HomeScreen} from './navigation/screens/HomeScreen';
+import {CategoryScreen} from './navigation/screens/CategoryScreen';
+import {WordScreen} from './navigation/screens/WordScreen';
+import {InfoScreen} from './navigation/screens/InfoScreen';
+
+import {RealmContext, Word} from './models/Word';
+import {RootStackParamList} from './navigation/RootStackParams';
+import {Category} from './models/Category';
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -20,6 +23,10 @@ function App(): React.JSX.Element {
   useEffect(() => {
     realm.subscriptions.update(mutableSubs => {
       mutableSubs.add(realm.objects(Word));
+    });
+
+    realm.subscriptions.update(mutableSubs => {
+      mutableSubs.add(realm.objects(Category));
     });
   }, []);
 

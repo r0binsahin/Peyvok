@@ -3,10 +3,10 @@ import React, {useEffect} from 'react';
 
 import {ICategory} from '../models/ICategory';
 
-import {playTrack, setupTrackPlayer} from '../audioFunctions/audioFunctions';
+import {playTrack, setupTrackPlayer} from '../utiles/audioFunctions';
 
 import {StackNavigationProp} from '@react-navigation/stack';
-import {RootStackParamList} from '../navigation/pages/RootStackParams';
+import {RootStackParamList} from '../navigation/RootStackParams';
 import {useNavigation} from '@react-navigation/native';
 
 interface ICategoryViewProps {

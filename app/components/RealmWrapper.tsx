@@ -1,16 +1,19 @@
-import {useApp, useRealm} from '@realm/react';
-import {ActivityIndicator, SafeAreaView, Text} from 'react-native';
+import {useApp} from '@realm/react';
+
+import {ActivityIndicator, SafeAreaView} from 'react-native';
+import {useEffect, useState} from 'react';
+
 import {OpenRealmBehaviorType} from 'realm';
 import Realm from 'realm';
 
-import {useEffect, useState} from 'react';
 import App from '../App';
-import {RealmContext} from '../models/Word';
-
-const {RealmProvider} = RealmContext;
+import {RealmContext, Word} from '../models/Word';
+import {Category} from '../models/Category';
 
 export const RealmWrapper = () => {
+  const {RealmProvider} = RealmContext;
   const app = useApp();
+
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const login = async () => {

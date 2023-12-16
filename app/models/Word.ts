@@ -1,5 +1,6 @@
 import {createRealmContext} from '@realm/react';
 import Realm, {BSON, ObjectSchema} from 'realm';
+import {Category} from './Category';
 
 export class Word extends Realm.Object<Word> {
   _id: Realm.BSON.ObjectId = new BSON.ObjectID();
@@ -22,5 +23,5 @@ export class Word extends Realm.Object<Word> {
 }
 
 export const RealmContext = createRealmContext({
-  schema: [Word],
+  schema: [Word, Category],
 });

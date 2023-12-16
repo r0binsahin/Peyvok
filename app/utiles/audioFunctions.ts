@@ -1,6 +1,4 @@
 import TrackPlayer, {Capability} from 'react-native-track-player';
-import {Word} from '../models/Word';
-import {ICategory} from '../models/ICategory';
 
 export const setupTrackPlayer = async (isPlayerInitialized: boolean) => {
   try {

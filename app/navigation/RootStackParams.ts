@@ -1,4 +1,4 @@
-import {ICategory} from '../../models/ICategory';
+import {ICategory} from '../models/ICategory';
 
 export type RootStackParamList = {
   HomeScreen: undefined;

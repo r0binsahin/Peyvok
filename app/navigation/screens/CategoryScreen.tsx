@@ -1,26 +1,25 @@
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {RealmContext, Word} from '../../models/Word';
 
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {RootStackParamList} from './RootStackParams';
 import {useNavigation} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
-import {playTrack} from '../../audioFunctions/audioFunctions';
-import {useEffect} from 'react';
+
+import {RealmContext, Word} from '../../models/Word';
+
+import {playTrack} from '../../utiles/audioFunctions';
+import {RootStackParamList} from '../RootStackParams';
+
 type propsType = NativeStackScreenProps<RootStackParamList, 'CategoryScreen'>;
 
 export const CategoryScreen = (props: propsType) => {
+  const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
   const {route} = props;
   const {selectedCategory} = route.params;
-
   const {useQuery} = RealmContext;
 
   const filteredWords = useQuery(Word, words => {
     return words.filtered(`category == $0`, selectedCategory);
   });
-  const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
-
-  useEffect(() => {});
 
   return (
     <View style={styles.wrapper}>
