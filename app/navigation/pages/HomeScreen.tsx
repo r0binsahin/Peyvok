@@ -26,7 +26,7 @@ export const HomeScreen = () => {
         <Text>Home page</Text>
         <View style={styles.categoryContainer}>
           {categories.map((category, index) => (
-            <CategoryView key={index} category={category} />
+            <CategoryView key={index} category={category} word={words[index]} />
           ))}
         </View>
       </View>
@@ -36,7 +36,6 @@ export const HomeScreen = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     padding: 20,
     backgroundColor: 'yellow',
     justifyContent: 'center',

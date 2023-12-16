@@ -1,22 +1,54 @@
-import {Image, StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import React, {useEffect} from 'react';
+
 import {ICategory} from '../models/ICategory';
+
+import {playTrack, setupTrackPlayer} from '../audioFunctions/audioFunctions';
+import {useNavigation} from '@react-navigation/native';
+
+import {RootStackParamList} from '../navigation/pages/RootStackParams';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {Word} from '../models/Word';
 
 interface ICategoryViewProps {
   category: ICategory;
+  word: Word;
 }
 
-const CategoryView = ({category}: ICategoryViewProps) => {
+const CategoryView = ({category, word}: ICategoryViewProps) => {
+  let isPlayerInitialized = false;
+  const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
+
+  const setPlayer = async () => {
+    if (!isPlayerInitialized) {
+      await setupTrackPlayer(isPlayerInitialized);
+    }
+  };
+
+  useEffect(() => {
+    setPlayer();
+  }, []);
+
   return (
     <View style={styles.imgContainer}>
-      <Image
-        style={styles.img}
-        source={{
-          uri: category.imgURL,
-        }}
-      />
-
+      <TouchableOpacity
+        onPress={() =>
+          navigation.navigate('CategoryScreen', {
+            selectedCategory: word.category,
+          })
+        }>
+        <Image
+          style={styles.img}
+          source={{
+            uri: category.imgURL,
+          }}
+        />
+      </TouchableOpacity>
       <View style={styles.textBox}>
+        <TouchableOpacity onPress={() => playTrack(category.categoryAudio)}>
+          <Text style={styles.text}>Listen</Text>
+        </TouchableOpacity>
+
         <Text style={styles.text}>{category.categoryName}</Text>
       </View>
     </View>
@@ -27,10 +59,15 @@ export default CategoryView;
 
 const styles = StyleSheet.create({
   imgContainer: {
+    width: '40%',
+    height: 250,
     backgroundColor: '#ff0044',
     padding: 10,
     borderRadius: 10,
     margin: 10,
+    display: 'flex',
+
+    alignItems: 'center',
   },
 
   img: {
@@ -44,7 +81,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'white',
-    fontSize: 20,
-    margin: 20,
+    fontSize: 15,
+    margin: 10,
   },
 });
