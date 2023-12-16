@@ -1,5 +1,6 @@
 import TrackPlayer, {Capability} from 'react-native-track-player';
 import {Word} from '../models/Word';
+import {ICategory} from '../models/ICategory';
 
 export const setupTrackPlayer = async (isPlayerInitialized: boolean) => {
   try {
@@ -15,11 +16,11 @@ export const setupTrackPlayer = async (isPlayerInitialized: boolean) => {
   }
 };
 
-export const playTrack = async (word: Word) => {
+export const playTrack = async (audio: string) => {
   try {
     await TrackPlayer.stop();
     await TrackPlayer.reset();
-    await TrackPlayer.add({url: word.audio});
+    await TrackPlayer.add({url: audio});
     console.log('Track added successfully');
     const stateBeforePlay = await TrackPlayer.getPlaybackState();
     console.log('Player state before play:', stateBeforePlay);

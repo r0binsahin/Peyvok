@@ -1,0 +1,32 @@
+{
+  "categoryData": [
+    {
+      "id": "1",
+      "imgURL": "https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg",
+      "categoryNameKU": "reng",
+      "categoryName": "colors",
+      "categoryAudio": "https://drive.google.com/uc?export=media&id=1DNXGka5RbegvP8HtNRpuy2r26pnBcmCd"
+    },
+    {
+      "id": "2",
+      "imgURL": "https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg",
+      "categoryNameKU": "ajel",
+      "categoryName": "animals",
+      "categoryAudio": "https://drive.google.com/uc?export=media&id=1hwKPIWGmxoiUzjU2fbAo1TUzVOdXHWsf"
+    },
+    {
+      "id": "3",
+      "imgURL": "https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg",
+      "categoryNameKU": "fêkî",
+      "categoryName": "fruits",
+      "categoryAudio": "https://drive.google.com/uc?export=media&id=161Hz-IfY63sMsPbtefr2fH4rPuu5ftLh"
+    },
+    {
+      "id": "4",
+      "imgURL": "https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg",
+      "categoryNameKU": "formên geometrîk",
+      "categoryName": "shapes",
+      "categoryAudio": "https://drive.google.com/uc?export=media&id=1drGc9vyLw__JfMrijLA6GLhgJKQSM7rd"
+    }
+  ]
+}

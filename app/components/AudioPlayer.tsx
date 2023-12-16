@@ -25,7 +25,9 @@ export const AudioPlayer = ({words}: IAudioPayerProps) => {
     <View style={styles.container}>
       {words.map(word => (
         <View style={styles.row} key={word.audio}>
-          <TouchableOpacity style={styles.btn} onPress={() => playTrack(word)}>
+          <TouchableOpacity
+            style={styles.btn}
+            onPress={() => playTrack(word.audio)}>
             <Text style={styles.text}>{word.word}</Text>
           </TouchableOpacity>
         </View>
@@ -39,11 +41,10 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
-    height: '100%',
 
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'black',
+    backgroundColor: 'yellow',
   },
   btn: {
     backgroundColor: '#ff0044',
