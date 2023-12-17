@@ -46,7 +46,8 @@ export const RealmWrapper = () => {
             existingRealmFileBehavior: {
               type: OpenRealmBehaviorType.OpenImmediately,
             },
-          }}>
+          }}
+          schema={[Word, Category]}>
           <App />
         </RealmProvider>
       ) : (

@@ -3,7 +3,7 @@ import Realm, {BSON, ObjectSchema} from 'realm';
 import {Category} from './Category';
 
 export class Word extends Realm.Object<Word> {
-  _id: Realm.BSON.ObjectId = new BSON.ObjectID();
+  _id!: Realm.BSON.ObjectId;
   word!: string;
   image!: string;
   audio!: string;
@@ -13,7 +13,7 @@ export class Word extends Realm.Object<Word> {
     name: 'Word',
     primaryKey: '_id',
     properties: {
-      _id: 'objectId',
+      _id: {type: 'objectId', default: () => new BSON.ObjectId()},
       word: 'string',
       image: 'string',
       audio: 'string',

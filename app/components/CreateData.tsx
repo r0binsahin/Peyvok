@@ -1,22 +1,28 @@
 import {BSON} from 'realm';
-import {Text, TouchableOpacity, View} from 'react-native';
-import {useCallback, useState} from 'react';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {useCallback, useEffect, useState} from 'react';
 import {RealmContext, Word} from '../models/Word';
 import categoryData from '../assets/categoryData.json';
 import {ICategory} from '../models/ICategory';
+import {Category} from '../models/Category';
 
-export const CreateWords = () => {
+export const CreateData = () => {
   const [isSureToDelete, setIsSureToDelete] = useState(false);
-  const {RealmProvider} = RealmContext;
   const {useRealm, useQuery} = RealmContext;
   const realm = useRealm();
   const words = useQuery(Word);
   const categories: ICategory[] = categoryData.categoryData;
 
+  useEffect(() => {
+    realm.subscriptions.update(mutableSubs => {
+      mutableSubs.add(realm.objects(Word));
+      mutableSubs.add(realm.objects(Category));
+    });
+  }, []);
+
   const data = useCallback(() => {
     realm.write(() => {
       realm.create('Word', {
-        _id: new BSON.ObjectID(),
         word: 'zer',
         image:
           'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
@@ -26,7 +32,6 @@ export const CreateWords = () => {
       });
 
       realm.create('Word', {
-        _id: new BSON.ObjectID(),
         word: 'sor',
         image:
           'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
@@ -36,7 +41,6 @@ export const CreateWords = () => {
       });
 
       realm.create('Word', {
-        _id: new BSON.ObjectID(),
         word: 'spî',
         image:
           'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
@@ -46,7 +50,6 @@ export const CreateWords = () => {
       });
 
       realm.create('Word', {
-        _id: new BSON.ObjectID(),
         word: 'kesk',
         image:
           'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
@@ -56,7 +59,6 @@ export const CreateWords = () => {
       });
 
       realm.create('Word', {
-        _id: new BSON.ObjectID(),
         word: 'kûçik',
         image:
           'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
@@ -66,7 +68,6 @@ export const CreateWords = () => {
       });
 
       realm.create('Word', {
-        _id: new BSON.ObjectID(),
         word: 'pisîk',
         image:
           'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
@@ -76,7 +77,6 @@ export const CreateWords = () => {
       });
 
       realm.create('Word', {
-        _id: new BSON.ObjectID(),
         word: 'jûjî',
         image:
           'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
@@ -86,7 +86,6 @@ export const CreateWords = () => {
       });
 
       realm.create('Word', {
-        _id: new BSON.ObjectID(),
         word: 'çivîk',
         image:
           'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
@@ -96,7 +95,6 @@ export const CreateWords = () => {
       });
 
       realm.create('Word', {
-        _id: new BSON.ObjectID(),
         word: 'sêv',
         image:
           'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
@@ -106,7 +104,6 @@ export const CreateWords = () => {
       });
 
       realm.create('Word', {
-        _id: new BSON.ObjectID(),
         word: 'hirmî',
         image:
           'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
@@ -116,7 +113,6 @@ export const CreateWords = () => {
       });
 
       realm.create('Word', {
-        _id: new BSON.ObjectID(),
         word: 'mûz',
         image:
           'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
@@ -126,7 +122,6 @@ export const CreateWords = () => {
       });
 
       realm.create('Word', {
-        _id: new BSON.ObjectID(),
         word: 'trî',
         image:
           'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
@@ -136,7 +131,6 @@ export const CreateWords = () => {
       });
 
       realm.create('Word', {
-        _id: new BSON.ObjectID(),
         word: 'xelek',
         image:
           'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
@@ -146,7 +140,6 @@ export const CreateWords = () => {
       });
 
       realm.create('Word', {
-        _id: new BSON.ObjectID(),
         word: 'gilover',
         image:
           'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
@@ -156,7 +149,6 @@ export const CreateWords = () => {
       });
 
       realm.create('Word', {
-        _id: new BSON.ObjectID(),
         word: 'çargoşe',
         image:
           'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
@@ -166,7 +158,6 @@ export const CreateWords = () => {
       });
 
       realm.create('Word', {
-        _id: new BSON.ObjectID(),
         word: 'sêgoşe',
         image:
           'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
@@ -175,6 +166,8 @@ export const CreateWords = () => {
         category: 'shapes',
       });
     });
+
+    setIsSureToDelete(false);
   }, [realm]);
 
   const createCategories = useCallback(() => {
@@ -182,7 +175,6 @@ export const CreateWords = () => {
       realm.write(() => {
         categories.map(category => {
           realm.create('Category', {
-            _id: new BSON.ObjectID(),
             imgURL: category.imgURL,
             categoryName: category.categoryName,
             categoryNameKU: category.categoryNameKU,
@@ -203,31 +195,77 @@ export const CreateWords = () => {
   };
 
   return (
-    <RealmProvider>
-      <View>
-        <View>
-          <TouchableOpacity onPress={data}>
-            <Text>Add new word</Text>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={createCategories}>
-            <Text>Add new category</Text>
-          </TouchableOpacity>
-        </View>
-        <View>
-          {isSureToDelete ? (
-            <TouchableOpacity onPress={deleteData}>
-              <Text>Approve to delete all data</Text>
-              <TouchableOpacity onPress={() => setIsSureToDelete(false)}>
-                <Text>Cancel action</Text>
-              </TouchableOpacity>
-            </TouchableOpacity>
-          ) : (
-            <TouchableOpacity onPress={() => setIsSureToDelete(true)}>
-              <Text>Delete all words</Text>
-            </TouchableOpacity>
-          )}
-        </View>
+    <View style={styles.container}>
+      <View style={styles.buttonContainer}>
+        <TouchableOpacity style={styles.button} onPress={data}>
+          <Text style={styles.buttonText}>Add new word</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={createCategories}>
+          <Text style={styles.buttonText}>Add new category</Text>
+        </TouchableOpacity>
       </View>
-    </RealmProvider>
+      <View style={styles.buttonContainer}>
+        {isSureToDelete ? (
+          <View style={styles.doubleButtonContainer}>
+            <TouchableOpacity style={styles.approveButton} onPress={deleteData}>
+              <Text style={styles.buttonText}>Approve to delete all data</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.cancelButton}
+              onPress={() => setIsSureToDelete(false)}>
+              <Text style={styles.cancelText}>Cancel action</Text>
+            </TouchableOpacity>
+          </View>
+        ) : (
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => setIsSureToDelete(true)}>
+            <Text style={styles.buttonText}>Delete all words</Text>
+          </TouchableOpacity>
+        )}
+      </View>
+    </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  buttonContainer: {
+    marginBottom: 20,
+  },
+  doubleButtonContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 10,
+  },
+  button: {
+    backgroundColor: '#3498db',
+    padding: 10,
+    borderRadius: 5,
+    marginBottom: 10,
+  },
+  approveButton: {
+    backgroundColor: 'green',
+    padding: 10,
+    borderRadius: 5,
+    marginBottom: 10,
+  },
+  cancelButton: {
+    backgroundColor: 'red',
+    padding: 10,
+    borderRadius: 5,
+    marginBottom: 10,
+  },
+  buttonText: {
+    color: 'white',
+    textAlign: 'center',
+  },
+  cancelText: {
+    color: 'white',
+    textAlign: 'center',
+  },
+});
