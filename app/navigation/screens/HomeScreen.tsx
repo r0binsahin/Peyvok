@@ -3,16 +3,12 @@ import {StyleSheet, View, ScrollView} from 'react-native';
 import CategoryView from '../../components/CategoryView';
 import {ICategory} from '../../models/ICategory';
 import categoryData from '../../assets/categoryData.json';
-import {CreateData} from '../../components/CreateData';
 
 export const HomeScreen = () => {
   const categories: ICategory[] = categoryData.categoryData;
 
   return (
     <ScrollView>
-      <View>
-        <CreateData />
-      </View>
       <View style={styles.container}>
         <View style={styles.categoryContainer}>
           {categories.map((category, index) => (
