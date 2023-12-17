@@ -6,7 +6,7 @@ import {ICategory} from '../models/ICategory';
 import {playTrack, setupTrackPlayer} from '../utiles/audioFunctions';
 
 import {StackNavigationProp} from '@react-navigation/stack';
-import {RootStackParamList} from '../navigation/RootStackParams';
+import {RootStackParamList} from '../utiles/RootStackParams';
 import {useNavigation} from '@react-navigation/native';
 
 interface ICategoryViewProps {

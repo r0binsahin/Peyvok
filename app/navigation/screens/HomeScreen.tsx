@@ -3,8 +3,7 @@ import {StyleSheet, View, ScrollView} from 'react-native';
 import CategoryView from '../../components/CategoryView';
 import {ICategory} from '../../models/ICategory';
 import categoryData from '../../assets/categoryData.json';
-import {CreateWords} from '../../components/CreateWord';
-import {RealmContext} from '../../models/Word';
+import {CreateData} from '../../components/CreateData';
 
 export const HomeScreen = () => {
   const categories: ICategory[] = categoryData.categoryData;
@@ -12,7 +11,7 @@ export const HomeScreen = () => {
   return (
     <ScrollView>
       <View>
-        <CreateWords />
+        <CreateData />
       </View>
       <View style={styles.container}>
         <View style={styles.categoryContainer}>

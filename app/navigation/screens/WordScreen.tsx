@@ -2,7 +2,7 @@ import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 
-import {RootStackParamList} from '../RootStackParams';
+import {RootStackParamList} from '../../utiles/RootStackParams';
 import {RealmContext, Word} from '../../models/Word';
 
 import {playTrack} from '../../utiles/audioFunctions';

@@ -7,7 +7,7 @@ import {StackNavigationProp} from '@react-navigation/stack';
 import {RealmContext, Word} from '../../models/Word';
 
 import {playTrack} from '../../utiles/audioFunctions';
-import {RootStackParamList} from '../RootStackParams';
+import {RootStackParamList} from '../../utiles/RootStackParams';
 
 type propsType = NativeStackScreenProps<RootStackParamList, 'CategoryScreen'>;
 

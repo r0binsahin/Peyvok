@@ -11,7 +11,7 @@ import {WordScreen} from './navigation/screens/WordScreen';
 import {InfoScreen} from './navigation/screens/InfoScreen';
 
 import {RealmContext, Word} from './models/Word';
-import {RootStackParamList} from './navigation/RootStackParams';
+import {RootStackParamList} from './utiles/RootStackParams';
 import {Category} from './models/Category';
 
 const Stack = createStackNavigator<RootStackParamList>();
@@ -23,9 +23,6 @@ function App(): React.JSX.Element {
   useEffect(() => {
     realm.subscriptions.update(mutableSubs => {
       mutableSubs.add(realm.objects(Word));
-    });
-
-    realm.subscriptions.update(mutableSubs => {
       mutableSubs.add(realm.objects(Category));
     });
   }, []);
