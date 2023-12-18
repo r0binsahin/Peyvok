@@ -11,6 +11,7 @@ import {Word} from '../models/Word';
 import {playTrack} from '../utiles/audioFunctions';
 
 const {width, height} = Dimensions.get('screen');
+
 interface ISlideItemProps {
   word: Word;
 }

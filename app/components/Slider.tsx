@@ -4,13 +4,12 @@ import {
   Dimensions,
   NativeScrollEvent,
   NativeSyntheticEvent,
-  StyleSheet,
-  Text,
   View,
   ViewToken,
+  FlatList,
 } from 'react-native';
 import {Word} from '../models/Word';
-import {FlatList} from 'react-native-gesture-handler';
+
 import SlideItem from './SlideItem';
 import Pagination from './Pagination';
 
