@@ -6,23 +6,23 @@ import {RealmContext, Word} from '../../models/Word';
 import WordView from '../../components/WordView';
 import {StyleSheet, View} from 'react-native';
 import {index} from 'realm';
+import Slider from '../../components/Slider';
 
 type propsType = NativeStackScreenProps<RootStackParamList, 'WordScreen'>;
 
 export const WordScreen = (props: propsType) => {
   const {route} = props;
-  const {selectedWord} = route.params;
+  const {selectedWord, startIndex, selectedCategory} = route.params;
 
   const {useQuery} = RealmContext;
   const filteredWords = useQuery(Word, words => {
-    return words.filtered(`word == $0`, selectedWord);
+    return words.filtered(`category == $0`, selectedCategory);
   });
 
-  return filteredWords.map((word, index) => (
-    <View key={index} style={styles.container}>
-      <WordView word={word} />
-    </View>
-  ));
+  const words = useQuery(Word);
+  const convertedWords: Word[] = Array.from(filteredWords);
+
+  return <Slider startIndex={startIndex} words={convertedWords} />;
 };
 const styles = StyleSheet.create({
   container: {

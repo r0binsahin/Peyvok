@@ -1,4 +1,11 @@
-import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {
+  Dimensions,
+  Image,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import React from 'react';
 import {Word} from '../models/Word';
 import {playTrack} from '../utiles/audioFunctions';
@@ -9,7 +16,7 @@ interface IWordViewProps {
 
 const WordView = ({word}: IWordViewProps) => {
   return (
-    <View style={styles.imgContainer}>
+    <View style={styles.container}>
       <Image
         style={styles.img}
         source={{
@@ -31,13 +38,12 @@ const WordView = ({word}: IWordViewProps) => {
 export default WordView;
 
 const styles = StyleSheet.create({
-  imgContainer: {
-    width: '100%',
-
+  container: {
     backgroundColor: '#ff0044',
     padding: 10,
     borderRadius: 10,
     display: 'flex',
+
     marginBottom: 10,
     marginTop: 10,
 

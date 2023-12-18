@@ -41,15 +41,15 @@ const CategoryView = ({category}: ICategoryViewProps) => {
             uri: category.imgURL,
           }}
         />
+
+        <View style={styles.textBox}>
+          <TouchableOpacity onPress={() => playTrack(category.categoryAudio)}>
+            <Text style={styles.text}>Listen</Text>
+          </TouchableOpacity>
+
+          <Text style={styles.text}>{category.categoryNameKU}</Text>
+        </View>
       </TouchableOpacity>
-
-      <View style={styles.textBox}>
-        <TouchableOpacity onPress={() => playTrack(category.categoryAudio)}>
-          <Text style={styles.text}>Listen</Text>
-        </TouchableOpacity>
-
-        <Text style={styles.text}>{category.categoryNameKU}</Text>
-      </View>
     </View>
   );
 };

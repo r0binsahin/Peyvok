@@ -4,5 +4,9 @@ export type RootStackParamList = {
   HomeScreen: undefined;
   CategoryScreen: {selectedCategory: string};
   InfoScreen: undefined;
-  WordScreen: {selectedWord: string};
+  WordScreen: {
+    selectedWord: string;
+    startIndex: number;
+    selectedCategory: string;
+  };
 };
