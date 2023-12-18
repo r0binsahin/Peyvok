@@ -24,8 +24,9 @@ export const CategoryScreen = (props: propsType) => {
 
   return (
     <View style={styles.wrapper}>
-      {filteredWords.map(word => (
+      {filteredWords.map((word, index) => (
         <TouchableOpacity
+          key={index}
           onPress={() =>
             navigation.navigate('WordScreen', {
               selectedWord: word.word,

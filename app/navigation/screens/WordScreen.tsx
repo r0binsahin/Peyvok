@@ -5,6 +5,7 @@ import {RealmContext, Word} from '../../models/Word';
 
 import WordView from '../../components/WordView';
 import {StyleSheet, View} from 'react-native';
+import {index} from 'realm';
 
 type propsType = NativeStackScreenProps<RootStackParamList, 'WordScreen'>;
 
@@ -17,8 +18,8 @@ export const WordScreen = (props: propsType) => {
     return words.filtered(`word == $0`, selectedWord);
   });
 
-  return filteredWords.map(word => (
-    <View style={styles.container}>
+  return filteredWords.map((word, index) => (
+    <View key={index} style={styles.container}>
       <WordView word={word} />
     </View>
   ));
