@@ -28,17 +28,21 @@ export const CategoryScreen = (props: propsType) => {
     return words.filtered(`category == $0`, selectedCategory);
   });
 
+  const handleWordPress = (selectedWord: string, index: number) => {
+    navigation.navigate('WordScreen', {
+      selectedWord,
+      startIndex: index,
+      selectedCategory: selectedCategory,
+    });
+  };
+
   return (
     <ScrollView>
       <View style={styles.container}>
         {filteredWords.map((word, index) => (
           <TouchableOpacity
             key={index}
-            onPress={() =>
-              navigation.navigate('WordScreen', {
-                selectedWord: word.word,
-              })
-            }>
+            onPress={() => handleWordPress(word.word, index)}>
             <WordView word={word} />
           </TouchableOpacity>
         ))}

@@ -16,12 +16,13 @@ import Pagination from './Pagination';
 
 interface ISliderProps {
   words: Word[];
+  startIndex: number;
 }
 
 const {width, height} = Dimensions.get('screen');
 
-const Slider = ({words}: ISliderProps) => {
-  const [index, setIndex] = useState(0);
+const Slider = ({words, startIndex}: ISliderProps) => {
+  const [index, setIndex] = useState(startIndex);
   const scrollX = useRef(new Animated.Value(0)).current;
 
   const handleOnViewableItemsChanged = useRef(
@@ -51,6 +52,12 @@ const Slider = ({words}: ISliderProps) => {
     itemVisiblePercentThreshold: 50,
   }).current;
 
+  const getItemLayout = (_: any, index: number) => ({
+    length: width,
+    offset: width * index,
+    index,
+  });
+
   return (
     <View>
       <FlatList
@@ -63,6 +70,8 @@ const Slider = ({words}: ISliderProps) => {
         onScroll={handleOnScroll}
         onViewableItemsChanged={handleOnViewableItemsChanged}
         viewabilityConfig={viewabilityConfig}
+        initialScrollIndex={startIndex}
+        getItemLayout={getItemLayout}
       />
       <Pagination data={words} scrollX={scrollX} index={index} />
     </View>
