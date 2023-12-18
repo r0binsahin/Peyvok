@@ -8,6 +8,7 @@ import {RealmContext, Word} from '../../models/Word';
 
 import {playTrack} from '../../utiles/audioFunctions';
 import {RootStackParamList} from '../../utiles/RootStackParams';
+import WordView from '../../components/WordView';
 
 type propsType = NativeStackScreenProps<RootStackParamList, 'CategoryScreen'>;
 
@@ -23,30 +24,15 @@ export const CategoryScreen = (props: propsType) => {
 
   return (
     <View style={styles.wrapper}>
-      {filteredWords.map((word, index) => (
-        <View key={index} style={styles.imgContainer}>
-          <TouchableOpacity
-            onPress={() =>
-              navigation.navigate('WordScreen', {
-                selectedWord: word.word,
-              })
-            }>
-            <Image
-              style={styles.img}
-              source={{
-                uri: word.image,
-              }}
-            />
-          </TouchableOpacity>
-
-          <View style={styles.textBox}>
-            <TouchableOpacity onPress={() => playTrack(word.audio)}>
-              <Text style={styles.text}>Listen</Text>
-            </TouchableOpacity>
-
-            <Text style={styles.text}>{word.word}</Text>
-          </View>
-        </View>
+      {filteredWords.map(word => (
+        <TouchableOpacity
+          onPress={() =>
+            navigation.navigate('WordScreen', {
+              selectedWord: word.word,
+            })
+          }>
+          <WordView word={word} />
+        </TouchableOpacity>
       ))}
     </View>
   );
@@ -58,33 +44,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
 
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
     alignItems: 'center',
-  },
-  imgContainer: {
-    width: '40%',
-    height: 250,
-    backgroundColor: '#ff0044',
-    padding: 10,
-    borderRadius: 10,
-    margin: 10,
-    display: 'flex',
-
-    alignItems: 'center',
-  },
-
-  img: {
-    width: 125,
-    height: 125,
-    resizeMode: 'cover',
-  },
-  textBox: {
-    display: 'flex',
-    alignItems: 'center',
-  },
-  text: {
-    color: 'white',
-    fontSize: 15,
-    margin: 10,
   },
 });
