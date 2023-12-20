@@ -26,10 +26,11 @@ const Slider = ({words, startIndex}: ISliderProps) => {
 
   const handleOnViewableItemsChanged = useRef(
     ({viewableItems}: {viewableItems: ViewToken[]}) => {
-      setIndex(viewableItems[0].index || 0);
+      if (viewableItems && viewableItems.length > 0) {
+        setIndex(viewableItems[0].index || 0);
+      }
     },
   ).current;
-
   const handleOnScroll = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
     Animated.event(
       [
