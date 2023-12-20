@@ -10,7 +10,7 @@ export const InfoScreen = () => {
   const convertedWords: Word[] = Array.from(words);
   return (
     <GestureHandlerRootView>
-      <Slider words={convertedWords} />
+      <Slider startIndex={0} words={convertedWords} />
     </GestureHandlerRootView>
   );
 };

@@ -9,6 +9,7 @@ import {RealmContext, Word} from './models/Word';
 import {RootStackParamList} from './utiles/RootStackParams';
 import {Category} from './models/Category';
 import BottomTab from './navigation/bottomTab/BottomTab';
+import StackNavigation from './navigation/stack/StackNavigation';
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -25,7 +26,7 @@ function App(): React.JSX.Element {
 
   return (
     <NavigationContainer>
-      <BottomTab />
+      <StackNavigation />
     </NavigationContainer>
   );
 }

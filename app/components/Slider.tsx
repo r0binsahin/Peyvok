@@ -59,7 +59,7 @@ const Slider = ({words, startIndex}: ISliderProps) => {
   });
 
   return (
-    <View>
+    <View style={{gap: 56}}>
       <FlatList
         data={words}
         renderItem={({item}) => <SlideItem word={item} />}
@@ -73,7 +73,6 @@ const Slider = ({words, startIndex}: ISliderProps) => {
         initialScrollIndex={startIndex}
         getItemLayout={getItemLayout}
       />
-      <Pagination data={words} scrollX={scrollX} index={index} />
     </View>
   );
 };

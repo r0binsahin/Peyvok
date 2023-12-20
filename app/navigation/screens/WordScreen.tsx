@@ -4,6 +4,7 @@ import {RootStackParamList} from '../../utiles/RootStackParams';
 import {RealmContext, Word} from '../../models/Word';
 
 import Slider from '../../components/Slider';
+import {StyleSheet, View} from 'react-native';
 
 type propsType = NativeStackScreenProps<RootStackParamList, 'WordScreen'>;
 
@@ -18,5 +19,19 @@ export const WordScreen = (props: propsType) => {
 
   const convertedWords: Word[] = Array.from(filteredWords);
 
-  return <Slider startIndex={startIndex} words={convertedWords} />;
+  return (
+    <View style={styles.container}>
+      <Slider startIndex={startIndex} words={convertedWords} />
+    </View>
+  );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'red',
+  },
+});

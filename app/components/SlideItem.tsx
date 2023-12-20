@@ -17,12 +17,11 @@ interface ISlideItemProps {
 }
 
 const SlideItem = ({word}: ISlideItemProps) => {
-  const translateYImage = new Animated.Value(40);
+  const translateYImage = new Animated.Value(0);
   return (
     <View style={styles.container}>
       <Animated.Image
         source={{uri: word.image}}
-        resizeMode="contain"
         style={[
           styles.image,
           {
@@ -36,9 +35,14 @@ const SlideItem = ({word}: ISlideItemProps) => {
       />
 
       <View style={styles.content}>
-        <Text style={styles.title}>{word.word}</Text>
+        <View style={styles.titleBox}>
+          <Text style={styles.title}>{word.word}</Text>
+        </View>
+
         <TouchableOpacity onPress={() => playTrack(word.audio)}>
-          <Text style={styles.description}>Listen</Text>
+          <View style={styles.iconBox}>
+            <Text style={styles.icon}>x</Text>
+          </View>
         </TouchableOpacity>
       </View>
     </View>
@@ -49,30 +53,50 @@ export default SlideItem;
 
 const styles = StyleSheet.create({
   container: {
-    width,
-    height,
-    alignItems: 'center',
+    width: 268,
+    height: 279,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    gap: 10,
+
+    margin: 10,
   },
   image: {
-    flex: 0.6,
+    height: 219,
     width: '100%',
+    borderRadius: 20,
   },
   content: {
-    flex: 0.4,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     alignItems: 'center',
   },
+  titleBox: {
+    width: 202,
+    height: 40,
+    backgroundColor: 'grey',
+    borderRadius: 100,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
   title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: '#333',
+    color: '#fff',
+    fontSize: 20,
   },
-  description: {
-    fontSize: 18,
-    marginVertical: 12,
-    color: '#333',
+
+  iconBox: {
+    width: 40,
+    height: 40,
+    backgroundColor: 'grey',
+    borderRadius: 100,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  price: {
-    fontSize: 32,
-    fontWeight: 'bold',
+  icon: {
+    fontSize: 15,
+    color: '#fff',
   },
 });
