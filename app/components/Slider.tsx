@@ -1,77 +1,45 @@
-import React, {useRef, useState} from 'react';
-import {
-  Animated,
-  Dimensions,
-  NativeScrollEvent,
-  NativeSyntheticEvent,
-  View,
-  ViewToken,
-  FlatList,
-} from 'react-native';
+import React, {useState} from 'react';
+import Carousel from 'react-native-snap-carousel';
+import {Animated, Dimensions, View} from 'react-native';
 import {Word} from '../models/Word';
 
 import SlideItem from './SlideItem';
-import Pagination from './Pagination';
 
 interface ISliderProps {
   words: Word[];
-  startIndex: number;
 }
 
 const {width, height} = Dimensions.get('screen');
 
-const Slider = ({words, startIndex}: ISliderProps) => {
-  const [index, setIndex] = useState(startIndex);
-  const scrollX = useRef(new Animated.Value(0)).current;
+const Slider = ({words}: ISliderProps) => {
+  const animatedStyle = (index: number, animatedValue: Animated.Value) => {
+    const scale = animatedValue.interpolate({
+      inputRange: [-1, 0, 1],
+      outputRange: [1, 0.5, 1],
+      extrapolate: 'clamp',
+    });
 
-  const handleOnViewableItemsChanged = useRef(
-    ({viewableItems}: {viewableItems: ViewToken[]}) => {
-      if (viewableItems && viewableItems.length > 0) {
-        setIndex(viewableItems[0].index || 0);
-      }
-    },
-  ).current;
-  const handleOnScroll = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
-    Animated.event(
-      [
-        {
-          nativeEvent: {
-            contentOffset: {
-              x: scrollX,
-            },
-          },
-        },
-      ],
-      {
-        useNativeDriver: false,
-      },
-    )(event);
+    return {
+      transform: [{scale}],
+    };
   };
 
-  const viewabilityConfig = useRef({
-    itemVisiblePercentThreshold: 50,
-  }).current;
-
-  const getItemLayout = (_: any, index: number) => ({
-    length: width,
-    offset: width * index,
-    index,
-  });
-
   return (
-    <View style={{gap: 56}}>
-      <FlatList
+    <View
+      style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+      <Carousel
+        layoutCardOffset={3}
         data={words}
-        renderItem={({item}) => <SlideItem word={item} />}
-        horizontal
-        pagingEnabled
-        snapToAlignment="center"
-        showsHorizontalScrollIndicator={false}
-        onScroll={handleOnScroll}
-        onViewableItemsChanged={handleOnViewableItemsChanged}
-        viewabilityConfig={viewabilityConfig}
-        initialScrollIndex={startIndex}
-        getItemLayout={getItemLayout}
+        //@ts-ignore
+        renderItem={({item, index}) => <SlideItem word={item} index={index} />}
+        sliderWidth={width}
+        itemWidth={268}
+        inactiveSlideShift={0}
+        useScrollView={true}
+        slideInterpolatedStyle={(index, animatedValue) =>
+          animatedStyle(index, animatedValue)
+        }
+        vertical={false}
       />
     </View>
   );

@@ -1,38 +1,25 @@
 import {
-  Dimensions,
   StyleSheet,
   Text,
   TouchableOpacity,
   View,
   Animated,
+  Image,
 } from 'react-native';
 import React from 'react';
 import {Word} from '../models/Word';
 import {playTrack} from '../utiles/audioFunctions';
 
-const {width, height} = Dimensions.get('screen');
-
 interface ISlideItemProps {
   word: Word;
+  index: number;
 }
 
-const SlideItem = ({word}: ISlideItemProps) => {
+const SlideItem = ({word, index}: ISlideItemProps) => {
   const translateYImage = new Animated.Value(0);
   return (
-    <View style={styles.container}>
-      <Animated.Image
-        source={{uri: word.image}}
-        style={[
-          styles.image,
-          {
-            transform: [
-              {
-                translateY: translateYImage,
-              },
-            ],
-          },
-        ]}
-      />
+    <View style={styles.container} key={index}>
+      <Image source={{uri: word.image}} style={styles.image} />
 
       <View style={styles.content}>
         <View style={styles.titleBox}>
@@ -53,14 +40,18 @@ export default SlideItem;
 
 const styles = StyleSheet.create({
   container: {
-    width: 268,
+    /*     width: 268, */
     height: 279,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
+    backgroundColor: 'white',
     gap: 10,
 
     margin: 10,
+
+    shadowOpacity: 0.29,
+    shadowRadius: 5,
   },
   image: {
     height: 219,
