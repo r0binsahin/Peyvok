@@ -3,7 +3,7 @@ export type RootStackParamList = {
   CategoryScreen: {selectedCategory: string};
   InfoScreen: undefined;
   WordScreen: {
-    startIndex: number;
     selectedCategory: string;
+    clickedWordId: string;
   };
 };
