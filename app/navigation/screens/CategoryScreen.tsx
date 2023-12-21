@@ -31,7 +31,7 @@ export const CategoryScreen = (props: propsType) => {
   const handleWordPress = (selectedCategory: string, word: Word) => {
     navigation.navigate('WordScreen', {
       selectedCategory: selectedCategory,
-      clickedWord: word,
+      clickedWordId: word._id.toHexString(),
     });
   };
 

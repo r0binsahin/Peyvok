@@ -5,25 +5,31 @@ import {RealmContext, Word} from '../../models/Word';
 
 import Slider from '../../components/Slider';
 import {StyleSheet} from 'react-native';
+import {useEffect} from 'react';
 
 type propsType = NativeStackScreenProps<RootStackParamList, 'WordScreen'>;
 
 export const WordScreen = (props: propsType) => {
   const {route} = props;
-  const {selectedCategory, clickedWord} = route.params;
+  const {selectedCategory, clickedWordId} = route.params;
 
   const {useQuery} = RealmContext;
   const filteredWords = useQuery(Word, words => {
     return words.filtered(`category == $0`, selectedCategory);
   });
-
-  const reorderedWords = [
+  const clickedWord = filteredWords.find(
+    word => word._id.toHexString() === clickedWordId,
+  );
+  //@ts-ignore
+  const reorderedWords: Word[] = [
     clickedWord,
     ...filteredWords.filter(word => word !== clickedWord),
-  ];
-  const convertedWords: Word[] = Array.from(reorderedWords);
+  ].filter(
+    (item, index, self) =>
+      index === self.findIndex(t => t?.word === item?.word),
+  );
 
-  return <Slider words={convertedWords} />;
+  return <Slider words={reorderedWords} />;
 };
 
 const styles = StyleSheet.create({});
