@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import Carousel from 'react-native-snap-carousel';
 import {Animated, Dimensions, View} from 'react-native';
 import {Word} from '../models/Word';
@@ -7,11 +7,13 @@ import SlideItem from './SlideItem';
 
 interface ISliderProps {
   words: Word[];
+  startIndex: number;
 }
 
 const {width} = Dimensions.get('screen');
 
-const Slider = ({words}: ISliderProps) => {
+const Slider = ({words, startIndex}: ISliderProps) => {
+  const carouselRef = useRef(null);
   const animatedStyle = (index: number, animatedValue: Animated.Value) => {
     const scale = animatedValue.interpolate({
       inputRange: [-1, 0, 1],
@@ -28,6 +30,7 @@ const Slider = ({words}: ISliderProps) => {
     <View
       style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
       <Carousel
+        ref={carouselRef}
         layoutCardOffset={3}
         data={words}
         //@ts-ignore
@@ -40,6 +43,7 @@ const Slider = ({words}: ISliderProps) => {
           animatedStyle(index, animatedValue)
         }
         vertical={false}
+        firstItem={startIndex}
       />
     </View>
   );
