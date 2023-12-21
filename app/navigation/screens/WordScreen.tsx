@@ -10,7 +10,7 @@ type propsType = NativeStackScreenProps<RootStackParamList, 'WordScreen'>;
 
 export const WordScreen = (props: propsType) => {
   const {route} = props;
-  const {startIndex, selectedCategory} = route.params;
+  const {selectedCategory} = route.params;
 
   const {useQuery} = RealmContext;
   const filteredWords = useQuery(Word, words => {
@@ -19,19 +19,7 @@ export const WordScreen = (props: propsType) => {
 
   const convertedWords: Word[] = Array.from(filteredWords);
 
-  return (
-    <View style={styles.container}>
-      <Slider startIndex={startIndex} words={convertedWords} />
-    </View>
-  );
+  return <Slider words={convertedWords} />;
 };
 
-const styles = StyleSheet.create({
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'red',
-  },
-});
+const styles = StyleSheet.create({});
