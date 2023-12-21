@@ -25,7 +25,7 @@ export const CreateData = () => {
       realm.create('Word', {
         word: 'zer',
         image:
-          'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
+          'https://drive.google.com/uc?export=download&id=1B0dXYdBdaQyP3dA7QQbVmAmB_ldtJwBl',
         audio:
           'https://drive.google.com/uc?export=media&id=1F5K88Mhmq5x8uXw-ofWXVBXiMl-PPYrh',
         category: 'colors',
@@ -34,7 +34,7 @@ export const CreateData = () => {
       realm.create('Word', {
         word: 'sor',
         image:
-          'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
+          'https://drive.google.com/uc?export=download&id=1azv1KphLu39JIENjCrotEyYGlafHJh1b',
         audio:
           'https://drive.google.com/uc?export=media&id=1r1h4_jb4xgx2GChfvNuCbPlKY5TYeB8D',
         category: 'colors',
@@ -43,7 +43,7 @@ export const CreateData = () => {
       realm.create('Word', {
         word: 'spî',
         image:
-          'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
+          'https://drive.google.com/uc?export=download&id=1XH6Q1-8LUttAzBiai3vRflvvogWkf2J_',
         audio:
           'https://drive.google.com/uc?export=media&id=1yx2L-5cyy07_H_JFagcboZXeDx2KAloq',
         category: 'colors',
@@ -52,7 +52,7 @@ export const CreateData = () => {
       realm.create('Word', {
         word: 'kesk',
         image:
-          'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
+          'https://drive.google.com/uc?export=download&id=1aLCkeCEzCWoTDqEAPVIl_y4Q_0vNvstQ',
         audio:
           'https://drive.google.com/uc?export=media&id=1ehSIt-2Hgn5-SVusMmPglqaexywZC7RN',
         category: 'colors',
@@ -61,7 +61,7 @@ export const CreateData = () => {
       realm.create('Word', {
         word: 'kûçik',
         image:
-          'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
+          'https://drive.google.com/uc?export=download&id=16NeBnPawXQInZmp5RsXrDtKHrLOhCwCJ',
         audio:
           'https://drive.google.com/uc?export=media&id=1-Eq2KG0FuPeoNjAvwZGDjm1u8VdIoWU2',
         category: 'animals',
@@ -70,7 +70,7 @@ export const CreateData = () => {
       realm.create('Word', {
         word: 'pisîk',
         image:
-          'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
+          'https://drive.google.com/uc?export=download&id=1UFYcZe17iOsNQQZ6dy3ijZABCSAjR8ll',
         audio:
           'https://drive.google.com/uc?export=media&id=1vOk1oYlhsbqOH9ojwN8GIeT6wHkqwkTs',
         category: 'animals',
@@ -79,7 +79,7 @@ export const CreateData = () => {
       realm.create('Word', {
         word: 'jûjî',
         image:
-          'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
+          'https://drive.google.com/uc?export=download&id=1HFU_t_iOROAnm9pOYhLCPp5J8_4f6g-L',
         audio:
           'https://drive.google.com/uc?export=media&id=1GpT5mS_Fd9SJzjtH1xGB-N0Q5GpWbf7G',
         category: 'animals',
@@ -88,7 +88,7 @@ export const CreateData = () => {
       realm.create('Word', {
         word: 'çivîk',
         image:
-          'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
+          'https://drive.google.com/uc?export=download&id=1eKwv9zQNPuBKAUMHpt3EOtUB9K_b3iOJ',
         audio:
           'https://drive.google.com/uc?export=media&id=1GvKrlWzSwGAzbgXhjXotKFgxjrGCypOE',
         category: 'animals',
@@ -97,7 +97,7 @@ export const CreateData = () => {
       realm.create('Word', {
         word: 'sêv',
         image:
-          'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
+          'https://drive.google.com/uc?export=download&id=1WBTQfHcGJ4Im6EZ8lOKffyGYVyfASOJA',
         audio:
           'https://drive.google.com/uc?export=media&id=1AoYH584E2-1jivqPIBopESIJZq_EzCU_',
         category: 'fruits',
@@ -106,7 +106,7 @@ export const CreateData = () => {
       realm.create('Word', {
         word: 'hirmî',
         image:
-          'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
+          'https://drive.google.com/uc?export=download&id=1_mQD460K9R9-yQgGrsODddepCxq0IOdu',
         audio:
           'https://drive.google.com/uc?export=media&id=1VwmoXPD0Mo3JoSpzc_3UY2C-1jcEIj-2',
         category: 'fruits',
@@ -115,7 +115,7 @@ export const CreateData = () => {
       realm.create('Word', {
         word: 'mûz',
         image:
-          'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
+          'https://drive.google.com/uc?export=download&id=1M4IWcXrI9sQ5mJU5ncGKe1auKrQ2xLcc',
         audio:
           'https://drive.google.com/uc?export=media&id=1So_iT2LOzURJHAml8RCQEQucScjxghYd',
         category: 'fruits',
@@ -124,7 +124,7 @@ export const CreateData = () => {
       realm.create('Word', {
         word: 'trî',
         image:
-          'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
+          'https://drive.google.com/uc?export=download&id=1Q-4DvUdpmyuyP_oLXAE4Cm4fhjLSW2fy',
         audio:
           'https://drive.google.com/uc?export=media&id=1jIZeSmiKlKAGt_sYqNGLfTx_NUm1RhLJ',
         category: 'fruits',
@@ -133,7 +133,7 @@ export const CreateData = () => {
       realm.create('Word', {
         word: 'xelek',
         image:
-          'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
+          'https://drive.google.com/uc?export=download&id=1InBQhTvs5kJYS8kxWPzXffznL_cFtD6c',
         audio:
           'https://drive.google.com/uc?export=media&id=1nk0DMtA7t1YEOxq0odwRMJP-I7aNeK9h',
         category: 'shapes',
@@ -142,7 +142,7 @@ export const CreateData = () => {
       realm.create('Word', {
         word: 'gilover',
         image:
-          'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
+          'https://drive.google.com/uc?export=download&id=1GV0wGw8CtbaJqcwMDwbFBqHPQLgXNrsu',
         audio:
           'https://drive.google.com/uc?export=media&id=1zyCZXXptuCuYVNP0_Rr_wYnWh2fP5Xsl',
         category: 'shapes',
@@ -151,7 +151,7 @@ export const CreateData = () => {
       realm.create('Word', {
         word: 'çargoşe',
         image:
-          'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
+          'https://drive.google.com/uc?export=download&id=1M6ml1BZRh4IWdaLwQnwKO7-cXyMnuDe3',
         audio:
           'https://drive.google.com/uc?export=media&id=1uwMdUYHee9PR9VjQYpRlhY6aSslRJMBG',
         category: 'shapes',
@@ -160,7 +160,7 @@ export const CreateData = () => {
       realm.create('Word', {
         word: 'sêgoşe',
         image:
-          'https://i.postimg.cc/Y9d1f9qz/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg',
+          'https://drive.google.com/uc?export=download&id=1rgxRIowdT2HxnXGvCeuVjjQzh6W8vxnS',
         audio:
           'https://drive.google.com/uc?export=media&id=1YlhNaIfxq7A9G7FJWY2xdkmDjTA___BS',
         category: 'shapes',

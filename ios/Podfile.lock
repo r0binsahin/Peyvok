@@ -1130,11 +1130,6 @@ PODS:
     - glog
     - RCT-Folly (= 2022.05.16.00)
     - React-Core
-  - RNSound (0.11.2):
-    - React-Core
-    - RNSound/Core (= 0.11.2)
-  - RNSound/Core (0.11.2):
-    - React-Core
   - RNVectorIcons (10.0.3):
     - glog
     - RCT-Folly (= 2022.05.16.00)
@@ -1223,7 +1218,6 @@ DEPENDENCIES:
   - "RNCMaskedView (from `../node_modules/@react-native-masked-view/masked-view`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNScreens (from `../node_modules/react-native-screens`)
-  - RNSound (from `../node_modules/react-native-sound`)
   - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -1354,8 +1348,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-gesture-handler"
   RNScreens:
     :path: "../node_modules/react-native-screens"
-  RNSound:
-    :path: "../node_modules/react-native-sound"
   RNVectorIcons:
     :path: "../node_modules/react-native-vector-icons"
   Yoga:
@@ -1428,7 +1420,6 @@ SPEC CHECKSUMS:
   RNCMaskedView: 090213d32d8b3bb83a4dcb7d12c18f0152591906
   RNGestureHandler: 61bfdfc05db9b79dd61f894dcd29d3dcc6db3c02
   RNScreens: b582cb834dc4133307562e930e8fa914b8c04ef2
-  RNSound: 6c156f925295bdc83e8e422e7d8b38d33bc71852
   RNVectorIcons: 210f910e834e3485af40693ad4615c1ec22fc02b
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   SwiftAudioEx: 6f511018b7a0fdfd14ed1bb4081f953588245cc0

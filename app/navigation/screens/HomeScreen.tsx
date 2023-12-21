@@ -7,6 +7,7 @@ import Card from '../../components/Card';
 import Carousel from 'react-native-snap-carousel';
 import {useRef} from 'react';
 import {Category} from '../../models/Category';
+import {CreateData} from '../../components/CreateData';
 
 export const HomeScreen = () => {
   const categories: ICategory[] = categoryData.categoryData;
@@ -38,7 +39,7 @@ export const HomeScreen = () => {
         //@ts-ignore
         renderItem={({item}) => <CategoryView category={item} />}
         sliderWidth={Dimensions.get('screen').width}
-        itemWidth={225}
+        itemWidth={300}
         inactiveSlideShift={0}
         useScrollView={true}
         slideInterpolatedStyle={(index, animatedValue) =>

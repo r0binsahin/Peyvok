@@ -28,7 +28,7 @@ const CategoryView = ({category}: ICategoryViewProps) => {
   }, []);
 
   const colors = ['#3F6150', '#456E5D'];
-  const cardWidth = [209, 215];
+  const cardWidth = [275, 285];
 
   return (
     <View style={styles.container}>
@@ -75,8 +75,8 @@ export default CategoryView;
 
 const styles = StyleSheet.create({
   container: {
-    width: 225,
-    height: 119,
+    width: 300,
+    height: 225,
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -84,8 +84,8 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   card: {
-    width: 225,
-    height: 119,
+    width: 300,
+    height: 225,
     borderRadius: 20,
     position: 'absolute',
 
@@ -103,9 +103,8 @@ const styles = StyleSheet.create({
   },
 
   imgCard: {
-    width: 225,
-    height: 119,
-    backgroundColor: 'white',
+    width: 300,
+    height: 225,
   },
 
   img: {
