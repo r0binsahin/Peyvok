@@ -7,12 +7,11 @@ import SlideItem from './SlideItem';
 
 interface ISliderProps {
   words: Word[];
-  startIndex: number;
 }
 
 const {width} = Dimensions.get('screen');
 
-const Slider = ({words, startIndex}: ISliderProps) => {
+const Slider = ({words}: ISliderProps) => {
   const carouselRef = useRef(null);
   const animatedStyle = (index: number, animatedValue: Animated.Value) => {
     const scale = animatedValue.interpolate({
@@ -43,7 +42,6 @@ const Slider = ({words, startIndex}: ISliderProps) => {
           animatedStyle(index, animatedValue)
         }
         vertical={false}
-        firstItem={startIndex}
       />
     </View>
   );
