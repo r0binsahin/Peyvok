@@ -1,3 +1,5 @@
+import {Word} from '../models/Word';
+
 export type RootStackParamList = {
   HomeScreen: undefined;
   CategoryScreen: {selectedCategory: string};
@@ -5,5 +7,6 @@ export type RootStackParamList = {
   WordScreen: {
     startIndex: number;
     selectedCategory: string;
+    clickedWord: Word;
   };
 };
