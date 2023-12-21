@@ -5,7 +5,6 @@ import {RealmContext, Word} from '../../models/Word';
 
 import Slider from '../../components/Slider';
 import {StyleSheet} from 'react-native';
-import {useEffect} from 'react';
 
 type propsType = NativeStackScreenProps<RootStackParamList, 'WordScreen'>;
 
