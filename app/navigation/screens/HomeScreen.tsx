@@ -29,6 +29,7 @@ export const HomeScreen = () => {
       style={{
         flex: 1,
         marginLeft: 48,
+        backgroundColor: 'white',
       }}>
       <Carousel
         ref={carouselRef}
