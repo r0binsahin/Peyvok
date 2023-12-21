@@ -9,7 +9,7 @@ interface ISliderProps {
   words: Word[];
 }
 
-const {width, height} = Dimensions.get('screen');
+const {width} = Dimensions.get('screen');
 
 const Slider = ({words}: ISliderProps) => {
   const animatedStyle = (index: number, animatedValue: Animated.Value) => {

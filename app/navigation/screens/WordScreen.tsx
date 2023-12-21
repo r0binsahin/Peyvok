@@ -4,7 +4,7 @@ import {RootStackParamList} from '../../utiles/RootStackParams';
 import {RealmContext, Word} from '../../models/Word';
 
 import Slider from '../../components/Slider';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet} from 'react-native';
 
 type propsType = NativeStackScreenProps<RootStackParamList, 'WordScreen'>;
 

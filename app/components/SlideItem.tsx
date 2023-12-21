@@ -16,7 +16,6 @@ interface ISlideItemProps {
 }
 
 const SlideItem = ({word, index}: ISlideItemProps) => {
-  const translateYImage = new Animated.Value(0);
   return (
     <View style={styles.container} key={index}>
       <Image source={{uri: word.image}} style={styles.image} />
@@ -40,7 +39,6 @@ export default SlideItem;
 
 const styles = StyleSheet.create({
   container: {
-    /*     width: 268, */
     height: 279,
     display: 'flex',
     flexDirection: 'column',

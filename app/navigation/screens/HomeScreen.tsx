@@ -3,7 +3,6 @@ import {StyleSheet, View, ScrollView} from 'react-native';
 import CategoryView from '../../components/CategoryView';
 import {ICategory} from '../../models/ICategory';
 import categoryData from '../../assets/categoryData.json';
-import CarouselHolder from '../../components/CarouselHolder';
 
 export const HomeScreen = () => {
   const categories: ICategory[] = categoryData.categoryData;
