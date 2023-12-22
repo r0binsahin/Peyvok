@@ -1,15 +1,15 @@
 import React, {useEffect} from 'react';
 
-import {View} from 'react-native';
-
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 
 import {RealmContext, Word} from './models/Word';
 import {RootStackParamList} from './utiles/RootStackParams';
 import {Category} from './models/Category';
-import BottomTab from './navigation/bottomTab/BottomTab';
+
 import StackNavigation from './navigation/stack/StackNavigation';
+import {Header} from './components/Header';
+import {View} from 'react-native';
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -25,9 +25,11 @@ function App(): React.JSX.Element {
   }, []);
 
   return (
-    <NavigationContainer>
-      <StackNavigation />
-    </NavigationContainer>
+    <View style={{flex: 1, paddingLeft: 48}}>
+      <NavigationContainer>
+        <StackNavigation />
+      </NavigationContainer>
+    </View>
   );
 }
 

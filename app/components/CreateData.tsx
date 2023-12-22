@@ -133,7 +133,7 @@ export const CreateData = () => {
       realm.create('Word', {
         word: 'xelek',
         image:
-          'https://drive.google.com/uc?export=download&id=1InBQhTvs5kJYS8kxWPzXffznL_cFtD6c',
+          'https://drive.google.com/uc?export=download&id=1tJmdkDi7XDfEtzLDqnOBGigR-QquQTn3',
         audio:
           'https://drive.google.com/uc?export=media&id=1nk0DMtA7t1YEOxq0odwRMJP-I7aNeK9h',
         category: 'shapes',
@@ -142,7 +142,7 @@ export const CreateData = () => {
       realm.create('Word', {
         word: 'gilover',
         image:
-          'https://drive.google.com/uc?export=download&id=1GV0wGw8CtbaJqcwMDwbFBqHPQLgXNrsu',
+          'https://drive.google.com/uc?export=download&id=1zbJsO3HVv1owiJwZaLj7wzoQY2Senr_O',
         audio:
           'https://drive.google.com/uc?export=media&id=1zyCZXXptuCuYVNP0_Rr_wYnWh2fP5Xsl',
         category: 'shapes',
@@ -151,7 +151,7 @@ export const CreateData = () => {
       realm.create('Word', {
         word: 'çargoşe',
         image:
-          'https://drive.google.com/uc?export=download&id=1M6ml1BZRh4IWdaLwQnwKO7-cXyMnuDe3',
+          'https://drive.google.com/uc?export=download&id=1pp17ReWfl6xuF78Po-9BiVBFCRidgpJv',
         audio:
           'https://drive.google.com/uc?export=media&id=1uwMdUYHee9PR9VjQYpRlhY6aSslRJMBG',
         category: 'shapes',
@@ -160,7 +160,7 @@ export const CreateData = () => {
       realm.create('Word', {
         word: 'sêgoşe',
         image:
-          'https://drive.google.com/uc?export=download&id=1rgxRIowdT2HxnXGvCeuVjjQzh6W8vxnS',
+          'https://drive.google.com/uc?export=download&id=1maQ_-l7dARoOT_NXZHOSg5imYYjmDBmL',
         audio:
           'https://drive.google.com/uc?export=media&id=1YlhNaIfxq7A9G7FJWY2xdkmDjTA___BS',
         category: 'shapes',

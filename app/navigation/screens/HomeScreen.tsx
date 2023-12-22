@@ -1,4 +1,4 @@
-import {StyleSheet, View, ScrollView, Dimensions, Animated} from 'react-native';
+import {View, Dimensions, Animated} from 'react-native';
 
 import CategoryView from '../../components/CategoryView';
 import {ICategory} from '../../models/ICategory';
@@ -27,7 +27,6 @@ export const HomeScreen = () => {
     <View
       style={{
         flex: 1,
-        backgroundColor: 'white',
       }}>
       <Carousel
         ref={carouselRef}
@@ -36,7 +35,7 @@ export const HomeScreen = () => {
         //@ts-ignore
         renderItem={({item}) => <CategoryView category={item} />}
         sliderWidth={Dimensions.get('screen').width}
-        itemWidth={300}
+        itemWidth={225}
         inactiveSlideShift={0}
         useScrollView={true}
         slideInterpolatedStyle={(index, animatedValue) =>
@@ -48,20 +47,3 @@ export const HomeScreen = () => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    padding: 20,
-    backgroundColor: 'yellow',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  categoryContainer: {
-    display: 'flex',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-});
