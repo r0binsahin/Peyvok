@@ -39,7 +39,7 @@ export default SlideItem;
 
 const styles = StyleSheet.create({
   container: {
-    height: 290,
+    height: 310,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   image: {
-    height: 250,
+    height: 260,
     width: '100%',
     borderRadius: 20,
     resizeMode: 'cover',

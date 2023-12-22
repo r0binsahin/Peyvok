@@ -1,7 +1,8 @@
 export type RootStackParamList = {
+  Home: undefined;
   HomeScreen: undefined;
   CategoryScreen: {selectedCategory: string};
-  InfoScreen: undefined;
+  Info: undefined;
   WordScreen: {
     selectedCategory: string;
     clickedWordId: string;
