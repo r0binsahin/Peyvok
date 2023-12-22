@@ -38,20 +38,16 @@ export default SlideItem;
 
 const styles = StyleSheet.create({
   container: {
-    height: 310,
+    height: 'auto',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
-
     gap: 10,
-
-    margin: 10,
   },
   image: {
-    height: 260,
+    height: 266,
     width: '100%',
     borderRadius: 20,
-    resizeMode: 'cover',
   },
   content: {
     display: 'flex',

@@ -4,7 +4,7 @@ import {RootStackParamList} from '../../utiles/RootStackParams';
 import {RealmContext, Word} from '../../models/Word';
 
 import Slider from '../../components/Slider';
-import {StyleSheet} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 
 type propsType = NativeStackScreenProps<RootStackParamList, 'WordScreen'>;
 
@@ -28,7 +28,11 @@ export const WordScreen = (props: propsType) => {
       index === self.findIndex(t => t?.word === item?.word),
   );
 
-  return <Slider words={reorderedWords} />;
+  return (
+    <View style={{flex: 1}}>
+      <Slider words={reorderedWords} />
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({});
