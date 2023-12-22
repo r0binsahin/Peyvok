@@ -3,11 +3,9 @@ import {StyleSheet, View, ScrollView, Dimensions, Animated} from 'react-native';
 import CategoryView from '../../components/CategoryView';
 import {ICategory} from '../../models/ICategory';
 import categoryData from '../../assets/categoryData.json';
-import Card from '../../components/Card';
+
 import Carousel from 'react-native-snap-carousel';
 import {useRef} from 'react';
-import {Category} from '../../models/Category';
-import {CreateData} from '../../components/CreateData';
 
 export const HomeScreen = () => {
   const categories: ICategory[] = categoryData.categoryData;
@@ -21,7 +19,7 @@ export const HomeScreen = () => {
     });
 
     return {
-      transform: [{scale}, {translateX: index * 20}],
+      transform: [{scale}, {translateX: index * 30}],
     };
   };
 
@@ -29,7 +27,6 @@ export const HomeScreen = () => {
     <View
       style={{
         flex: 1,
-        marginLeft: 48,
         backgroundColor: 'white',
       }}>
       <Carousel

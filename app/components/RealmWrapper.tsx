@@ -35,7 +35,7 @@ export const RealmWrapper = () => {
   }, [app]);
 
   return (
-    <SafeAreaView style={{flex: 1}}>
+    <SafeAreaView style={{flex: 1, marginLeft: 48}}>
       {isLoggedIn ? (
         <RealmProvider
           sync={{
