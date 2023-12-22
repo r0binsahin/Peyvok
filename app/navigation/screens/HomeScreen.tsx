@@ -6,7 +6,6 @@ import categoryData from '../../assets/categoryData.json';
 
 import Carousel from 'react-native-snap-carousel';
 import {useRef} from 'react';
-import {CreateData} from '../../components/CreateData';
 
 export const HomeScreen = () => {
   const categories: ICategory[] = categoryData.categoryData;

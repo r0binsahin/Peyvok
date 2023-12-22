@@ -6,8 +6,10 @@ import {NavigationContainer} from '@react-navigation/native';
 import {RealmContext, Word} from './models/Word';
 import {RootStackParamList} from './utiles/RootStackParams';
 import {Category} from './models/Category';
-import TopTab from './navigation/topTab/TopTab';
+
 import StackNavigation from './navigation/stack/StackNavigation';
+import {Header} from './components/Header';
+import {View} from 'react-native';
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -23,9 +25,11 @@ function App(): React.JSX.Element {
   }, []);
 
   return (
-    <NavigationContainer>
-      <TopTab />
-    </NavigationContainer>
+    <View style={{flex: 1}}>
+      <NavigationContainer>
+        <StackNavigation />
+      </NavigationContainer>
+    </View>
   );
 }
 
