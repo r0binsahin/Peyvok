@@ -8,7 +8,6 @@ import {CategoryScreen} from '../screens/CategoryScreen';
 import {InfoScreen} from '../screens/InfoScreen';
 import {WordScreen} from '../screens/WordScreen';
 import {Header} from '../../components/Header';
-import {useRoute} from '@react-navigation/native';
 
 const Stack = createStackNavigator<RootStackParamList>();
 

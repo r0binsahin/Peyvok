@@ -1,14 +1,9 @@
-import {
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-  Animated,
-  Image,
-} from 'react-native';
-import React from 'react';
+import {StyleSheet, Text, TouchableOpacity, View, Image} from 'react-native';
 import {Word} from '../models/Word';
 import {playTrack} from '../utiles/audioFunctions';
+
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+MaterialCommunityIcons.loadFont();
 
 interface ISlideItemProps {
   word: Word;
@@ -27,7 +22,11 @@ const SlideItem = ({word, index}: ISlideItemProps) => {
 
         <TouchableOpacity onPress={() => playTrack(word.audio)}>
           <View style={styles.iconBox}>
-            <Text style={styles.icon}>x</Text>
+            <MaterialCommunityIcons
+              name="volume-high"
+              size={24}
+              color={'#fff'}
+            />
           </View>
         </TouchableOpacity>
       </View>
@@ -81,9 +80,5 @@ const styles = StyleSheet.create({
     borderRadius: 100,
     justifyContent: 'center',
     alignItems: 'center',
-  },
-  icon: {
-    fontSize: 15,
-    color: '#fff',
   },
 });

@@ -4,11 +4,12 @@ import {StyleSheet} from 'react-native';
 import {useNavigation, useRoute} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {RootStackParamList} from '../utiles/RootStackParams';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+MaterialCommunityIcons.loadFont();
 
 export const Header = () => {
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
   const route = useRoute();
-  const imageURL = require('../assets/avatar/avatar.png');
 
   const isHomeScreen = route.name === 'HomeScreen' ? true : false;
   return (
@@ -28,14 +29,22 @@ export const Header = () => {
       ) : (
         <View>
           <TouchableOpacity onPress={() => navigation.goBack()}>
-            <Text>BACK</Text>
+            <MaterialCommunityIcons
+              name="arrow-left-circle"
+              size={40}
+              color={'#3B3B3BCC'}
+            />
           </TouchableOpacity>
         </View>
       )}
 
       <View>
         <TouchableOpacity onPress={() => navigation.navigate('Info')}>
-          <Text>INFO</Text>
+          <MaterialCommunityIcons
+            name="information-outline"
+            size={40}
+            color={'#3B3B3BCC'}
+          />
         </TouchableOpacity>
       </View>
     </View>
