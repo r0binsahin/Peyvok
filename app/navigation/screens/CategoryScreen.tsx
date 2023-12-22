@@ -16,13 +16,13 @@ import {RootStackParamList} from '../../utiles/RootStackParams';
 import WordView from '../../components/WordView';
 
 type propsType = NativeStackScreenProps<RootStackParamList, 'CategoryScreen'>;
-const {width, height} = Dimensions.get('screen');
 
 export const CategoryScreen = (props: propsType) => {
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
   const {route} = props;
   const {selectedCategory} = route.params;
   const {useQuery} = RealmContext;
+  const words = useQuery(Word);
 
   const filteredWords = useQuery(Word, words => {
     return words.filtered(`category == $0`, selectedCategory);
@@ -52,13 +52,11 @@ export const CategoryScreen = (props: propsType) => {
 
 const styles = StyleSheet.create({
   container: {
-    width,
-    height,
-    display: 'flex',
+    flex: 1,
     flexDirection: 'row',
     flexWrap: 'wrap',
-
-    justifyContent: 'space-around',
-    alignItems: 'center',
+    gap: 20,
+    justifyContent: 'center',
+    paddingVertical: 32,
   },
 });

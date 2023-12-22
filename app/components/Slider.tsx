@@ -35,7 +35,7 @@ const Slider = ({words}: ISliderProps) => {
         //@ts-ignore
         renderItem={({item, index}) => <SlideItem word={item} index={index} />}
         sliderWidth={width}
-        itemWidth={325}
+        itemWidth={268}
         inactiveSlideShift={0}
         useScrollView={true}
         slideInterpolatedStyle={(index, animatedValue) =>

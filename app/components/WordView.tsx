@@ -25,10 +25,6 @@ const WordView = ({word}: IWordViewProps) => {
       />
 
       <View style={styles.textBox}>
-        <TouchableOpacity onPress={() => playTrack(word.audio)}>
-          <Text style={styles.text}>Listen</Text>
-        </TouchableOpacity>
-
         <Text style={styles.text}>{word.word}</Text>
       </View>
     </View>
@@ -39,29 +35,30 @@ export default WordView;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#ff0044',
-    padding: 10,
-    borderRadius: 10,
     display: 'flex',
-
-    marginBottom: 10,
-    marginTop: 10,
-
+    flexDirection: 'column',
+    width: 164,
+    height: 207,
     alignItems: 'center',
+    gap: 10,
   },
 
   img: {
-    width: 125,
-    height: 125,
+    width: 164,
+    height: 162,
     resizeMode: 'cover',
+    borderRadius: 20,
   },
   textBox: {
-    width: '100%',
+    width: 107,
+    height: 35,
     alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#B9B9B9',
+    borderRadius: 100,
   },
   text: {
+    fontSize: 20,
     color: 'white',
-    fontSize: 15,
-    margin: 10,
   },
 });
