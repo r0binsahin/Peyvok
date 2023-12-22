@@ -25,7 +25,7 @@ function App(): React.JSX.Element {
   }, []);
 
   return (
-    <View style={{flex: 1}}>
+    <View style={{flex: 1, paddingLeft: 48}}>
       <NavigationContainer>
         <StackNavigation />
       </NavigationContainer>
