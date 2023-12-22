@@ -115,18 +115,18 @@ const styles = StyleSheet.create({
   },
 
   titleBox: {
-    width: 48,
-    height: 26,
+    width: 200,
+    height: 36,
+
     backgroundColor: 'grey',
     borderRadius: 100,
     fontSize: 20,
     justifyContent: 'center',
     alignItems: 'center',
-    color: 'white',
   },
 
   title: {
-    fontSize: 20,
     color: 'white',
+    fontSize: 20,
   },
 });
