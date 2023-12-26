@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 
 import {createStackNavigator} from '@react-navigation/stack';
-import {NavigationContainer} from '@react-navigation/native';
+import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 
 import {RealmContext, Word} from './models/Word';
 import {RootStackParamList} from './utiles/RootStackParams';
@@ -9,13 +9,22 @@ import {Category} from './models/Category';
 
 import StackNavigation from './navigation/stack/StackNavigation';
 import {Header} from './components/Header';
-import {View} from 'react-native';
+import {Dimensions, View} from 'react-native';
+import Background from './components/Background';
 
 const Stack = createStackNavigator<RootStackParamList>();
 
 function App(): React.JSX.Element {
   const {useRealm} = RealmContext;
   const realm = useRealm();
+
+  const transparentTheme = {
+    ...DefaultTheme,
+    colors: {
+      ...DefaultTheme.colors,
+      background: 'transparent',
+    },
+  };
 
   useEffect(() => {
     realm.subscriptions.update(mutableSubs => {
@@ -25,11 +34,9 @@ function App(): React.JSX.Element {
   }, []);
 
   return (
-    <View style={{flex: 1, paddingLeft: 48}}>
-      <NavigationContainer>
-        <StackNavigation />
-      </NavigationContainer>
-    </View>
+    <NavigationContainer theme={transparentTheme}>
+      <StackNavigation />
+    </NavigationContainer>
   );
 }
 

@@ -1,7 +1,7 @@
-import {Text, View} from 'react-native';
-import Slider from '../../components/Slider';
-import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import {View} from 'react-native';
+import Background from '../../components/Background';
 import {RealmContext, Word} from '../../models/Word';
+import {Text} from 'react-native-svg';
 
 export const InfoScreen = () => {
   const {useQuery} = RealmContext;
@@ -9,8 +9,11 @@ export const InfoScreen = () => {
 
   const convertedWords: Word[] = Array.from(words);
   return (
-    <GestureHandlerRootView>
-      <Slider startIndex={0} words={convertedWords} />
-    </GestureHandlerRootView>
+    <View
+      style={{
+        flex: 1,
+      }}>
+      <Text>Info</Text>
+    </View>
   );
 };
