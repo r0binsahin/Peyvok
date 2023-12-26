@@ -87,9 +87,7 @@ const Background = ({children}: IBackgroundProps) => {
         </View>
       </View>
       <View style={styles.bottom}>
-        <View style={styles.box}>
-          <BottomWave />
-        </View>
+        <BottomWave />
       </View>
     </View>
   );
@@ -106,11 +104,6 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
   },
-  box: {
-    bottom: 0,
-  },
-  bottom: {
-    width: '100%',
-    bottom: 0,
-  },
+  box: {},
+  bottom: {},
 });

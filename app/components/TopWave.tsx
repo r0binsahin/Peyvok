@@ -6,7 +6,7 @@ const TopWave = () => {
   return (
     <Svg
       width={Dimensions.get('screen').width}
-      height="358"
+      height="420"
       viewBox={`0 0 ${Dimensions.get('screen').width} 358`}>
       <Defs>
         <LinearGradient

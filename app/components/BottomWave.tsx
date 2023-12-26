@@ -6,23 +6,23 @@ const BottomWave = () => {
   return (
     <Svg
       width={Dimensions.get('screen').width}
-      height="71"
-      viewBox={`0 0 ${Dimensions.get('screen').width} 71`}
+      height="122"
+      viewBox={`0 0 ${Dimensions.get('screen').width} 122`}
       style={styles.bottomWavy}>
       <Defs>
         <LinearGradient
           id="gradientBottom"
-          x1="415.25"
-          y1="3.72949e-08"
-          x2="415"
-          y2="256.5"
+          x1="405.999"
+          y1="45"
+          x2="405.977"
+          y2="118.699"
           gradientUnits="userSpaceOnUse">
           <Stop stopColor="#F8CAFF" />
           <Stop offset="1" stopColor="#FF9FF5" />
         </LinearGradient>
       </Defs>
       <Path
-        d="M201 0C110.6 0 10 29.6667 -29 44.5V177.5H859.5V0C758.5 0 622.5 44.5 516 44.5C409.5 44.5 314 0 201 0Z"
+        d="M291 25.5C182.235 25.5 46.9229 73.238 0 77.5V121.5H1069V0C947.482 0 714.136 70 586 70C457.864 70 426.956 25.5 291 25.5Z"
         fill="url(#gradientBottom)"
       />
     </Svg>
