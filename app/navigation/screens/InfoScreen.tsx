@@ -1,10 +1,19 @@
+import {View} from 'react-native';
 import Background from '../../components/Background';
 import {RealmContext, Word} from '../../models/Word';
+import {Text} from 'react-native-svg';
 
 export const InfoScreen = () => {
   const {useQuery} = RealmContext;
   const words = useQuery(Word);
 
   const convertedWords: Word[] = Array.from(words);
-  return <Background />;
+  return (
+    <View
+      style={{
+        flex: 1,
+      }}>
+      <Text>Info</Text>
+    </View>
+  );
 };

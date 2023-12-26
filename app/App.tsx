@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 
 import {createStackNavigator} from '@react-navigation/stack';
-import {NavigationContainer} from '@react-navigation/native';
+import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 
 import {RealmContext, Word} from './models/Word';
 import {RootStackParamList} from './utiles/RootStackParams';
@@ -18,6 +18,14 @@ function App(): React.JSX.Element {
   const {useRealm} = RealmContext;
   const realm = useRealm();
 
+  const transparentTheme = {
+    ...DefaultTheme,
+    colors: {
+      ...DefaultTheme.colors,
+      background: 'transparent',
+    },
+  };
+
   useEffect(() => {
     realm.subscriptions.update(mutableSubs => {
       mutableSubs.add(realm.objects(Word));
@@ -26,8 +34,8 @@ function App(): React.JSX.Element {
   }, []);
 
   return (
-    <View style={{flex: 1}}>
-      <NavigationContainer>
+    <View style={{flex: 1, backgroundColor: 'transparent'}}>
+      <NavigationContainer theme={transparentTheme}>
         <StackNavigation />
       </NavigationContainer>
     </View>
