@@ -9,7 +9,7 @@ import {Category} from './models/Category';
 
 import StackNavigation from './navigation/stack/StackNavigation';
 import {Header} from './components/Header';
-import {View} from 'react-native';
+import {Dimensions, View} from 'react-native';
 import Background from './components/Background';
 
 const Stack = createStackNavigator<RootStackParamList>();
@@ -34,11 +34,9 @@ function App(): React.JSX.Element {
   }, []);
 
   return (
-    <View style={{flex: 1, backgroundColor: 'transparent'}}>
-      <NavigationContainer theme={transparentTheme}>
-        <StackNavigation />
-      </NavigationContainer>
-    </View>
+    <NavigationContainer theme={transparentTheme}>
+      <StackNavigation />
+    </NavigationContainer>
   );
 }
 

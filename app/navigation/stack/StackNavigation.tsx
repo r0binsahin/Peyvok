@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {Dimensions, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {RootStackParamList} from '../../utiles/RootStackParams';
@@ -18,6 +18,7 @@ const StackNavigation = () => {
       initialRouteName="HomeScreen"
       screenOptions={{
         header: () => <Header />,
+
         headerShown: true,
       }}>
       <Stack.Screen name="HomeScreen" component={HomeScreen}></Stack.Screen>
