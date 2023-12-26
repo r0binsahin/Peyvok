@@ -1,52 +1,61 @@
-import {Dimensions, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import Svg, {Defs, LinearGradient, Path, Stop} from 'react-native-svg';
+import {Dimensions, PixelRatio, StyleSheet, View} from 'react-native';
 import TopWave from './TopWave';
 import Cloud from './Cloud';
 import BottomWave from './BottomWave';
 import Star from './Star';
 
 const Background = () => {
-  const pink = '#FABFFD';
-  const purple = '#A8A6FF';
+  const screenWidth = Dimensions.get('window').width;
+  const screenHeight = Dimensions.get('window').height;
+  const percentageToPixels = (percentage: string, dimension: number) => {
+    const elemDimension = parseFloat(percentage);
+    return PixelRatio.roundToNearestPixel((dimension * elemDimension) / 100);
+  };
+
+  const stars = [
+    {top: 35, left: 40, color: '#A8A6FF'},
+    {top: 15, left: percentageToPixels('70%', screenWidth), color: '#FABFFD'},
+    {top: 25, left: percentageToPixels('30%', screenWidth), color: '#FABFFD'},
+    {top: 80, left: percentageToPixels('50%', screenWidth), color: '#A8A6FF'},
+    {top: 20, left: percentageToPixels('51%', screenWidth), color: '#A8A6FF'},
+    {top: 150, left: percentageToPixels('40%', screenWidth), color: '#FABFFD'},
+    {top: percentageToPixels('50%', screenHeight), left: 50, color: '#FABFFD'},
+    {
+      bottom: percentageToPixels('30%', screenHeight),
+      left: percentageToPixels('45%', screenWidth),
+      color: '#A8A6FF',
+    },
+    {
+      bottom: percentageToPixels('60%', screenHeight),
+      left: percentageToPixels('75%', screenWidth),
+      color: '#FABFFD',
+    },
+    {
+      top: percentageToPixels('35%', screenHeight),
+      right: percentageToPixels('10%', screenWidth),
+      color: '#A8A6FF',
+    },
+    {
+      top: percentageToPixels('60%', screenHeight),
+      right: percentageToPixels('5%', screenWidth),
+      color: '#FABFFD',
+    },
+  ];
+
   return (
     <View style={styles.container}>
-      <View style={{position: 'absolute', top: 35, left: 40, zIndex: 1}}>
-        <Star color={purple} />
-      </View>
-      <View style={{position: 'absolute', top: 15, left: '70%', zIndex: 1}}>
-        <Star color={pink} />
-      </View>
-      <View style={{position: 'absolute', top: 25, left: '30%', zIndex: 1}}>
-        <Star color={pink} />
-      </View>
-      <View style={{position: 'absolute', top: 70, left: '50%', zIndex: 1}}>
-        <Star color={purple} />
-      </View>
-      <View style={{position: 'absolute', top: 20, left: '51%', zIndex: 1}}>
-        <Star color={purple} />
-      </View>
-      <View style={{position: 'absolute', top: 150, left: '40%', zIndex: 1}}>
-        <Star color={pink} />
-      </View>
-      <View style={{position: 'absolute', top: '50%', left: 50, zIndex: 1}}>
-        <Star color={pink} />
-      </View>
-      <View
-        style={{position: 'absolute', bottom: '30%', left: '50%', zIndex: 1}}>
-        <Star color={purple} />
-      </View>
-      <View
-        style={{position: 'absolute', bottom: '60%', left: '75%', zIndex: 1}}>
-        <Star color={pink} />
-      </View>
-      <View style={{position: 'absolute', top: '35%', right: '10%', zIndex: 1}}>
-        <Star color={purple} />
-      </View>
-      <View style={{position: 'absolute', top: '60%', right: '5%', zIndex: 1}}>
-        <Star color={pink} />
-      </View>
-
+      {stars.map((star, index) => (
+        <View
+          style={{
+            position: 'absolute',
+            zIndex: 1,
+            ...star,
+          }}
+          key={index}>
+          <Star color={star.color} />
+        </View>
+      ))}
       <View style={styles.top}>
         <View style={styles.box}>
           <TopWave />
@@ -81,17 +90,12 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
   },
-  topWavy: {},
   box: {
     bottom: 0,
   },
   bottom: {
     position: 'absolute',
-    width: Dimensions.get('screen').width,
-    bottom: 0,
-  },
-  bottomWavy: {
-    position: 'absolute',
+    width: '100%', // Use '100%' instead of Dimensions.get('screen').width
     bottom: 0,
   },
 });
