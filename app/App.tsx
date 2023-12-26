@@ -10,6 +10,7 @@ import {Category} from './models/Category';
 import StackNavigation from './navigation/stack/StackNavigation';
 import {Header} from './components/Header';
 import {View} from 'react-native';
+import Background from './components/Background';
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -25,7 +26,7 @@ function App(): React.JSX.Element {
   }, []);
 
   return (
-    <View style={{flex: 1, paddingLeft: 48}}>
+    <View style={{flex: 1}}>
       <NavigationContainer>
         <StackNavigation />
       </NavigationContainer>

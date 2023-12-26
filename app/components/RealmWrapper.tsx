@@ -1,6 +1,6 @@
 import {useApp} from '@realm/react';
 
-import {ActivityIndicator, SafeAreaView} from 'react-native';
+import {ActivityIndicator, SafeAreaView, View} from 'react-native';
 import {useEffect, useState} from 'react';
 
 import {OpenRealmBehaviorType} from 'realm';

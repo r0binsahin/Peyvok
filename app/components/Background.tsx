@@ -5,7 +5,11 @@ import Cloud from './Cloud';
 import BottomWave from './BottomWave';
 import Star from './Star';
 
-const Background = () => {
+interface IBackgroundProps {
+  children: React.ReactNode;
+}
+
+const Background = ({children}: IBackgroundProps) => {
   const screenWidth = Dimensions.get('window').width;
   const screenHeight = Dimensions.get('window').height;
   const percentageToPixels = (percentage: string, dimension: number) => {
@@ -56,6 +60,18 @@ const Background = () => {
           <Star color={star.color} />
         </View>
       ))}
+
+      <View
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          bottom: 0,
+          right: 0,
+          zIndex: 1,
+        }}>
+        {children}
+      </View>
       <View style={styles.top}>
         <View style={styles.box}>
           <TopWave />
@@ -84,7 +100,7 @@ export default Background;
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#B9B7FF',
-    padding: 0,
+    zIndex: 0,
   },
   top: {
     width: '100%',
@@ -94,8 +110,7 @@ const styles = StyleSheet.create({
     bottom: 0,
   },
   bottom: {
-    position: 'absolute',
-    width: '100%', // Use '100%' instead of Dimensions.get('screen').width
+    width: '100%',
     bottom: 0,
   },
 });
