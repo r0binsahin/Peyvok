@@ -1,5 +1,5 @@
 import {Dimensions, StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {RootStackParamList} from '../../utiles/RootStackParams';
 
@@ -13,13 +13,21 @@ import Background from '../../components/Background';
 const Stack = createStackNavigator<RootStackParamList>();
 
 const StackNavigation = () => {
+  const [isHeaderShown, setIsHeaderShown] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsHeaderShown(true);
+    }, 6000);
+  });
+
   return (
     <Stack.Navigator
       initialRouteName="HomeScreen"
       screenOptions={{
         header: () => <Header />,
 
-        headerShown: true,
+        headerShown: isHeaderShown,
       }}>
       <Stack.Screen name="HomeScreen" component={HomeScreen}></Stack.Screen>
       <Stack.Screen

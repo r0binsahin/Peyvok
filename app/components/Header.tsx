@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {View, Text, TouchableOpacity, Image} from 'react-native';
 import {StyleSheet} from 'react-native';
 import {useNavigation, useRoute} from '@react-navigation/native';
@@ -11,7 +11,15 @@ export const Header = () => {
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
   const route = useRoute();
 
+  let isHeaderShown = false;
   const isHomeScreen = route.name === 'HomeScreen' ? true : false;
+
+  useEffect(() => {
+    setTimeout(() => {
+      isHeaderShown = true;
+    }, 6000);
+  });
+
   return (
     <View style={styles.container}>
       {isHomeScreen ? (
