@@ -11,6 +11,7 @@ import StackNavigation from './navigation/stack/StackNavigation';
 import {Header} from './components/Header';
 import {Dimensions, View} from 'react-native';
 import Background from './components/Background';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -34,9 +35,11 @@ function App(): React.JSX.Element {
   }, []);
 
   return (
-    <NavigationContainer theme={transparentTheme}>
-      <StackNavigation />
-    </NavigationContainer>
+    <SafeAreaView style={{flex: 1, justifyContent: 'center'}}>
+      <NavigationContainer theme={transparentTheme}>
+        <StackNavigation />
+      </NavigationContainer>
+    </SafeAreaView>
   );
 }
 
