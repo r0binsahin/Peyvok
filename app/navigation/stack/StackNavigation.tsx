@@ -25,9 +25,8 @@ const StackNavigation = () => {
     <Stack.Navigator
       initialRouteName="HomeScreen"
       screenOptions={{
-        header: () => <Header />,
-
         headerShown: isHeaderShown,
+        header: () => <Header />,
       }}>
       <Stack.Screen name="HomeScreen" component={HomeScreen}></Stack.Screen>
       <Stack.Screen
@@ -40,4 +39,8 @@ const StackNavigation = () => {
 };
 export default StackNavigation;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  cover: {
+    flex: 1,
+  },
+});

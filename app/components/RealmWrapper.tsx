@@ -35,7 +35,7 @@ export const RealmWrapper = () => {
   }, [app]);
 
   return (
-    <SafeAreaView style={{flex: 1}}>
+    <>
       {isLoggedIn ? (
         <RealmProvider
           sync={{
@@ -53,6 +53,6 @@ export const RealmWrapper = () => {
       ) : (
         <ActivityIndicator size={'large'} />
       )}
-    </SafeAreaView>
+    </>
   );
 };
