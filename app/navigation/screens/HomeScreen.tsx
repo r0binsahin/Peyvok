@@ -27,7 +27,7 @@ export const HomeScreen = () => {
 
       Animated.timing(bounceValue, {
         toValue: 0,
-        duration: 400,
+        duration: 600,
         easing: Easing.out(Easing.ease),
         useNativeDriver: true,
       }).start(() => {
