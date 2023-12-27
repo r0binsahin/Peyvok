@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {View, Text, TouchableOpacity, Image} from 'react-native';
 import {StyleSheet} from 'react-native';
 import {useNavigation, useRoute} from '@react-navigation/native';
@@ -10,8 +10,8 @@ MaterialCommunityIcons.loadFont();
 export const Header = () => {
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
   const route = useRoute();
-
   const isHomeScreen = route.name === 'HomeScreen' ? true : false;
+
   return (
     <View style={styles.container}>
       {isHomeScreen ? (
@@ -19,12 +19,11 @@ export const Header = () => {
           <View>
             <Text>TU BI XÊR HATÎ PEYVOKÊ</Text>
           </View>
-          <View style={styles.imageBox}>
-            <Image
-              style={styles.image}
-              source={require('../assets/avatar/avatar.png')}
-            />
-          </View>
+
+          <Image
+            style={styles.image}
+            source={require('../assets/avatar/avatar.png')}
+          />
         </View>
       ) : (
         <View>
@@ -56,7 +55,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingHorizontal: 20,
+    paddingHorizontal: 50,
+    paddingVertical: 20,
   },
 
   avatarBox: {
@@ -66,15 +66,12 @@ const styles = StyleSheet.create({
     gap: 50,
   },
 
-  imageBox: {
+  image: {
     width: 144,
     height: 80,
-  },
-
-  image: {
-    width: '100%',
-    height: '100%',
     resizeMode: 'center',
+    position: 'absolute',
+    left: 200,
   },
 
   leftContainer: {

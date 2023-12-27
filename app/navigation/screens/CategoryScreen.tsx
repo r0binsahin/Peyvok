@@ -57,6 +57,6 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     gap: 20,
     justifyContent: 'center',
-    paddingVertical: 32,
+    paddingHorizontal: 20,
   },
 });

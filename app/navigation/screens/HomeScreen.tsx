@@ -107,6 +107,7 @@ export const HomeScreen = () => {
             renderItem={({item}) => <CategoryView category={item} />}
             sliderWidth={Dimensions.get('screen').width}
             itemWidth={225}
+            slideStyle={{justifyContent: 'center'}}
             inactiveSlideShift={0}
             useScrollView={true}
             slideInterpolatedStyle={(index, animatedValue) =>
