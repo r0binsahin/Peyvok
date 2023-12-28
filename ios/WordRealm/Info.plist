@@ -32,7 +32,7 @@
 		<true/>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string/>
+	<string></string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>AntDesign.ttf</string>
@@ -54,15 +54,12 @@
 		<string>Octicons.ttf</string>
 		<string>Zocial.ttf</string>
 		<string>Fontisto.ttf</string>
-		<string>gothamrnd_bold.ttf</string>
-		<string>gothamrnd_bolditalic.ttf</string>
-		<string>gothamrnd_book.ttf</string>
-		<string>gothamrnd_bookitalic.ttf</string>
-		<string>gothamrnd_light.ttf</string>
-		<string>gothamrnd_lightitalic.ttf</string>
-		<string>gothamrnd_medium.ttf</string>
-		<string>gothamrnd_mediumitalic.ttf</string>
 		<string>RubikDoodleShadow-Regular.ttf</string>
+		<string>GothamRoundedBold_21016.ttf</string>
+		<string>GothamRoundedBook_21018.ttf</string>
+		<string>GothamRoundedLight_21020.ttf</string>
+		<string>GothamRoundedMedium_21022.ttf</string>
+		<string>VarelaRound-Regular.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
