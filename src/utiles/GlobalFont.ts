@@ -1,7 +1,8 @@
 import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
-  CustomFont: {
-    fontFamily: 'Times New Roman',
+  fontBold_18: {
+    fontFamily: 'gothamrnd_bold.ttf',
+    fontSize: 18,
   },
 });

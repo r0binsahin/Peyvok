@@ -13,6 +13,7 @@ import {useNavigation, useRoute} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {RootStackParamList} from '../utiles/RootStackParams';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import GlobalFont from '../utiles/GlobalFont';
 
 interface IHeaderProps {
   isHeaderShown: boolean;
@@ -45,7 +46,9 @@ export const Header = ({isHeaderShown}: IHeaderProps) => {
       {isHomeScreen ? (
         <View style={styles.avatarBox}>
           <View>
-            <Text>TU BI XÊR HATÎ PEYVOKÊ</Text>
+            <Text style={[styles.text, GlobalFont.fontBold_18]}>
+              tu bi xêr hatî Peyvokê
+            </Text>
           </View>
 
           <Image
@@ -114,4 +117,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
   },
+
+  text: {},
 });

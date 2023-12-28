@@ -1,0 +1,37 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/gothamrnd_bold.ttf",
+      "sha1": "8921c2dce1334074b3517ec9342fefc4f04cb613"
+    },
+    {
+      "path": "assets/fonts/gothamrnd_bolditalic.ttf",
+      "sha1": "bb83d5c91c990b94fa3f3a37240cd3bd1e810084"
+    },
+    {
+      "path": "assets/fonts/gothamrnd_book.ttf",
+      "sha1": "debc211d514235be9c8b4e2bcd58f8602db3711f"
+    },
+    {
+      "path": "assets/fonts/gothamrnd_bookitalic.ttf",
+      "sha1": "6830920bc2abdc628a75c4e4eb8366fa53481cea"
+    },
+    {
+      "path": "assets/fonts/gothamrnd_light.ttf",
+      "sha1": "0c9f5ed91d82bd83364323017bec682d8bcdc4ff"
+    },
+    {
+      "path": "assets/fonts/gothamrnd_lightitalic.ttf",
+      "sha1": "52b4b36e3fe434e0008f07a03131326549c4c056"
+    },
+    {
+      "path": "assets/fonts/gothamrnd_medium.ttf",
+      "sha1": "3a3f1f4421c4b720186d7fd2f4274bdb4dd13e69"
+    },
+    {
+      "path": "assets/fonts/gothamrnd_mediumitalic.ttf",
+      "sha1": "32c74397ab75a38d981a0f862537a916b3bc1d4c"
+    }
+  ]
+}
