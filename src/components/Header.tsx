@@ -63,7 +63,7 @@ export const Header = ({isHeaderShown}: IHeaderProps) => {
             <MaterialCommunityIcons
               name="arrow-left-circle"
               size={40}
-              color={'#1C1B1F'}
+              color={'#3B3B3BB2'}
             />
           </TouchableOpacity>
         </View>

@@ -43,4 +43,14 @@ export default StyleSheet.create({
     color: '#000',
     textTransform: 'capitalize',
   },
+
+  sliderWordTitle: {
+    fontFamily: 'Quicksand-Bold',
+    fontSize: 16,
+    letterSpacing: 1.5,
+    marginHorizontal: 20,
+    marginVertical: 4,
+    color: '#FFFFFF',
+    textTransform: 'capitalize',
+  },
 });

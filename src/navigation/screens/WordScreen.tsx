@@ -4,14 +4,15 @@ import {RootStackParamList} from '../../utiles/RootStackParams';
 import {RealmContext, Word} from '../../models/Word';
 
 import Slider from '../../components/Slider';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import GlobalStyles from '../../utiles/GlobalStyles';
 
 type propsType = NativeStackScreenProps<RootStackParamList, 'WordScreen'>;
 
 export const WordScreen = (props: propsType) => {
   const {route} = props;
-  const {selectedCategory, clickedWordId} = route.params;
+  const {selectedCategory, clickedWordId, selectedCategoryKu} = route.params;
 
   const {useQuery} = RealmContext;
   const filteredWords = useQuery(Word, words => {
@@ -30,10 +31,19 @@ export const WordScreen = (props: propsType) => {
   );
 
   return (
-    <View style={{flex: 1}}>
+    <View style={{flex: 1, alignItems: 'center'}}>
+      <View style={styles.categoryTitle}>
+        <Text style={GlobalStyles.categoryHead}>{selectedCategoryKu}</Text>
+      </View>
       <Slider words={reorderedWords} />
     </View>
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  categoryTitle: {
+    position: 'absolute',
+    zIndex: 2,
+    top: 0,
+  },
+});

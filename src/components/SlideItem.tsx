@@ -3,6 +3,8 @@ import {Word} from '../models/Word';
 import {playTrack} from '../utiles/audioFunctions';
 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import React from 'react';
+import GlobalStyles from '../utiles/GlobalStyles';
 MaterialCommunityIcons.loadFont();
 
 interface ISlideItemProps {
@@ -17,7 +19,7 @@ const SlideItem = ({word, index}: ISlideItemProps) => {
 
       <View style={styles.content}>
         <View style={styles.titleBox}>
-          <Text style={styles.title}>{word.word}</Text>
+          <Text style={GlobalStyles.sliderWordTitle}>{word.word}</Text>
         </View>
 
         <TouchableOpacity onPress={() => playTrack(word.audio)}>
@@ -58,21 +60,16 @@ const styles = StyleSheet.create({
   titleBox: {
     width: 202,
     height: 40,
-    backgroundColor: 'grey',
+    backgroundColor: '#3B3B3BB2',
     borderRadius: 100,
     justifyContent: 'center',
     alignItems: 'center',
   },
 
-  title: {
-    color: '#fff',
-    fontSize: 20,
-  },
-
   iconBox: {
     width: 40,
     height: 40,
-    backgroundColor: 'grey',
+    backgroundColor: '#3B3B3BB2',
     borderRadius: 100,
     justifyContent: 'center',
     alignItems: 'center',
