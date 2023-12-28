@@ -53,4 +53,10 @@ export default StyleSheet.create({
     color: '#FFFFFF',
     textTransform: 'capitalize',
   },
+  startWelcomeText: {
+    fontFamily: 'Quicksand-Bold',
+    fontSize: 24,
+    letterSpacing: 1.5,
+    color: '#000',
+  },
 });

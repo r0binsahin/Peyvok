@@ -8,6 +8,7 @@ import Carousel from 'react-native-snap-carousel';
 import {useEffect, useRef, useState} from 'react';
 import {Image} from 'react-native';
 import React from 'react';
+import GlobalStyles from '../../utiles/GlobalStyles';
 
 export const HomeScreen = () => {
   const categories: ICategory[] = categoryData.categoryData;
@@ -76,7 +77,9 @@ export const HomeScreen = () => {
       }}>
       {isAvatar ? (
         <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-          <Text>TU BI XÊR HATÎ PEYVOKÊ</Text>
+          <Text style={GlobalStyles.startWelcomeText}>
+            Tu bi xêr hatî Peyvokê!
+          </Text>
           <Animated.View
             style={{
               width: 300,
@@ -87,7 +90,7 @@ export const HomeScreen = () => {
             }}
             onTouchStart={startBounceAnimation}>
             <Image
-              style={{width: 250, height: 250}}
+              style={{width: 190, height: 208}}
               source={{
                 uri: 'https://drive.google.com/uc?export=download&id=1jMzIo1ql9FNPUAd-5pZqijvlN_M2ZSWi',
               }}
