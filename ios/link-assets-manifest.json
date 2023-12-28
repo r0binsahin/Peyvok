@@ -2,6 +2,10 @@
   "migIndex": 1,
   "data": [
     {
+      "path": "assets/fonts/RubikDoodleShadow-Regular.ttf",
+      "sha1": "1b0092781395a98142548d15929cfbb2c16e2334"
+    },
+    {
       "path": "assets/fonts/gothamrnd_bold.ttf",
       "sha1": "8921c2dce1334074b3517ec9342fefc4f04cb613"
     },

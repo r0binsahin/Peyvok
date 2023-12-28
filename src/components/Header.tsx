@@ -46,9 +46,7 @@ export const Header = ({isHeaderShown}: IHeaderProps) => {
       {isHomeScreen ? (
         <View style={styles.avatarBox}>
           <View>
-            <Text style={[styles.text, GlobalFont.fontBold_18]}>
-              tu bi xêr hatî Peyvokê
-            </Text>
+            <Text style={[styles.text]}>tu bi xêr hatî Peyvokê</Text>
           </View>
 
           <Image
@@ -118,5 +116,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 
-  text: {},
+  text: {
+    fontFamily: 'gothamrnd_bold',
+    fontSize: 18,
+  },
 });

@@ -62,6 +62,7 @@
 		<string>gothamrnd_lightitalic.ttf</string>
 		<string>gothamrnd_medium.ttf</string>
 		<string>gothamrnd_mediumitalic.ttf</string>
+		<string>RubikDoodleShadow-Regular.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
