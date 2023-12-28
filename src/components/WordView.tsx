@@ -9,6 +9,7 @@ import {
 import React from 'react';
 import {Word} from '../models/Word';
 import {playTrack} from '../utiles/audioFunctions';
+import GlobalStyles from '../utiles/GlobalStyles';
 
 interface IWordViewProps {
   word: Word;
@@ -25,7 +26,7 @@ const WordView = ({word}: IWordViewProps) => {
       />
 
       <View style={styles.textBox}>
-        <Text style={styles.text}>{word.word}</Text>
+        <Text style={GlobalStyles.wordListTitle}>{word.word}</Text>
       </View>
     </View>
   );
@@ -50,15 +51,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
   },
   textBox: {
-    width: 107,
-    height: 35,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#B9B9B9',
+    backgroundColor: '#3B3B3BB2',
     borderRadius: 100,
-  },
-  text: {
-    fontSize: 20,
-    color: 'white',
   },
 });

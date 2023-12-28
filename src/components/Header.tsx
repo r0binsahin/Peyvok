@@ -13,7 +13,8 @@ import {useNavigation, useRoute} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {RootStackParamList} from '../utiles/RootStackParams';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import GlobalFont from '../utiles/GlobalFont';
+
+import GlobalStyles from '../utiles/GlobalStyles';
 
 interface IHeaderProps {
   isHeaderShown: boolean;
@@ -46,7 +47,9 @@ export const Header = ({isHeaderShown}: IHeaderProps) => {
       {isHomeScreen ? (
         <View style={styles.avatarBox}>
           <View>
-            <Text style={styles.text}>Tu bi xêr hatî Peyvokê</Text>
+            <Text style={[styles.text, GlobalStyles.fontBold]}>
+              Tu bi xêr hatî Peyvokê
+            </Text>
           </View>
 
           <Image
@@ -60,7 +63,7 @@ export const Header = ({isHeaderShown}: IHeaderProps) => {
             <MaterialCommunityIcons
               name="arrow-left-circle"
               size={40}
-              color={'#3B3B3BCC'}
+              color={'#1C1B1F'}
             />
           </TouchableOpacity>
         </View>
@@ -71,7 +74,7 @@ export const Header = ({isHeaderShown}: IHeaderProps) => {
           <MaterialCommunityIcons
             name="information-outline"
             size={40}
-            color={'#3B3B3BCC'}
+            color={'#1C1B1F'}
           />
         </TouchableOpacity>
       </View>
@@ -117,7 +120,6 @@ const styles = StyleSheet.create({
   },
 
   text: {
-    fontFamily: 'Quicksand-Bold',
     fontSize: 18,
   },
 });

@@ -9,6 +9,7 @@ import {RootStackParamList} from '../utiles/RootStackParams';
 import {useNavigation} from '@react-navigation/native';
 import {useEffect} from 'react';
 import React from 'react';
+import GlobalStyles from '../utiles/GlobalStyles';
 
 interface ICategoryViewProps {
   category: ICategory;
@@ -65,7 +66,9 @@ const CategoryView = ({category}: ICategoryViewProps) => {
 
       <TouchableOpacity onPress={() => playTrack(category.categoryAudio)}>
         <View style={styles.titleBox}>
-          <Text style={styles.title}>{category.categoryNameKU}</Text>
+          <Text style={[GlobalStyles.categoryTitle]}>
+            {category.categoryNameKU}
+          </Text>
         </View>
       </TouchableOpacity>
     </View>
@@ -91,7 +94,6 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     position: 'absolute',
 
-    /*     paddingTop: 20, */
     textAlign: 'center',
 
     shadowColor: '#000',
@@ -117,18 +119,7 @@ const styles = StyleSheet.create({
   },
 
   titleBox: {
-    width: 200,
-    height: 36,
-
-    backgroundColor: 'grey',
+    backgroundColor: '#3B3B3BB2',
     borderRadius: 100,
-    fontSize: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-
-  title: {
-    color: 'white',
-    fontSize: 20,
   },
 });
