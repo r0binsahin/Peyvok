@@ -4,6 +4,7 @@ import {
   TouchableOpacity,
   View,
   Dimensions,
+  Text,
 } from 'react-native';
 
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
@@ -14,13 +15,15 @@ import {RealmContext, Word} from '../../models/Word';
 
 import {RootStackParamList} from '../../utiles/RootStackParams';
 import WordView from '../../components/WordView';
+import React from 'react';
+import GlobalStyles from '../../utiles/GlobalStyles';
 
 type propsType = NativeStackScreenProps<RootStackParamList, 'CategoryScreen'>;
 
 export const CategoryScreen = (props: propsType) => {
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
   const {route} = props;
-  const {selectedCategory} = route.params;
+  const {selectedCategory, selectedCategoryKu} = route.params;
   const {useQuery} = RealmContext;
   const words = useQuery(Word);
 
@@ -37,26 +40,42 @@ export const CategoryScreen = (props: propsType) => {
 
   return (
     <ScrollView>
-      <View style={styles.container}>
-        {filteredWords.map((word, index) => (
-          <TouchableOpacity
-            key={index}
-            onPress={() => handleWordPress(word.category, word)}>
-            <WordView word={word} />
-          </TouchableOpacity>
-        ))}
+      <View style={styles.wrapper}>
+        <View style={styles.categoryTitle}>
+          <Text style={GlobalStyles.categoryHead}>{selectedCategoryKu}</Text>
+        </View>
+        <View style={styles.container}>
+          {filteredWords.map((word, index) => (
+            <TouchableOpacity
+              key={index}
+              onPress={() => handleWordPress(word.category, word)}>
+              <WordView word={word} />
+            </TouchableOpacity>
+          ))}
+        </View>
       </View>
     </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
+  wrapper: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: 20,
+  },
   container: {
     flex: 1,
     flexDirection: 'row',
     flexWrap: 'wrap',
     gap: 20,
     justifyContent: 'center',
-    paddingHorizontal: 20,
+  },
+  categoryTitle: {
+    position: 'absolute',
+    zIndex: 2,
+    top: 0,
   },
 });

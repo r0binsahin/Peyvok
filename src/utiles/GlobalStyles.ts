@@ -35,4 +35,12 @@ export default StyleSheet.create({
     color: '#FFFFFF',
     textTransform: 'capitalize',
   },
+
+  categoryHead: {
+    fontFamily: 'Quicksand-Bold',
+    fontSize: 20,
+    letterSpacing: 1.5,
+    color: '#000',
+    textTransform: 'capitalize',
+  },
 });

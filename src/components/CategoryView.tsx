@@ -53,6 +53,7 @@ const CategoryView = ({category}: ICategoryViewProps) => {
           onPress={() =>
             navigation.navigate('CategoryScreen', {
               selectedCategory: category.categoryName,
+              selectedCategoryKu: category.categoryNameKU,
             })
           }>
           <Image
