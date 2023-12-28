@@ -1,5 +1,4 @@
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import React, {useEffect} from 'react';
 
 import {ICategory} from '../models/ICategory';
 
@@ -8,6 +7,8 @@ import {playTrack, setupTrackPlayer} from '../utiles/audioFunctions';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {RootStackParamList} from '../utiles/RootStackParams';
 import {useNavigation} from '@react-navigation/native';
+import {useEffect} from 'react';
+import React from 'react';
 
 interface ICategoryViewProps {
   category: ICategory;

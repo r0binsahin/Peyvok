@@ -46,9 +46,7 @@ export const Header = ({isHeaderShown}: IHeaderProps) => {
       {isHomeScreen ? (
         <View style={styles.avatarBox}>
           <View>
-            <Text style={{fontFamily: 'RubikDoodleShadow-Regular'}}>
-              tu bi xêr hatî Peyvokê
-            </Text>
+            <Text style={styles.text}>tu bi xêr hatî Peyvokê</Text>
           </View>
 
           <Image
