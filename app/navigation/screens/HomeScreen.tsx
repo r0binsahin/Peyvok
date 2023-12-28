@@ -12,7 +12,7 @@ export const HomeScreen = () => {
   const categories: ICategory[] = categoryData.categoryData;
   const carouselRef = useRef(null);
   const [isAvatar, setIsAvatar] = useState(true);
-  const carouselTranslateX = new Animated.Value(Dimensions.get('screen').width);
+  const carouselTranslateY = new Animated.Value(Dimensions.get('screen').width);
 
   const bounceValue = new Animated.Value(0.8);
 
@@ -50,7 +50,7 @@ export const HomeScreen = () => {
   };
 
   const startCarouselAnimation = () => {
-    Animated.timing(carouselTranslateX, {
+    Animated.timing(carouselTranslateY, {
       toValue: 1,
       duration: 700,
       easing: Easing.out(Easing.ease),
@@ -97,7 +97,7 @@ export const HomeScreen = () => {
         <Animated.View
           style={{
             flex: 1,
-            transform: [{translateY: carouselTranslateX}],
+            transform: [{translateY: carouselTranslateY}],
           }}>
           <Carousel
             ref={carouselRef}
