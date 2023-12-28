@@ -8,7 +8,7 @@ import {CategoryScreen} from '../screens/CategoryScreen';
 import {InfoScreen} from '../screens/InfoScreen';
 import {WordScreen} from '../screens/WordScreen';
 import {Header} from '../../components/Header';
-import Background from '../../components/Background';
+import Background from '../../components/backgroundComponents/Background';
 
 const Stack = createStackNavigator<RootStackParamList>();
 

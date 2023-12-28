@@ -1,7 +1,7 @@
 import {AppProvider, UserProvider} from '@realm/react';
 import {RealmWrapper} from './RealmWrapper';
 import {APP_ID} from '@env';
-import Background from './Background';
+import Background from './backgroundComponents/Background';
 
 export const AppWrapper = () => {
   return (

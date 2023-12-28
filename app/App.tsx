@@ -10,7 +10,7 @@ import {Category} from './models/Category';
 import StackNavigation from './navigation/stack/StackNavigation';
 import {Header} from './components/Header';
 import {Dimensions, View} from 'react-native';
-import Background from './components/Background';
+import Background from './components/backgroundComponents/Background';
 import {SafeAreaView} from 'react-native-safe-area-context';
 
 const Stack = createStackNavigator<RootStackParamList>();
