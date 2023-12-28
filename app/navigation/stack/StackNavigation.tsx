@@ -26,7 +26,7 @@ const StackNavigation = () => {
       initialRouteName="HomeScreen"
       screenOptions={{
         headerShown: isHeaderShown,
-        header: () => <Header />,
+        header: () => <Header isHeaderShown={isHeaderShown} />,
       }}>
       <Stack.Screen name="HomeScreen" component={HomeScreen}></Stack.Screen>
       <Stack.Screen
