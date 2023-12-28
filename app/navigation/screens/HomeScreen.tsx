@@ -2,7 +2,7 @@ import {View, Dimensions, Animated, Text, Easing} from 'react-native';
 
 import CategoryView from '../../components/CategoryView';
 import {ICategory} from '../../models/ICategory';
-import categoryData from '../../assets/categoryData.json';
+import categoryData from '../../../assets/categoryData.json';
 
 import Carousel from 'react-native-snap-carousel';
 import {useEffect, useRef, useState} from 'react';

@@ -50,7 +50,7 @@ export const Header = ({isHeaderShown}: IHeaderProps) => {
 
           <Image
             style={styles.image}
-            source={require('../assets/avatar/avatar.png')}
+            source={require('../../assets/avatar/avatar.png')}
           />
         </View>
       ) : (

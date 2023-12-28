@@ -2,7 +2,7 @@ import {BSON} from 'realm';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {useCallback, useEffect, useState} from 'react';
 import {RealmContext, Word} from '../models/Word';
-import categoryData from '../assets/categoryData.json';
+import categoryData from '../../assets/categoryData.json';
 import {ICategory} from '../models/ICategory';
 import {Category} from '../models/Category';
 
