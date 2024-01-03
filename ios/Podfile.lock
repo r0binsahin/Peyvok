@@ -944,13 +944,7 @@ PODS:
   - React-Mapbuffer (0.73.0):
     - glog
     - React-debug
-  - react-native-flipper (0.212.0):
-    - React-Core
-  - react-native-pager-view (6.2.3):
-    - glog
-    - RCT-Folly (= 2022.05.16.00)
-    - React-Core
-  - react-native-safe-area-context (4.8.1):
+  - react-native-safe-area-context (4.8.2):
     - React-Core
   - react-native-track-player (4.0.1):
     - React-Core
@@ -1124,8 +1118,6 @@ PODS:
     - React-perflogger (= 0.73.0)
   - RealmJS (12.3.1):
     - React
-  - RNCMaskedView (0.3.1):
-    - React-Core
   - RNGestureHandler (2.14.0):
     - glog
     - RCT-Folly (= 2022.05.16.00)
@@ -1193,8 +1185,6 @@ DEPENDENCIES:
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector-modern`)
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
   - React-Mapbuffer (from `../node_modules/react-native/ReactCommon`)
-  - react-native-flipper (from `../node_modules/react-native-flipper`)
-  - react-native-pager-view (from `../node_modules/react-native-pager-view`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - react-native-track-player (from `../node_modules/react-native-track-player`)
   - React-nativeconfig (from `../node_modules/react-native/ReactCommon`)
@@ -1218,7 +1208,6 @@ DEPENDENCIES:
   - React-utils (from `../node_modules/react-native/ReactCommon/react/utils`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - RealmJS (from `../node_modules/realm`)
-  - "RNCMaskedView (from `../node_modules/@react-native-masked-view/masked-view`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNScreens (from `../node_modules/react-native-screens`)
   - RNSVG (from `../node_modules/react-native-svg`)
@@ -1297,10 +1286,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/logger"
   React-Mapbuffer:
     :path: "../node_modules/react-native/ReactCommon"
-  react-native-flipper:
-    :path: "../node_modules/react-native-flipper"
-  react-native-pager-view:
-    :path: "../node_modules/react-native-pager-view"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
   react-native-track-player:
@@ -1347,8 +1332,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   RealmJS:
     :path: "../node_modules/realm"
-  RNCMaskedView:
-    :path: "../node_modules/@react-native-masked-view/masked-view"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
   RNScreens:
@@ -1398,9 +1381,7 @@ SPEC CHECKSUMS:
   React-jsinspector: 9f6fb9ed9f03a0fb961ab8dc2e0e0ee0dc729e77
   React-logger: 008caec0d6a587abc1e71be21bfac5ba1662fe6a
   React-Mapbuffer: 58fe558faf52ecde6705376700f848d0293d1cef
-  react-native-flipper: 9c1957af24b76493ba74f46d000a5c1d485e7731
-  react-native-pager-view: d81ab2060b9caf57ca8c3a0d57467ff407cdb825
-  react-native-safe-area-context: cd1169d797a2ef722a00bfc5af10748d5b6c94f9
+  react-native-safe-area-context: 0ee144a6170530ccc37a0fd9388e28d06f516a89
   react-native-track-player: 97d76dbbd35f27cc709e5f04540615e54264b3f9
   React-nativeconfig: a063483672b8add47a4875b0281e202908ff6747
   React-NativeModulesApple: 169506a5fd708ab22811f76ee06a976595c367a1
@@ -1423,13 +1404,12 @@ SPEC CHECKSUMS:
   React-utils: 42708ea436853045ef1eaff29996813d9fbbe209
   ReactCommon: 851280fb976399ca1aabc74cc2c3612069ea70a2
   RealmJS: 578e16cf7c0b32c13a23b2df667b021bb3c36f1c
-  RNCMaskedView: 090213d32d8b3bb83a4dcb7d12c18f0152591906
   RNGestureHandler: 61bfdfc05db9b79dd61f894dcd29d3dcc6db3c02
   RNScreens: b582cb834dc4133307562e930e8fa914b8c04ef2
   RNSVG: ba3e7232f45e34b7b47e74472386cf4e1a676d0a
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   SwiftAudioEx: 6f511018b7a0fdfd14ed1bb4081f953588245cc0
-  Yoga: 44003f970aa541b79dfdd59cf236fda41bd5890f
+  Yoga: 20d6a900dcc8d61d5e3b799bbf627cc34474a8c4
 
 PODFILE CHECKSUM: 857ae5a7c752bd44fecfcc5fa95b511e313e0129
 
