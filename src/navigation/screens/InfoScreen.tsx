@@ -3,6 +3,7 @@ import Background from '../../components/backgroundComponents/Background';
 import {RealmContext, Word} from '../../models/Word';
 import {Text} from 'react-native-svg';
 import React from 'react';
+import Skeleton from '../../components/Skeleton';
 
 export const InfoScreen = () => {
   const {useQuery} = RealmContext;
@@ -14,7 +15,7 @@ export const InfoScreen = () => {
       style={{
         flex: 1,
       }}>
-      <Text>Info</Text>
+      <Skeleton borderRadius={20} width={200} height={200} />
     </View>
   );
 };

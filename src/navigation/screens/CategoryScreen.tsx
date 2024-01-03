@@ -12,10 +12,11 @@ import {useNavigation} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 
 import {RealmContext, Word} from '../../models/Word';
+import Realm from 'realm';
 
 import {RootStackParamList} from '../../utiles/RootStackParams';
 import WordView from '../../components/WordView';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import GlobalStyles from '../../utiles/GlobalStyles';
 
 type propsType = NativeStackScreenProps<RootStackParamList, 'CategoryScreen'>;
@@ -26,6 +27,7 @@ export const CategoryScreen = (props: propsType) => {
   const {selectedCategory, selectedCategoryKu} = route.params;
   const {useQuery} = RealmContext;
   const words = useQuery(Word);
+  const [loading, setLoading] = useState(true);
 
   const filteredWords = useQuery(Word, words => {
     return words.filtered(`category == $0`, selectedCategory);
@@ -39,6 +41,13 @@ export const CategoryScreen = (props: propsType) => {
     });
   };
 
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
+
   return (
     <ScrollView>
       <View style={styles.wrapper}>
@@ -50,7 +59,7 @@ export const CategoryScreen = (props: propsType) => {
             <TouchableOpacity
               key={index}
               onPress={() => handleWordPress(word.category, word)}>
-              <WordView word={word} />
+              <WordView word={word} loading={loading} />
             </TouchableOpacity>
           ))}
         </View>

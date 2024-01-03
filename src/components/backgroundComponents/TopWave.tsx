@@ -12,12 +12,12 @@ const TopWave = () => {
         <LinearGradient
           id="gradientTop"
           x1="337.5"
-          y1="-20"
+          y1="0"
           x2="336.709"
           y2="526.236"
           gradientUnits="userSpaceOnUse">
           <Stop stopColor="#CCCAFF" />
-          <Stop offset="1" stopColor="#C99FFF" />
+          <Stop offset="1" stopColor="#C99BFF" />
         </LinearGradient>
       </Defs>
       <Path
