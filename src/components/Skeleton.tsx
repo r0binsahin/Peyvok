@@ -4,10 +4,9 @@ import React, {useEffect, useRef} from 'react';
 interface ISkeletonProps {
   width: number;
   height: number;
-  borderRadius: number;
 }
 
-const Skeleton = ({width, height, borderRadius}: ISkeletonProps) => {
+const Skeleton = ({width, height}: ISkeletonProps) => {
   const opacity = useRef(new Animated.Value(0.3));
 
   useEffect(() => {
@@ -28,10 +27,7 @@ const Skeleton = ({width, height, borderRadius}: ISkeletonProps) => {
   }, [opacity]);
   return (
     <Animated.View
-      style={[
-        {opacity: opacity.current, height, width, borderRadius: borderRadius},
-        styles.skeleton,
-      ]}
+      style={[{opacity: opacity.current, height, width}, styles.skeleton]}
     />
   );
 };
@@ -41,5 +37,6 @@ export default Skeleton;
 const styles = StyleSheet.create({
   skeleton: {
     backgroundColor: '#3B3B3BB2',
+    borderRadius: 20,
   },
 });

@@ -21,7 +21,7 @@ const WordView = ({word, loading}: IWordViewProps) => {
   return (
     <View style={styles.container}>
       {loading ? (
-        <Skeleton width={164} height={162} borderRadius={20} />
+        <Skeleton width={164} height={162} />
       ) : (
         <Image
           style={styles.img}

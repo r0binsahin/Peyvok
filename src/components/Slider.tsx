@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import Carousel from 'react-native-snap-carousel';
 import {Animated, Dimensions, View} from 'react-native';
 import {Word} from '../models/Word';
@@ -25,6 +25,14 @@ const Slider = ({words}: ISliderProps) => {
     };
   };
 
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
   return (
     <View
       style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
@@ -33,7 +41,9 @@ const Slider = ({words}: ISliderProps) => {
         layoutCardOffset={3}
         data={words}
         //@ts-ignore
-        renderItem={({item, index}) => <SlideItem word={item} index={index} />}
+        renderItem={({item, index}) => (
+          <SlideItem word={item} index={index} loading={loading} />
+        )}
         sliderWidth={width}
         itemWidth={268}
         inactiveSlideShift={0}

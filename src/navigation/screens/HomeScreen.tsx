@@ -15,6 +15,14 @@ export const HomeScreen = () => {
   const carouselRef = useRef(null);
   const [isAvatar, setIsAvatar] = useState(true);
   const carouselTranslateY = new Animated.Value(Dimensions.get('screen').width);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 6000);
+  }, []);
 
   const bounceValue = new Animated.Value(0.8);
 
@@ -108,7 +116,9 @@ export const HomeScreen = () => {
             layoutCardOffset={3}
             data={categories}
             //@ts-ignore
-            renderItem={({item}) => <CategoryView category={item} />}
+            renderItem={({item}) => (
+              <CategoryView category={item} loading={loading} />
+            )}
             sliderWidth={Dimensions.get('screen').width}
             itemWidth={225}
             slideStyle={{justifyContent: 'center'}}

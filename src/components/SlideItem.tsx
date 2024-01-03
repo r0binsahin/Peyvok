@@ -5,17 +5,24 @@ import {playTrack} from '../utiles/audioFunctions';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import React from 'react';
 import GlobalStyles from '../utiles/GlobalStyles';
+import {load} from 'react-native-track-player/lib/trackPlayer';
+import Skeleton from './Skeleton';
 MaterialCommunityIcons.loadFont();
 
 interface ISlideItemProps {
   word: Word;
   index: number;
+  loading: boolean;
 }
 
-const SlideItem = ({word, index}: ISlideItemProps) => {
+const SlideItem = ({word, index, loading}: ISlideItemProps) => {
   return (
     <View style={styles.container} key={index}>
-      <Image source={{uri: word.image}} style={styles.image} />
+      {loading ? (
+        <Skeleton width={268} height={266} />
+      ) : (
+        <Image source={{uri: word.image}} style={styles.image} />
+      )}
 
       <View style={styles.content}>
         <View style={styles.titleBox}>
