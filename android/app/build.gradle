@@ -1,25 +1,6 @@
 apply plugin: "com.android.application"
 apply plugin: "org.jetbrains.kotlin.android"
 apply plugin: "com.facebook.react"
-project.ext.vectoricons = [
-    iconFontNames: [ 'MaterialIcons.ttf', 'EvilIcons.ttf' ] // Specify font files
-]
-
-apply from: file("../../node_modules/react-native-vector-icons/fonts.gradle")
-
-
-apply plugin: 'com.android.application'
-
-android {}
-
-dependencies {
-  implementation fileTree(dir: "libs", include: ["*.jar"])
-  //noinspection GradleDynamicVersion
-  implementation "com.facebook.react:react-native:+"  // From node_modules
-
-implementation project(':react-native-vector-icons')
-}
-
 
 /**
  * This is the configuration block to customize your React Native Android app.
@@ -93,9 +74,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.newapp"
+    namespace "com.newproject"
     defaultConfig {
-        applicationId "com.newapp"
+        applicationId "com.newproject"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
