@@ -10,20 +10,26 @@ import React from 'react';
 import {Word} from '../models/Word';
 import {playTrack} from '../utiles/audioFunctions';
 import GlobalStyles from '../utiles/GlobalStyles';
+import Skeleton from './Skeleton';
 
 interface IWordViewProps {
   word: Word;
+  loading: boolean;
 }
 
-const WordView = ({word}: IWordViewProps) => {
+const WordView = ({word, loading}: IWordViewProps) => {
   return (
     <View style={styles.container}>
-      <Image
-        style={styles.img}
-        source={{
-          uri: word.image,
-        }}
-      />
+      {loading ? (
+        <Skeleton width={164} height={162} />
+      ) : (
+        <Image
+          style={styles.img}
+          source={{
+            uri: word.image,
+          }}
+        />
+      )}
 
       <View style={styles.textBox}>
         <Text style={GlobalStyles.wordListTitle}>{word.word}</Text>

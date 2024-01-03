@@ -10,12 +10,14 @@ import {useNavigation} from '@react-navigation/native';
 import {useEffect} from 'react';
 import React from 'react';
 import GlobalStyles from '../utiles/GlobalStyles';
+import Skeleton from './Skeleton';
 
 interface ICategoryViewProps {
   category: ICategory;
+  loading: boolean;
 }
 
-const CategoryView = ({category}: ICategoryViewProps) => {
+const CategoryView = ({category, loading}: ICategoryViewProps) => {
   let isPlayerInitialized = false;
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
 
@@ -56,12 +58,16 @@ const CategoryView = ({category}: ICategoryViewProps) => {
               selectedCategoryKu: category.categoryNameKU,
             })
           }>
-          <Image
-            style={styles.img}
-            source={{
-              uri: category.imgURL,
-            }}
-          />
+          {loading ? (
+            <Skeleton width={225} height={148} />
+          ) : (
+            <Image
+              style={styles.img}
+              source={{
+                uri: category.imgURL,
+              }}
+            />
+          )}
         </TouchableOpacity>
       </View>
 
