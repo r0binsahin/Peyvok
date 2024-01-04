@@ -64,24 +64,24 @@ const styles = StyleSheet.create({
   },
 
   textBox: {
-    marginHorizontal: 100,
+    marginHorizontal: 70,
   },
   info: {
     flex: 1,
     justifyContent: 'space-between',
-    paddingBottom: 100,
+    paddingBottom: 50,
   },
   infoTitle: {
     fontFamily: 'Quicksand-Bold',
-    fontSize: 24,
+    fontSize: 20,
   },
   text: {
-    fontFamily: 'Quicksand-Bold',
-    fontSize: 16,
+    fontFamily: 'Quicksand-Regular',
+    fontSize: 14,
   },
 
   lang: {
     fontFamily: 'Quicksand-Bold',
-    fontSize: 15,
+    fontSize: 14,
   },
 });
