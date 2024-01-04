@@ -13,14 +13,15 @@ type propsType = NativeStackScreenProps<RootStackParamList, 'WordScreen'>;
 export const WordScreen = (props: propsType) => {
   const {route} = props;
   const {selectedCategory, clickedWordId, selectedCategoryKu} = route.params;
-
   const {useQuery} = RealmContext;
+
   const filteredWords = useQuery(Word, words => {
     return words.filtered(`category == $0`, selectedCategory);
   });
   const clickedWord = filteredWords.find(
     word => word._id.toHexString() === clickedWordId,
   );
+
   //@ts-ignore
   const reorderedWords: Word[] = [
     clickedWord,
@@ -31,19 +32,19 @@ export const WordScreen = (props: propsType) => {
   );
 
   return (
-    <View style={{flex: 1, alignItems: 'center'}}>
-      <View style={styles.categoryTitle}>
+    <View style={styles.container}>
+      {/*   <View>
         <Text style={GlobalStyles.categoryHead}>{selectedCategoryKu}</Text>
-      </View>
+      </View> */}
       <Slider words={reorderedWords} />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  categoryTitle: {
-    position: 'absolute',
-    zIndex: 2,
-    top: 0,
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'flex-start',
   },
 });
