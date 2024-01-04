@@ -28,12 +28,10 @@ const StackNavigation = () => {
         headerShown: isHeaderShown,
         header: () => <Header isHeaderShown={isHeaderShown} />,
       }}>
-      <Stack.Screen name="HomeScreen" component={HomeScreen}></Stack.Screen>
-      <Stack.Screen
-        name="CategoryScreen"
-        component={CategoryScreen}></Stack.Screen>
-      <Stack.Screen name="WordScreen" component={WordScreen}></Stack.Screen>
-      <Stack.Screen name="Info" component={InfoScreen}></Stack.Screen>
+      <Stack.Screen name="HomeScreen" component={HomeScreen} />
+      <Stack.Screen name="CategoryScreen" component={CategoryScreen} />
+      <Stack.Screen name="WordScreen" component={WordScreen} />
+      <Stack.Screen name="Info" component={InfoScreen} />
     </Stack.Navigator>
   );
 };

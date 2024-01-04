@@ -18,6 +18,7 @@ import {RootStackParamList} from '../../utiles/RootStackParams';
 import WordView from '../../components/WordView';
 import React, {useEffect, useState} from 'react';
 import GlobalStyles from '../../utiles/GlobalStyles';
+import Background from '../../components/backgroundComponents/Background';
 
 type propsType = NativeStackScreenProps<RootStackParamList, 'CategoryScreen'>;
 
