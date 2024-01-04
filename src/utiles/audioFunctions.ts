@@ -19,14 +19,8 @@ export const playTrack = async (audio: string) => {
     await TrackPlayer.stop();
     await TrackPlayer.reset();
     await TrackPlayer.add({url: audio});
-    console.log('Track added successfully');
-    const stateBeforePlay = await TrackPlayer.getPlaybackState();
-    console.log('Player state before play:', stateBeforePlay);
+    await TrackPlayer.getPlaybackState();
     await TrackPlayer.play();
-    console.log('Track playing...');
-    const stateAfterPlay = await TrackPlayer.getPlaybackState();
-    console.log('Player state after play:', stateAfterPlay);
-  } catch (error) {
-    console.log('Error playing track:', error);
-  }
+    await TrackPlayer.getPlaybackState();
+  } catch (error) {}
 };

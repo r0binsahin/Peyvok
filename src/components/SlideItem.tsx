@@ -19,7 +19,7 @@ const SlideItem = ({word, index, loading}: ISlideItemProps) => {
   return (
     <View style={styles.container} key={index}>
       {loading ? (
-        <Skeleton width={268} height={266} />
+        <Skeleton width={225} height={225} />
       ) : (
         <Image source={{uri: word.image}} style={styles.image} />
       )}
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   image: {
-    height: 266,
+    height: 225,
     width: '100%',
     borderRadius: 20,
   },

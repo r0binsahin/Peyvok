@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
     height: 80,
     resizeMode: 'center',
     position: 'absolute',
-    left: 200,
+    left: 225,
   },
 
   leftContainer: {

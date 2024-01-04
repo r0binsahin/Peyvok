@@ -34,8 +34,7 @@ const Slider = ({words}: ISliderProps) => {
     }, 1000);
   }, []);
   return (
-    <View
-      style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
       <Carousel
         ref={carouselRef}
         layoutCardOffset={3}
@@ -45,7 +44,7 @@ const Slider = ({words}: ISliderProps) => {
           <SlideItem word={item} index={index} loading={loading} />
         )}
         sliderWidth={width}
-        itemWidth={268}
+        itemWidth={225}
         inactiveSlideShift={0}
         useScrollView={true}
         slideInterpolatedStyle={(index, animatedValue) =>
