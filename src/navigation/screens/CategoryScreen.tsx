@@ -76,6 +76,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     paddingHorizontal: 20,
+    gap: 30,
   },
   container: {
     flex: 1,
@@ -84,9 +85,5 @@ const styles = StyleSheet.create({
     gap: 20,
     justifyContent: 'center',
   },
-  categoryTitle: {
-    position: 'absolute',
-    zIndex: 2,
-    top: 0,
-  },
+  categoryTitle: {},
 });
