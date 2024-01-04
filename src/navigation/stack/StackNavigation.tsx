@@ -31,7 +31,7 @@ const StackNavigation = () => {
       <Stack.Screen name="HomeScreen" component={HomeScreen} />
       <Stack.Screen name="CategoryScreen" component={CategoryScreen} />
       <Stack.Screen name="WordScreen" component={WordScreen} />
-      <Stack.Screen name="Info" component={InfoScreen} />
+      <Stack.Screen name="InfoScreen" component={InfoScreen} />
     </Stack.Navigator>
   );
 };
