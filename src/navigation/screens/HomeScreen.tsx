@@ -9,6 +9,7 @@ import {useEffect, useRef, useState} from 'react';
 import {Image} from 'react-native';
 import React from 'react';
 import GlobalStyles from '../../utiles/GlobalStyles';
+import FastImage from 'react-native-fast-image';
 
 export const HomeScreen = () => {
   const categories: ICategory[] = categoryData.categoryData;
@@ -97,7 +98,7 @@ export const HomeScreen = () => {
               transform: [{scale: bounceValue}],
             }}
             onTouchStart={startBounceAnimation}>
-            <Image
+            <FastImage
               style={{width: 190, height: 208}}
               source={{
                 uri: 'https://drive.google.com/uc?export=download&id=1jMzIo1ql9FNPUAd-5pZqijvlN_M2ZSWi',

@@ -11,6 +11,7 @@ import {Word} from '../models/Word';
 import {playTrack} from '../utiles/audioFunctions';
 import GlobalStyles from '../utiles/GlobalStyles';
 import Skeleton from './Skeleton';
+import FastImage from 'react-native-fast-image';
 
 interface IWordViewProps {
   word: Word;
@@ -23,7 +24,7 @@ const WordView = ({word, loading}: IWordViewProps) => {
       {loading ? (
         <Skeleton width={164} height={162} />
       ) : (
-        <Image
+        <FastImage
           style={styles.img}
           source={{
             uri: word.image,

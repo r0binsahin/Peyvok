@@ -1,4 +1,5 @@
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import FastImage from 'react-native-fast-image';
 
 import {ICategory} from '../models/ICategory';
 
@@ -61,7 +62,7 @@ const CategoryView = ({category, loading}: ICategoryViewProps) => {
           {/*      {loading ? (
             <Skeleton width={225} height={148} />
           ) : ( */}
-          <Image
+          <FastImage
             style={styles.img}
             source={{
               uri: category.imgURL,
