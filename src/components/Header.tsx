@@ -24,6 +24,7 @@ export const Header = ({isHeaderShown}: IHeaderProps) => {
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
   const route = useRoute();
   const isHomeScreen = route.name === 'HomeScreen' ? true : false;
+  const isInfoScreen = route.name === 'InfoScreen' ? true : false;
   const [translateY, setTranslateY] = useState(new Animated.Value(-100));
 
   const animateHeader = () => {
@@ -69,15 +70,19 @@ export const Header = ({isHeaderShown}: IHeaderProps) => {
         </View>
       )}
 
-      <View>
-        <TouchableOpacity onPress={() => navigation.navigate('Info')}>
-          <MaterialCommunityIcons
-            name="information-outline"
-            size={40}
-            color={'#1C1B1F'}
-          />
-        </TouchableOpacity>
-      </View>
+      {!isInfoScreen ? (
+        <View>
+          <TouchableOpacity onPress={() => navigation.navigate('InfoScreen')}>
+            <MaterialCommunityIcons
+              name="information-outline"
+              size={40}
+              color={'#1C1B1F'}
+            />
+          </TouchableOpacity>
+        </View>
+      ) : (
+        ''
+      )}
     </Animated.View>
   );
 };

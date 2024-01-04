@@ -58,16 +58,16 @@ const CategoryView = ({category, loading}: ICategoryViewProps) => {
               selectedCategoryKu: category.categoryNameKU,
             })
           }>
-          {loading ? (
+          {/*      {loading ? (
             <Skeleton width={225} height={148} />
-          ) : (
-            <Image
-              style={styles.img}
-              source={{
-                uri: category.imgURL,
-              }}
-            />
-          )}
+          ) : ( */}
+          <Image
+            style={styles.img}
+            source={{
+              uri: category.imgURL,
+            }}
+          />
+          {/*  )} */}
         </TouchableOpacity>
       </View>
 

@@ -17,12 +17,12 @@ export const HomeScreen = () => {
   const carouselTranslateY = new Animated.Value(Dimensions.get('screen').width);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
+  /*   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
     }, 6000);
-  }, []);
+  }, []); */
 
   const bounceValue = new Animated.Value(0.8);
 
