@@ -7,6 +7,7 @@ import React from 'react';
 import GlobalStyles from '../utiles/GlobalStyles';
 import {load} from 'react-native-track-player/lib/trackPlayer';
 import Skeleton from './Skeleton';
+import FastImage from 'react-native-fast-image';
 MaterialCommunityIcons.loadFont();
 
 interface ISlideItemProps {
@@ -21,7 +22,7 @@ const SlideItem = ({word, index, loading}: ISlideItemProps) => {
       {loading ? (
         <Skeleton width={225} height={225} />
       ) : (
-        <Image source={{uri: word.image}} style={styles.image} />
+        <FastImage source={{uri: word.image}} style={styles.image} />
       )}
 
       <View style={styles.content}>

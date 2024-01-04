@@ -15,6 +15,7 @@ import {RootStackParamList} from '../utiles/RootStackParams';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import GlobalStyles from '../utiles/GlobalStyles';
+import FastImage from 'react-native-fast-image';
 
 interface IHeaderProps {
   isHeaderShown: boolean;
@@ -53,7 +54,7 @@ export const Header = ({isHeaderShown}: IHeaderProps) => {
             </Text>
           </View>
 
-          <Image
+          <FastImage
             style={styles.image}
             source={require('../../assets/avatar/avatar_half.png')}
           />

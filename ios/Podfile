@@ -53,3 +53,5 @@ target 'Peyvok' do
     )
   end
 end
+
+pod 'RNFastImage', :path => '../node_modules/react-native-fast-image'
