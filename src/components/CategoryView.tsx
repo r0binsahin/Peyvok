@@ -59,16 +59,12 @@ const CategoryView = ({category, loading}: ICategoryViewProps) => {
               selectedCategoryKu: category.categoryNameKU,
             })
           }>
-          {/*      {loading ? (
-            <Skeleton width={225} height={148} />
-          ) : ( */}
           <FastImage
             style={styles.img}
             source={{
               uri: category.imgURL,
             }}
           />
-          {/*  )} */}
         </TouchableOpacity>
       </View>
 
