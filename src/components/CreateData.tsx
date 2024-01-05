@@ -26,144 +26,144 @@ export const CreateData = () => {
       realm.create('Word', {
         word: 'zer',
         image:
-          'https://drive.google.com/uc?export=download&id=1B0dXYdBdaQyP3dA7QQbVmAmB_ldtJwBl',
+          'https://drive.google.com/uc?export=media&id=1B0dXYdBdaQyP3dA7QQbVmAmB_ldtJwBl',
         audio:
-          'https://drive.google.com/uc?export=download&id=1F5K88Mhmq5x8uXw-ofWXVBXiMl-PPYrh',
+          'https://drive.google.com/uc?export=media&id=1F5K88Mhmq5x8uXw-ofWXVBXiMl-PPYrh',
         category: 'colors',
       });
 
       realm.create('Word', {
         word: 'sor',
         image:
-          'https://drive.google.com/uc?export=download&id=1azv1KphLu39JIENjCrotEyYGlafHJh1b',
+          'https://drive.google.com/uc?export=media&id=1azv1KphLu39JIENjCrotEyYGlafHJh1b',
         audio:
-          'https://drive.google.com/uc?export=download&id=1r1h4_jb4xgx2GChfvNuCbPlKY5TYeB8D',
+          'https://drive.google.com/uc?export=media&id=1r1h4_jb4xgx2GChfvNuCbPlKY5TYeB8D',
         category: 'colors',
       });
 
       realm.create('Word', {
         word: 'spî',
         image:
-          'https://drive.google.com/uc?export=download&id=1XH6Q1-8LUttAzBiai3vRflvvogWkf2J_',
+          'https://drive.google.com/uc?export=media&id=1XH6Q1-8LUttAzBiai3vRflvvogWkf2J_',
         audio:
-          'https://drive.google.com/uc?export=download&id=1yx2L-5cyy07_H_JFagcboZXeDx2KAloq',
+          'https://drive.google.com/uc?export=media&id=1yx2L-5cyy07_H_JFagcboZXeDx2KAloq',
         category: 'colors',
       });
 
       realm.create('Word', {
         word: 'kesk',
         image:
-          'https://drive.google.com/uc?export=download&id=1aLCkeCEzCWoTDqEAPVIl_y4Q_0vNvstQ',
+          'https://drive.google.com/uc?export=media&id=1aLCkeCEzCWoTDqEAPVIl_y4Q_0vNvstQ',
         audio:
-          'https://drive.google.com/uc?export=download&id=1ehSIt-2Hgn5-SVusMmPglqaexywZC7RN',
+          'https://drive.google.com/uc?export=media&id=1ehSIt-2Hgn5-SVusMmPglqaexywZC7RN',
         category: 'colors',
       });
 
       realm.create('Word', {
         word: 'kûçik',
         image:
-          'https://drive.google.com/uc?export=download&id=16NeBnPawXQInZmp5RsXrDtKHrLOhCwCJ',
+          'https://drive.google.com/uc?export=media&id=16NeBnPawXQInZmp5RsXrDtKHrLOhCwCJ',
         audio:
-          'https://drive.google.com/uc?export=download&id=1-Eq2KG0FuPeoNjAvwZGDjm1u8VdIoWU2',
+          'https://drive.google.com/uc?export=media&id=1-Eq2KG0FuPeoNjAvwZGDjm1u8VdIoWU2',
         category: 'animals',
       });
 
       realm.create('Word', {
         word: 'pisîk',
         image:
-          'https://drive.google.com/uc?export=download&id=1UFYcZe17iOsNQQZ6dy3ijZABCSAjR8ll',
+          'https://drive.google.com/uc?export=media&id=1UFYcZe17iOsNQQZ6dy3ijZABCSAjR8ll',
         audio:
-          'https://drive.google.com/uc?export=download&id=1vOk1oYlhsbqOH9ojwN8GIeT6wHkqwkTs',
+          'https://drive.google.com/uc?export=media&id=1vOk1oYlhsbqOH9ojwN8GIeT6wHkqwkTs',
         category: 'animals',
       });
 
       realm.create('Word', {
         word: 'jûjî',
         image:
-          'https://drive.google.com/uc?export=download&id=1HFU_t_iOROAnm9pOYhLCPp5J8_4f6g-L',
+          'https://drive.google.com/uc?export=media&id=1HFU_t_iOROAnm9pOYhLCPp5J8_4f6g-L',
         audio:
-          'https://drive.google.com/uc?export=download&id=1GpT5mS_Fd9SJzjtH1xGB-N0Q5GpWbf7G',
+          'https://drive.google.com/uc?export=media&id=1GpT5mS_Fd9SJzjtH1xGB-N0Q5GpWbf7G',
         category: 'animals',
       });
 
       realm.create('Word', {
         word: 'çivîk',
         image:
-          'https://drive.google.com/uc?export=download&id=1eKwv9zQNPuBKAUMHpt3EOtUB9K_b3iOJ',
+          'https://drive.google.com/uc?export=media&id=1eKwv9zQNPuBKAUMHpt3EOtUB9K_b3iOJ',
         audio:
-          'https://drive.google.com/uc?export=download&id=1GvKrlWzSwGAzbgXhjXotKFgxjrGCypOE',
+          'https://drive.google.com/uc?export=media&id=1GvKrlWzSwGAzbgXhjXotKFgxjrGCypOE',
         category: 'animals',
       });
 
       realm.create('Word', {
         word: 'sêv',
         image:
-          'https://drive.google.com/uc?export=download&id=1WBTQfHcGJ4Im6EZ8lOKffyGYVyfASOJA',
+          'https://drive.google.com/uc?export=media&id=1WBTQfHcGJ4Im6EZ8lOKffyGYVyfASOJA',
         audio:
-          'https://drive.google.com/uc?export=download&id=1AoYH584E2-1jivqPIBopESIJZq_EzCU_',
+          'https://drive.google.com/uc?export=media&id=1AoYH584E2-1jivqPIBopESIJZq_EzCU_',
         category: 'fruits',
       });
 
       realm.create('Word', {
         word: 'hirmî',
         image:
-          'https://drive.google.com/uc?export=download&id=1_mQD460K9R9-yQgGrsODddepCxq0IOdu',
+          'https://drive.google.com/uc?export=media&id=1_mQD460K9R9-yQgGrsODddepCxq0IOdu',
         audio:
-          'https://drive.google.com/uc?export=download&id=1VwmoXPD0Mo3JoSpzc_3UY2C-1jcEIj-2',
+          'https://drive.google.com/uc?export=media&id=1VwmoXPD0Mo3JoSpzc_3UY2C-1jcEIj-2',
         category: 'fruits',
       });
 
       realm.create('Word', {
         word: 'mûz',
         image:
-          'https://drive.google.com/uc?export=download&id=1M4IWcXrI9sQ5mJU5ncGKe1auKrQ2xLcc',
+          'https://drive.google.com/uc?export=media&id=1M4IWcXrI9sQ5mJU5ncGKe1auKrQ2xLcc',
         audio:
-          'https://drive.google.com/uc?export=download&id=1So_iT2LOzURJHAml8RCQEQucScjxghYd',
+          'https://drive.google.com/uc?export=media&id=1So_iT2LOzURJHAml8RCQEQucScjxghYd',
         category: 'fruits',
       });
 
       realm.create('Word', {
         word: 'trî',
         image:
-          'https://drive.google.com/uc?export=download&id=1Q-4DvUdpmyuyP_oLXAE4Cm4fhjLSW2fy',
+          'https://drive.google.com/uc?export=media&id=1Q-4DvUdpmyuyP_oLXAE4Cm4fhjLSW2fy',
         audio:
-          'https://drive.google.com/uc?export=download&id=1jIZeSmiKlKAGt_sYqNGLfTx_NUm1RhLJ',
+          'https://drive.google.com/uc?export=media&id=1jIZeSmiKlKAGt_sYqNGLfTx_NUm1RhLJ',
         category: 'fruits',
       });
 
       realm.create('Word', {
         word: 'xelek',
         image:
-          'https://drive.google.com/uc?export=download&id=1tJmdkDi7XDfEtzLDqnOBGigR-QquQTn3',
+          'https://drive.google.com/uc?export=media&id=1tJmdkDi7XDfEtzLDqnOBGigR-QquQTn3',
         audio:
-          'https://drive.google.com/uc?export=download&id=1nk0DMtA7t1YEOxq0odwRMJP-I7aNeK9h',
+          'https://drive.google.com/uc?export=media&id=1nk0DMtA7t1YEOxq0odwRMJP-I7aNeK9h',
         category: 'shapes',
       });
 
       realm.create('Word', {
         word: 'gilover',
         image:
-          'https://drive.google.com/uc?export=download&id=1zbJsO3HVv1owiJwZaLj7wzoQY2Senr_O',
+          'https://drive.google.com/uc?export=media&id=1zbJsO3HVv1owiJwZaLj7wzoQY2Senr_O',
         audio:
-          'https://drive.google.com/uc?export=download&id=1zyCZXXptuCuYVNP0_Rr_wYnWh2fP5Xsl',
+          'https://drive.google.com/uc?export=media&id=1zyCZXXptuCuYVNP0_Rr_wYnWh2fP5Xsl',
         category: 'shapes',
       });
 
       realm.create('Word', {
         word: 'çargoşe',
         image:
-          'https://drive.google.com/uc?export=download&id=1pp17ReWfl6xuF78Po-9BiVBFCRidgpJv',
+          'https://drive.google.com/uc?export=media&id=1pp17ReWfl6xuF78Po-9BiVBFCRidgpJv',
         audio:
-          'https://drive.google.com/uc?export=download&id=1uwMdUYHee9PR9VjQYpRlhY6aSslRJMBG',
+          'https://drive.google.com/uc?export=media&id=1uwMdUYHee9PR9VjQYpRlhY6aSslRJMBG',
         category: 'shapes',
       });
 
       realm.create('Word', {
         word: 'sêgoşe',
         image:
-          'https://drive.google.com/uc?export=download&id=1maQ_-l7dARoOT_NXZHOSg5imYYjmDBmL',
+          'https://drive.google.com/uc?export=media&id=1maQ_-l7dARoOT_NXZHOSg5imYYjmDBmL',
         audio:
-          'https://drive.google.com/uc?export=download&id=1YlhNaIfxq7A9G7FJWY2xdkmDjTA___BS',
+          'https://drive.google.com/uc?export=media&id=1YlhNaIfxq7A9G7FJWY2xdkmDjTA___BS',
         category: 'shapes',
       });
     });
