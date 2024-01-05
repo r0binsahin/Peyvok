@@ -174,15 +174,41 @@ export const CreateData = () => {
   const createCategories = useCallback(() => {
     try {
       realm.write(() => {
-        categories.map(category => {
-          realm.create('Category', {
-            imgURL: category.imgURL,
-            categoryName: category.categoryName,
-            categoryNameKU: category.categoryNameKU,
-            categoryAudio: category.categoryAudio,
-          });
-          console.log('called');
+        realm.create('Category', {
+          imgURL:
+            'https://drive.google.com/uc?export=media&id=1Lkkko9-ktYX6cJBkNyp1fvtgZbTZ99ea',
+          categoryNameKU: 'reng',
+          categoryName: 'colors',
+          categoryAudio:
+            'https://drive.google.com/uc?export=media&id=1DNXGka5RbegvP8HtNRpuy2r26pnBcmCd',
         });
+        realm.create('Category', {
+          imgURL:
+            'https://drive.google.com/uc?export=media&id=1zj-qLoz_RN-7i3NzcvodKpz6YEZZVDCF',
+          categoryNameKU: 'ajel',
+          categoryName: 'animals',
+          categoryAudio:
+            'https://drive.google.com/uc?export=media&id=1hwKPIWGmxoiUzjU2fbAo1TUzVOdXHWsf',
+        });
+
+        realm.create('Category', {
+          imgURL:
+            'https://drive.google.com/uc?export=media&id=1e1dS-xtmALC1qtP2zi7dCW17o8MHBnOg',
+          categoryNameKU: 'fêkî',
+          categoryName: 'fruits',
+          categoryAudio:
+            'https://drive.google.com/uc?export=media&id=161Hz-IfY63sMsPbtefr2fH4rPuu5ftLh',
+        });
+        realm.create('Category', {
+          imgURL:
+            'https://drive.google.com/uc?export=media&id=1-fuahj5vrSDegu2WXfowXCWlUua6kN36',
+          categoryNameKU: 'formên geometrîk',
+          categoryName: 'shapes',
+          categoryAudio:
+            'https://drive.google.com/uc?export=media&id=1drGc9vyLw__JfMrijLA6GLhgJKQSM7rd',
+        });
+
+        console.log('create category called');
       });
     } catch (error) {
       console.error('An error occurred during the write transaction:', error);
