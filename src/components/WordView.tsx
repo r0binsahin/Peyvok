@@ -21,16 +21,12 @@ interface IWordViewProps {
 const WordView = ({word, loading}: IWordViewProps) => {
   return (
     <View style={styles.container}>
-      {loading ? (
-        <Skeleton width={164} height={162} />
-      ) : (
-        <FastImage
-          style={styles.img}
-          source={{
-            uri: word.image,
-          }}
-        />
-      )}
+      <FastImage
+        style={styles.img}
+        source={{
+          uri: word.image,
+        }}
+      />
 
       <View style={styles.textBox}>
         <Text style={GlobalStyles.wordListTitle}>{word.word}</Text>

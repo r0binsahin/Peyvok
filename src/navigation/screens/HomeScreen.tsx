@@ -10,6 +10,7 @@ import {Image} from 'react-native';
 import React from 'react';
 import GlobalStyles from '../../utiles/GlobalStyles';
 import FastImage from 'react-native-fast-image';
+import {setupTrackPlayer} from '../../utiles/audioFunctions';
 
 export const HomeScreen = () => {
   const categories: ICategory[] = categoryData.categoryData;
@@ -17,6 +18,19 @@ export const HomeScreen = () => {
   const [isAvatar, setIsAvatar] = useState(true);
   const carouselTranslateY = new Animated.Value(Dimensions.get('screen').width);
   const [loading, setLoading] = useState(true);
+
+  const [isPlayerInitialized, setIsPlayerInitialized] = useState(false);
+
+  const setPlayer = async () => {
+    if (!isPlayerInitialized) {
+      await setupTrackPlayer();
+      setIsPlayerInitialized(true);
+    }
+  };
+
+  useEffect(() => {
+    setPlayer();
+  }, []);
 
   /*   useEffect(() => {
     setLoading(true);

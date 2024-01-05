@@ -8,7 +8,7 @@ import {playTrack, setupTrackPlayer} from '../utiles/audioFunctions';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {RootStackParamList} from '../utiles/RootStackParams';
 import {useNavigation} from '@react-navigation/native';
-import {useEffect} from 'react';
+import {useEffect, useState} from 'react';
 import React from 'react';
 import GlobalStyles from '../utiles/GlobalStyles';
 import Skeleton from './Skeleton';
@@ -19,18 +19,7 @@ interface ICategoryViewProps {
 }
 
 const CategoryView = ({category, loading}: ICategoryViewProps) => {
-  let isPlayerInitialized = false;
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
-
-  const setPlayer = async () => {
-    if (!isPlayerInitialized) {
-      await setupTrackPlayer(isPlayerInitialized);
-    }
-  };
-
-  useEffect(() => {
-    setPlayer();
-  }, []);
 
   const colors = ['#7571E6', '#8481EE'];
   const cardWidth = [210, 215];
@@ -59,16 +48,12 @@ const CategoryView = ({category, loading}: ICategoryViewProps) => {
               selectedCategoryKu: category.categoryNameKU,
             })
           }>
-          {/*      {loading ? (
-            <Skeleton width={225} height={148} />
-          ) : ( */}
           <FastImage
             style={styles.img}
             source={{
               uri: category.imgURL,
             }}
           />
-          {/*  )} */}
         </TouchableOpacity>
       </View>
 

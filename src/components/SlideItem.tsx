@@ -19,11 +19,7 @@ interface ISlideItemProps {
 const SlideItem = ({word, index, loading}: ISlideItemProps) => {
   return (
     <View style={styles.container} key={index}>
-      {loading ? (
-        <Skeleton width={225} height={225} />
-      ) : (
-        <FastImage source={{uri: word.image}} style={styles.image} />
-      )}
+      <FastImage source={{uri: word.image}} style={styles.image} />
 
       <View style={styles.content}>
         <View style={styles.titleBox}>
