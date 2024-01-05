@@ -1,6 +1,6 @@
 import TrackPlayer, {Capability} from 'react-native-track-player';
 
-export const setupTrackPlayer = async (isPlayerInitialized: boolean) => {
+export const setupTrackPlayer = async () => {
   try {
     await TrackPlayer.setupPlayer();
     await TrackPlayer.updateOptions({
@@ -8,7 +8,6 @@ export const setupTrackPlayer = async (isPlayerInitialized: boolean) => {
       capabilities: [Capability.Play],
       compactCapabilities: [Capability.Play],
     });
-    isPlayerInitialized = true;
   } catch (error) {
     console.log(error);
   }
