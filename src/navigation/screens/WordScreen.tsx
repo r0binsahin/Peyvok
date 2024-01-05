@@ -33,9 +33,6 @@ export const WordScreen = (props: propsType) => {
 
   return (
     <View style={styles.container}>
-      {/*   <View>
-        <Text style={GlobalStyles.categoryHead}>{selectedCategoryKu}</Text>
-      </View> */}
       <Slider words={reorderedWords} />
     </View>
   );

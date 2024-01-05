@@ -12,9 +12,10 @@ import {useEffect, useState} from 'react';
 import React from 'react';
 import GlobalStyles from '../utiles/GlobalStyles';
 import Skeleton from './Skeleton';
+import {Category} from '../models/Category';
 
 interface ICategoryViewProps {
-  category: ICategory;
+  category: Category;
   loading: boolean;
 }
 

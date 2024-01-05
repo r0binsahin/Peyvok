@@ -3,22 +3,21 @@ import {
   ScrollView,
   TouchableOpacity,
   View,
-  Dimensions,
   Text,
 } from 'react-native';
+
+import React, {useEffect, useState} from 'react';
 
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {useNavigation} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 
 import {RealmContext, Word} from '../../models/Word';
-import Realm from 'realm';
 
-import {RootStackParamList} from '../../utiles/RootStackParams';
 import WordView from '../../components/WordView';
-import React, {useEffect, useState} from 'react';
+
 import GlobalStyles from '../../utiles/GlobalStyles';
-import Background from '../../components/backgroundComponents/Background';
+import {RootStackParamList} from '../../utiles/RootStackParams';
 
 type propsType = NativeStackScreenProps<RootStackParamList, 'CategoryScreen'>;
 
@@ -26,10 +25,10 @@ export const CategoryScreen = (props: propsType) => {
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
   const {route} = props;
   const {selectedCategory, selectedCategoryKu} = route.params;
-  const {useQuery} = RealmContext;
-  const words = useQuery(Word);
+
   const [loading, setLoading] = useState(true);
 
+  const {useQuery} = RealmContext;
   const filteredWords = useQuery(Word, words => {
     return words.filtered(`category == $0`, selectedCategory);
   });

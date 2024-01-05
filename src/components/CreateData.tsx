@@ -12,7 +12,6 @@ export const CreateData = () => {
   const {useRealm, useQuery} = RealmContext;
   const realm = useRealm();
   const words = useQuery(Word);
-  const categories: ICategory[] = categoryData.categoryData;
 
   useEffect(() => {
     realm.subscriptions.update(mutableSubs => {

@@ -1,25 +1,31 @@
+import React from 'react';
+import {useEffect, useRef, useState} from 'react';
+
 import {View, Dimensions, Animated, Text, Easing} from 'react-native';
 
 import CategoryView from '../../components/CategoryView';
-import {ICategory} from '../../models/ICategory';
-import categoryData from '../../../assets/categoryData.json';
 
 import Carousel from 'react-native-snap-carousel';
-import {useEffect, useRef, useState} from 'react';
-import {Image} from 'react-native';
-import React from 'react';
-import GlobalStyles from '../../utiles/GlobalStyles';
 import FastImage from 'react-native-fast-image';
+
+import GlobalStyles from '../../utiles/GlobalStyles';
 import {setupTrackPlayer} from '../../utiles/audioFunctions';
 
-export const HomeScreen = () => {
-  const categories: ICategory[] = categoryData.categoryData;
-  const carouselRef = useRef(null);
-  const [isAvatar, setIsAvatar] = useState(true);
-  const carouselTranslateY = new Animated.Value(Dimensions.get('screen').width);
-  const [loading, setLoading] = useState(true);
+import {RealmContext} from '../../models/Word';
+import {Category} from '../../models/Category';
 
+export const HomeScreen = () => {
+  const {useQuery} = RealmContext;
+  const categories = useQuery(Category);
+
+  const carouselRef = useRef(null);
+  const bounceValue = new Animated.Value(0.8);
+
+  const [isAvatar, setIsAvatar] = useState(true);
+  const [loading, setLoading] = useState(true);
   const [isPlayerInitialized, setIsPlayerInitialized] = useState(false);
+
+  const carouselTranslateY = new Animated.Value(Dimensions.get('screen').width);
 
   const setPlayer = async () => {
     if (!isPlayerInitialized) {
@@ -27,19 +33,6 @@ export const HomeScreen = () => {
       setIsPlayerInitialized(true);
     }
   };
-
-  useEffect(() => {
-    setPlayer();
-  }, []);
-
-  /*   useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 6000);
-  }, []); */
-
-  const bounceValue = new Animated.Value(0.8);
 
   const startBounceAnimation = () => {
     Animated.spring(bounceValue, {
@@ -84,8 +77,9 @@ export const HomeScreen = () => {
   };
 
   useEffect(() => {
+    setPlayer();
     startBounceAnimation();
-  });
+  }, []);
 
   useEffect(() => {
     if (!isAvatar) {
@@ -129,9 +123,10 @@ export const HomeScreen = () => {
           <Carousel
             ref={carouselRef}
             layoutCardOffset={3}
-            data={categories}
             //@ts-ignore
+            data={categories}
             renderItem={({item}) => (
+              //@ts-ignore
               <CategoryView category={item} loading={loading} />
             )}
             sliderWidth={Dimensions.get('screen').width}
