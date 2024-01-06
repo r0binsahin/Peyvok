@@ -24,9 +24,11 @@ const Information = () => {
               experience.
             </Text>
             <Text style={styles.text}>Contact: peyvok@outlook.com</Text>
-            <TouchableOpacity onPress={() => setEnglish(false)}>
-              <Text style={styles.lang}> {'>'} bi kurdî</Text>
-            </TouchableOpacity>
+            <View style={styles.langBox}>
+              <TouchableOpacity onPress={() => setEnglish(false)}>
+                <Text style={styles.lang}> {'>'} bi kurdî</Text>
+              </TouchableOpacity>
+            </View>
           </View>
         ) : (
           <View style={styles.info}>
@@ -44,9 +46,11 @@ const Information = () => {
               bikin.
             </Text>
             <Text style={styles.text}>Têkilî: peyvok@outlook.com</Text>
-            <TouchableOpacity onPress={() => setEnglish(true)}>
-              <Text style={styles.lang}>{'>'} in English</Text>
-            </TouchableOpacity>
+            <View style={styles.langBox}>
+              <TouchableOpacity onPress={() => setEnglish(true)}>
+                <Text style={styles.lang}>{'>'} in English</Text>
+              </TouchableOpacity>
+            </View>
           </View>
         )}
       </View>
@@ -79,7 +83,9 @@ const styles = StyleSheet.create({
     fontFamily: 'Quicksand-Regular',
     fontSize: 14,
   },
-
+  langBox: {
+    width: 100,
+  },
   lang: {
     fontFamily: 'Quicksand-Bold',
     fontSize: 14,
