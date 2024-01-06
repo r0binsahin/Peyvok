@@ -16,6 +16,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 
 import GlobalStyles from '../utiles/GlobalStyles';
 import FastImage from 'react-native-fast-image';
+import {Fonts} from '../utiles/Fonts';
 
 interface IHeaderProps {
   isHeaderShown: boolean;
@@ -49,9 +50,7 @@ export const Header = ({isHeaderShown}: IHeaderProps) => {
       {isHomeScreen ? (
         <View style={styles.avatarBox}>
           <View>
-            <Text style={[styles.text, GlobalStyles.fontBold]}>
-              Tu bi xêr hatî Peyvokê
-            </Text>
+            <Text style={styles.text}>Tu bi xêr hatî Peyvokê</Text>
           </View>
 
           <FastImage
@@ -127,5 +126,7 @@ const styles = StyleSheet.create({
 
   text: {
     fontSize: 18,
+    fontFamily: Fonts.QSBold,
+    color: '#000',
   },
 });

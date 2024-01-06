@@ -1,6 +1,7 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React, {useState} from 'react';
 import {TouchableOpacity} from 'react-native-gesture-handler';
+import {Fonts} from '../utiles/Fonts';
 
 const Information = () => {
   const [english, setEnglish] = useState(false);
@@ -24,9 +25,11 @@ const Information = () => {
               experience.
             </Text>
             <Text style={styles.text}>Contact: peyvok@outlook.com</Text>
-            <TouchableOpacity onPress={() => setEnglish(false)}>
-              <Text style={styles.lang}> {'>'} bi kurdî</Text>
-            </TouchableOpacity>
+            <View style={styles.langBox}>
+              <TouchableOpacity onPress={() => setEnglish(false)}>
+                <Text style={styles.lang}> {'>'} bi kurdî</Text>
+              </TouchableOpacity>
+            </View>
           </View>
         ) : (
           <View style={styles.info}>
@@ -44,9 +47,11 @@ const Information = () => {
               bikin.
             </Text>
             <Text style={styles.text}>Têkilî: peyvok@outlook.com</Text>
-            <TouchableOpacity onPress={() => setEnglish(true)}>
-              <Text style={styles.lang}>{'>'} in English</Text>
-            </TouchableOpacity>
+            <View style={styles.langBox}>
+              <TouchableOpacity onPress={() => setEnglish(true)}>
+                <Text style={styles.lang}>{'>'} in English</Text>
+              </TouchableOpacity>
+            </View>
           </View>
         )}
       </View>
@@ -72,16 +77,23 @@ const styles = StyleSheet.create({
     paddingBottom: 50,
   },
   infoTitle: {
-    fontFamily: 'Quicksand-Bold',
+    fontFamily: Fonts.QSBold,
     fontSize: 20,
+    color: '#000',
+    fontWeight: 'bold',
   },
   text: {
-    fontFamily: 'Quicksand-Regular',
+    fontFamily: Fonts.QSRegular,
     fontSize: 14,
+    color: '#000',
   },
-
+  langBox: {
+    width: 100,
+  },
   lang: {
-    fontFamily: 'Quicksand-Bold',
+    fontFamily: Fonts.QSBold,
     fontSize: 14,
+    color: '#000',
+    fontWeight: 'bold',
   },
 });
