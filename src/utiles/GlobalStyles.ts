@@ -1,24 +1,9 @@
 import {StyleSheet} from 'react-native';
+import {Fonts} from './Fonts';
 
 export default StyleSheet.create({
-  fontBold: {
-    fontFamily: 'Quicksand-Bold',
-  },
-  fontRegular: {
-    fontFamily: 'Quicksand-Regular',
-  },
-  fontSemiBold: {
-    fontFamily: 'Quicksand-SemiBold',
-  },
-  fontMedium: {
-    fontFamily: 'Quicksand-Medium',
-  },
-  fontLight: {
-    fontFamily: 'Quicksand-Light',
-  },
-
   categoryTitle: {
-    fontFamily: 'Quicksand-Bold',
+    fontFamily: Fonts.QSBold,
     fontSize: 16,
     letterSpacing: 1.5,
     marginHorizontal: 20,
@@ -27,7 +12,7 @@ export default StyleSheet.create({
     textTransform: 'capitalize',
   },
   wordListTitle: {
-    fontFamily: 'Quicksand-Bold',
+    fontFamily: Fonts.QSBold,
     fontSize: 15,
     letterSpacing: 1.5,
     marginHorizontal: 20,
@@ -37,7 +22,7 @@ export default StyleSheet.create({
   },
 
   categoryHead: {
-    fontFamily: 'Quicksand-Bold',
+    fontFamily: Fonts.QSBold,
     fontSize: 20,
     letterSpacing: 1.5,
     color: '#000',
@@ -45,7 +30,7 @@ export default StyleSheet.create({
   },
 
   sliderWordTitle: {
-    fontFamily: 'Quicksand-Bold',
+    fontFamily: Fonts.QSBold,
     fontSize: 16,
     letterSpacing: 1.5,
     marginHorizontal: 20,
@@ -54,7 +39,7 @@ export default StyleSheet.create({
     textTransform: 'capitalize',
   },
   startWelcomeText: {
-    fontFamily: 'Quicksand-Bold',
+    fontFamily: Fonts.QSBold,
     fontSize: 24,
     letterSpacing: 1.5,
     color: '#000',

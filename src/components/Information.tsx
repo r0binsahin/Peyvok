@@ -1,6 +1,7 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React, {useState} from 'react';
 import {TouchableOpacity} from 'react-native-gesture-handler';
+import {Fonts} from '../utiles/Fonts';
 
 const Information = () => {
   const [english, setEnglish] = useState(false);
@@ -76,18 +77,23 @@ const styles = StyleSheet.create({
     paddingBottom: 50,
   },
   infoTitle: {
-    fontFamily: 'Quicksand-Bold',
+    fontFamily: Fonts.QSBold,
     fontSize: 20,
+    color: '#000',
+    fontWeight: 'bold',
   },
   text: {
-    fontFamily: 'Quicksand-Regular',
+    fontFamily: Fonts.QSRegular,
     fontSize: 14,
+    color: '#000',
   },
   langBox: {
     width: 100,
   },
   lang: {
-    fontFamily: 'Quicksand-Bold',
+    fontFamily: Fonts.QSBold,
     fontSize: 14,
+    color: '#000',
+    fontWeight: 'bold',
   },
 });
