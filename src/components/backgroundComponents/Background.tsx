@@ -18,7 +18,7 @@ const Background = ({children}: IBackgroundProps) => {
   };
 
   const stars = [
-    {top: 35, left: 40, color: '#A8A6FF'},
+    {top: 15, left: 40, color: '#A8A6FF'},
     {top: 15, left: percentageToPixels('70%', screenWidth), color: '#FABFFD'},
     {top: 25, left: percentageToPixels('30%', screenWidth), color: '#FABFFD'},
     {top: 80, left: percentageToPixels('50%', screenWidth), color: '#A8A6FF'},
@@ -78,7 +78,10 @@ const Background = ({children}: IBackgroundProps) => {
           <View style={{position: 'absolute', top: 50, left: -25}}>
             <Cloud />
           </View>
-          <View style={{position: 'absolute', bottom: 70, left: '60%'}}>
+          <View style={{position: 'absolute', bottom: '60%', left: '30%'}}>
+            <Cloud />
+          </View>
+          <View style={{position: 'absolute', bottom: 100, left: '60%'}}>
             <Cloud />
           </View>
           <View style={{position: 'absolute', top: 40, left: '80%'}}>
