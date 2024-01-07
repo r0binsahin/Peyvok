@@ -81,7 +81,7 @@ const Background = ({children}: IBackgroundProps) => {
           <View style={{position: 'absolute', bottom: '60%', left: '30%'}}>
             <Cloud />
           </View>
-          <View style={{position: 'absolute', bottom: 100, left: '60%'}}>
+          <View style={{position: 'absolute', bottom: 170, left: '60%'}}>
             <Cloud />
           </View>
           <View style={{position: 'absolute', top: 40, left: '80%'}}>
