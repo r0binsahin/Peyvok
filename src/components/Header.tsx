@@ -17,6 +17,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import GlobalStyles from '../utiles/GlobalStyles';
 import FastImage from 'react-native-fast-image';
 import {Fonts} from '../utiles/Fonts';
+import {playTrack} from '../utiles/audioFunctions';
 
 interface IHeaderProps {
   isHeaderShown: boolean;
@@ -49,9 +50,14 @@ export const Header = ({isHeaderShown}: IHeaderProps) => {
       style={[styles.container, {transform: [{translateY: translateY}]}]}>
       {isHomeScreen ? (
         <View style={styles.avatarBox}>
-          <View>
+          <TouchableOpacity
+            onPress={() =>
+              playTrack(
+                'https://dl.dropboxusercontent.com/scl/fi/jjjbd01hd57vtfniqp82h/welcometowordrealm.mp3?rlkey=7o8rypa2mq0dm48azpfn3c90s&dl=0',
+              )
+            }>
             <Text style={styles.text}>Tu bi xêr hatî Peyvokê</Text>
-          </View>
+          </TouchableOpacity>
           <FastImage
             style={styles.image}
             source={require('../../assets/avatar/avatar_half.png')}
