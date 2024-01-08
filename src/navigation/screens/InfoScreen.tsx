@@ -4,5 +4,6 @@ import {CreateData} from '../../components/CreateData';
 
 export const InfoScreen = () => {
   return <CreateData />;
+
   /*   return <Information />; */
 };

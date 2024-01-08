@@ -25,6 +25,7 @@
     "react-devtools": "^5.0.0",
     "react-native": "^0.73.1",
     "react-native-fast-image": "^8.6.3",
+    "react-native-fs": "^2.20.0",
     "react-native-gesture-handler": "^2.14.0",
     "react-native-rename": "^3.2.13",
     "react-native-safe-area-context": "^4.8.2",
