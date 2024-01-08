@@ -23,9 +23,9 @@ export const playTrack = async (audio: string) => {
     const playBackstate1 = await TrackPlayer.getPlaybackState();
     console.log(playBackstate1);
     await TrackPlayer.play();
+    console.log('audio played');
     const playBackstate2 = await TrackPlayer.getPlaybackState();
     console.log(playBackstate2);
-    console.log('audio played');
   } catch (error) {
     console.log(error);
   }
