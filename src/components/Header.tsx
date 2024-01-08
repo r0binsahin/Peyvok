@@ -52,7 +52,6 @@ export const Header = ({isHeaderShown}: IHeaderProps) => {
           <View>
             <Text style={styles.text}>Tu bi xêr hatî Peyvokê</Text>
           </View>
-
           <FastImage
             style={styles.image}
             source={require('../../assets/avatar/avatar_half.png')}
