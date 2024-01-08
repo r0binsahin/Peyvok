@@ -132,6 +132,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 18,
     fontFamily: Fonts.QSBold,
+    fontWeight: '700',
     color: '#000',
   },
 });

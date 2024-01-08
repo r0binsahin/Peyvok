@@ -41,6 +41,7 @@ export default StyleSheet.create({
   startWelcomeText: {
     fontFamily: Fonts.QSBold,
     fontSize: 24,
+    fontWeight: '700',
     letterSpacing: 1.5,
     color: '#000',
   },

@@ -14,12 +14,9 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		35932A4784DB4AA5BB5A6BDA /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80E2772CA3F14A539D1C7058 /* Quicksand-Regular.ttf */; };
-		4320671E359B469687532A6A /* GothamRoundedMedium_21022.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBE48DC5CC934A12B09BEBF2 /* GothamRoundedMedium_21022.ttf */; };
-		46AD9F28E8D647A9B35AF111 /* GothamRoundedBook_21018.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 823F33AE6F71445C97BCCD95 /* GothamRoundedBook_21018.ttf */; };
 		602E866C1FB74F25A87C2C1F /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FA5718840B749E8A5C3BE87 /* Quicksand-Medium.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-Peyvok-PeyvokTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-Peyvok-PeyvokTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		A1689B501FF94FBFA3401871 /* GothamRoundedBold_21016.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 02A4BF0AF5D9461F8B2552AB /* GothamRoundedBold_21016.ttf */; };
 		A4943A6B83F540789171C15C /* VarelaRound-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C8B8D69530A4340BEF65B07 /* VarelaRound-Regular.ttf */; };
 		B5FAF5D52B3ADD3B00D11354 /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5FAF5C22B3ADD3B00D11354 /* Fontisto.ttf */; };
 		B5FAF5D62B3ADD3B00D11354 /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5FAF5C22B3ADD3B00D11354 /* Fontisto.ttf */; };
@@ -61,7 +58,6 @@
 		B5FAF5FA2B3ADD3B00D11354 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5FAF5D42B3ADD3B00D11354 /* MaterialIcons.ttf */; };
 		C83AAB0EEFBB4ECFB0232C42 /* Quicksand-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12FD9F6236F84FE7808DF63E /* Quicksand-Light.ttf */; };
 		D4C303AE95B04F4A9D5AD3E9 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79EC8C5594C54869BE3C65E4 /* Quicksand-Bold.ttf */; };
-		F3484F6CFDF34E22828A1F6D /* GothamRoundedLight_21020.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C74675829CD4C909AB282C7 /* GothamRoundedLight_21020.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,7 +74,6 @@
 		00E356EE1AD99517003FC87E /* PeyvokTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeyvokTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* PeyvokTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeyvokTests.m; sourceTree = "<group>"; };
-		02A4BF0AF5D9461F8B2552AB /* GothamRoundedBold_21016.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = GothamRoundedBold_21016.ttf; path = ../assets/fonts/GothamRoundedBold_21016.ttf; sourceTree = "<group>"; };
 		12FD9F6236F84FE7808DF63E /* Quicksand-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Quicksand-Light.ttf"; path = "../assets/fonts/Quicksand-Light.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* Peyvok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Peyvok.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Peyvok/AppDelegate.h; sourceTree = "<group>"; };
@@ -96,9 +91,7 @@
 		7FA5718840B749E8A5C3BE87 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Quicksand-Medium.ttf"; path = "../assets/fonts/Quicksand-Medium.ttf"; sourceTree = "<group>"; };
 		80E2772CA3F14A539D1C7058 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Quicksand-Regular.ttf"; path = "../assets/fonts/Quicksand-Regular.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Peyvok/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		823F33AE6F71445C97BCCD95 /* GothamRoundedBook_21018.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = GothamRoundedBook_21018.ttf; path = ../assets/fonts/GothamRoundedBook_21018.ttf; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-Peyvok-PeyvokTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Peyvok-PeyvokTests.release.xcconfig"; path = "Target Support Files/Pods-Peyvok-PeyvokTests/Pods-Peyvok-PeyvokTests.release.xcconfig"; sourceTree = "<group>"; };
-		8C74675829CD4C909AB282C7 /* GothamRoundedLight_21020.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = GothamRoundedLight_21020.ttf; path = ../assets/fonts/GothamRoundedLight_21020.ttf; sourceTree = "<group>"; };
 		B5FAF5C22B3ADD3B00D11354 /* Fontisto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fontisto.ttf; sourceTree = "<group>"; };
 		B5FAF5C32B3ADD3B00D11354 /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
 		B5FAF5C42B3ADD3B00D11354 /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Feather.ttf; sourceTree = "<group>"; };
@@ -118,7 +111,6 @@
 		B5FAF5D22B3ADD3B00D11354 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
 		B5FAF5D32B3ADD3B00D11354 /* FontAwesome6_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome6_Brands.ttf; sourceTree = "<group>"; };
 		B5FAF5D42B3ADD3B00D11354 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
-		BBE48DC5CC934A12B09BEBF2 /* GothamRoundedMedium_21022.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = GothamRoundedMedium_21022.ttf; path = ../assets/fonts/GothamRoundedMedium_21022.ttf; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		EF5D6972B4D84BEF94D46DD2 /* Quicksand-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Quicksand-SemiBold.ttf"; path = "../assets/fonts/Quicksand-SemiBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -219,10 +211,6 @@
 		AA8A253953674C9A90453363 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				02A4BF0AF5D9461F8B2552AB /* GothamRoundedBold_21016.ttf */,
-				823F33AE6F71445C97BCCD95 /* GothamRoundedBook_21018.ttf */,
-				8C74675829CD4C909AB282C7 /* GothamRoundedLight_21020.ttf */,
-				BBE48DC5CC934A12B09BEBF2 /* GothamRoundedMedium_21022.ttf */,
 				5C8B8D69530A4340BEF65B07 /* VarelaRound-Regular.ttf */,
 				79EC8C5594C54869BE3C65E4 /* Quicksand-Bold.ttf */,
 				12FD9F6236F84FE7808DF63E /* Quicksand-Light.ttf */,
@@ -405,10 +393,6 @@
 				B5FAF5F32B3ADD3B00D11354 /* FontAwesome6_Solid.ttf in Resources */,
 				B5FAF5DB2B3ADD3B00D11354 /* FontAwesome6_Regular.ttf in Resources */,
 				B5FAF5F92B3ADD3B00D11354 /* MaterialIcons.ttf in Resources */,
-				A1689B501FF94FBFA3401871 /* GothamRoundedBold_21016.ttf in Resources */,
-				46AD9F28E8D647A9B35AF111 /* GothamRoundedBook_21018.ttf in Resources */,
-				F3484F6CFDF34E22828A1F6D /* GothamRoundedLight_21020.ttf in Resources */,
-				4320671E359B469687532A6A /* GothamRoundedMedium_21022.ttf in Resources */,
 				A4943A6B83F540789171C15C /* VarelaRound-Regular.ttf in Resources */,
 				D4C303AE95B04F4A9D5AD3E9 /* Quicksand-Bold.ttf in Resources */,
 				C83AAB0EEFBB4ECFB0232C42 /* Quicksand-Light.ttf in Resources */,
