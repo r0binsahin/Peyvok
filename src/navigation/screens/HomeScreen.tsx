@@ -13,6 +13,7 @@ import {setupTrackPlayer} from '../../utiles/audioFunctions';
 
 import {RealmContext} from '../../models/Word';
 import {Category} from '../../models/Category';
+import Intro from '../../components/Intro';
 
 export const HomeScreen = () => {
   const {useQuery} = RealmContext;
@@ -25,7 +26,9 @@ export const HomeScreen = () => {
   const [loading, setLoading] = useState(true);
   const [isPlayerInitialized, setIsPlayerInitialized] = useState(false);
 
-  const carouselTranslateY = new Animated.Value(Dimensions.get('screen').width);
+  const carouselTranslateX = new Animated.Value(
+    Dimensions.get('screen').height,
+  );
 
   const setPlayer = async () => {
     if (!isPlayerInitialized) {
@@ -39,6 +42,7 @@ export const HomeScreen = () => {
       toValue: 1.2,
       friction: 0.5,
       tension: 20,
+
       useNativeDriver: true,
     }).start(() => {
       bounceValue.setValue(0.8);
@@ -68,7 +72,7 @@ export const HomeScreen = () => {
   };
 
   const startCarouselAnimation = () => {
-    Animated.timing(carouselTranslateY, {
+    Animated.timing(carouselTranslateX, {
       toValue: 1,
       duration: 700,
       easing: Easing.out(Easing.ease),
@@ -93,32 +97,15 @@ export const HomeScreen = () => {
         flex: 1,
       }}>
       {isAvatar ? (
-        <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-          <Text style={GlobalStyles.startWelcomeText}>
-            Tu bi xêr hatî Peyvokê!
-          </Text>
-          <Animated.View
-            style={{
-              width: 300,
-              height: '70%',
-              justifyContent: 'center',
-              alignItems: 'center',
-              transform: [{scale: bounceValue}],
-            }}
-            onTouchStart={startBounceAnimation}>
-            <FastImage
-              style={{width: 190, height: 208}}
-              source={{
-                uri: 'https://drive.google.com/uc?export=download&id=1jMzIo1ql9FNPUAd-5pZqijvlN_M2ZSWi',
-              }}
-            />
-          </Animated.View>
-        </View>
+        <Intro
+          bounceValue={bounceValue}
+          startBounceAnimation={startBounceAnimation}
+        />
       ) : (
         <Animated.View
           style={{
             flex: 1,
-            transform: [{translateY: carouselTranslateY}],
+            transform: [{translateX: carouselTranslateX}],
           }}>
           <Carousel
             ref={carouselRef}

@@ -1,6 +1,9 @@
 import {Dimensions, StyleSheet, Text, View} from 'react-native';
 import React, {useEffect, useState} from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
+import {
+  createStackNavigator,
+  CardStyleInterpolators,
+} from '@react-navigation/stack';
 import {RootStackParamList} from '../../utiles/RootStackParams';
 
 import {HomeScreen} from '../screens/HomeScreen';
@@ -13,26 +16,38 @@ import Background from '../../components/backgroundComponents/Background';
 const Stack = createStackNavigator<RootStackParamList>();
 
 const StackNavigation = () => {
-  const [isHeaderShown, setIsHeaderShown] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsHeaderShown(true);
-    }, 6000);
-  });
-
   return (
-    <Stack.Navigator
-      initialRouteName="HomeScreen"
-      screenOptions={{
-        headerShown: isHeaderShown,
-        header: () => <Header isHeaderShown={isHeaderShown} />,
-      }}>
-      <Stack.Screen name="HomeScreen" component={HomeScreen} />
-      <Stack.Screen name="CategoryScreen" component={CategoryScreen} />
-      <Stack.Screen name="WordScreen" component={WordScreen} />
-      <Stack.Screen name="InfoScreen" component={InfoScreen} />
-    </Stack.Navigator>
+    <Background>
+      <Stack.Navigator
+        initialRouteName="HomeScreen"
+        screenOptions={{
+          headerShown: true,
+          header: () => <Header />,
+          cardStyleInterpolator: ({current}) => {
+            return {
+              cardStyle: {
+                transform: [
+                  {
+                    translateX: current.progress.interpolate({
+                      inputRange: [0, 1],
+                      outputRange: [Dimensions.get('window').width, 0],
+                    }),
+                  },
+                ],
+              },
+            };
+          },
+          transitionSpec: {
+            open: {animation: 'timing', config: {duration: 350}},
+            close: {animation: 'timing', config: {duration: 350}},
+          },
+        }}>
+        <Stack.Screen name="HomeScreen" component={HomeScreen} />
+        <Stack.Screen name="CategoryScreen" component={CategoryScreen} />
+        <Stack.Screen name="WordScreen" component={WordScreen} />
+        <Stack.Screen name="InfoScreen" component={InfoScreen} />
+      </Stack.Navigator>
+    </Background>
   );
 };
 export default StackNavigation;
