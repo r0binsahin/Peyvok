@@ -12,7 +12,6 @@ import {InfoScreen} from '../screens/InfoScreen';
 import {WordScreen} from '../screens/WordScreen';
 import {Header} from '../../components/Header';
 import Background from '../../components/backgroundComponents/Background';
-import {Layout} from '@react-navigation/stack/lib/typescript/src/types';
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -24,7 +23,24 @@ const StackNavigation = () => {
         screenOptions={{
           headerShown: true,
           header: () => <Header />,
-          cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+          cardStyleInterpolator: ({current}) => {
+            return {
+              cardStyle: {
+                transform: [
+                  {
+                    translateX: current.progress.interpolate({
+                      inputRange: [0, 1],
+                      outputRange: [Dimensions.get('window').width, 0],
+                    }),
+                  },
+                ],
+              },
+            };
+          },
+          transitionSpec: {
+            open: {animation: 'timing', config: {duration: 350}},
+            close: {animation: 'timing', config: {duration: 350}},
+          },
         }}>
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="CategoryScreen" component={CategoryScreen} />
