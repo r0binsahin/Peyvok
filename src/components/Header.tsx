@@ -1,23 +1,18 @@
 import React, {useEffect, useState} from 'react';
 
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  Image,
-  Animated,
-  Easing,
-} from 'react-native';
+import {View, Text, TouchableOpacity, Animated, Easing} from 'react-native';
 import {StyleSheet} from 'react-native';
+
 import {useNavigation, useRoute} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
-import {RootStackParamList} from '../utiles/RootStackParams';
+
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-import GlobalStyles from '../utiles/GlobalStyles';
 import FastImage from 'react-native-fast-image';
+
 import {Fonts} from '../utiles/Fonts';
 import {playTrack} from '../utiles/audioFunctions';
+import {RootStackParamList} from '../utiles/RootStackParams';
 
 export const Header = () => {
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();

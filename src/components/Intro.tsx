@@ -1,7 +1,10 @@
-import {Animated, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import GlobalStyles from '../utiles/GlobalStyles';
+
+import {Animated, StyleSheet, Text, View} from 'react-native';
+
 import FastImage from 'react-native-fast-image';
+
+import GlobalStyles from '../utiles/GlobalStyles';
 
 interface IIntroProps {
   bounceValue: Animated.Value;
@@ -17,9 +20,7 @@ const Intro = ({bounceValue, startBounceAnimation}: IIntroProps) => {
         onTouchStart={startBounceAnimation}>
         <FastImage
           style={styles.img}
-          source={{
-            uri: 'https://drive.google.com/uc?export=download&id=1jMzIo1ql9FNPUAd-5pZqijvlN_M2ZSWi',
-          }}
+          source={require('../../assets/avatar/avatar.png')}
         />
       </Animated.View>
     </View>

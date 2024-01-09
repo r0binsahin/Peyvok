@@ -1,5 +1,7 @@
-import {Dimensions, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+
+import {Dimensions} from 'react-native';
+
 import Svg, {Defs, LinearGradient, Path, Stop} from 'react-native-svg';
 
 const TopWave = () => {
@@ -29,5 +31,3 @@ const TopWave = () => {
 };
 
 export default TopWave;
-
-const styles = StyleSheet.create({});

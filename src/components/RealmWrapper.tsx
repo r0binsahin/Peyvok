@@ -9,6 +9,7 @@ import Realm from 'realm';
 import App from '../App';
 import {RealmContext, Word} from '../models/Word';
 import {Category} from '../models/Category';
+import React from 'react';
 
 export const RealmWrapper = () => {
   const {RealmProvider} = RealmContext;

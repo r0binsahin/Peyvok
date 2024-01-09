@@ -6,9 +6,7 @@ import {View, Dimensions, Animated, Text, Easing} from 'react-native';
 import CategoryView from '../../components/CategoryView';
 
 import Carousel from 'react-native-snap-carousel';
-import FastImage from 'react-native-fast-image';
 
-import GlobalStyles from '../../utiles/GlobalStyles';
 import {setupTrackPlayer} from '../../utiles/audioFunctions';
 
 import {RealmContext} from '../../models/Word';
@@ -23,7 +21,7 @@ export const HomeScreen = () => {
   const bounceValue = new Animated.Value(0.8);
 
   const [isAvatar, setIsAvatar] = useState(true);
-  const [loading, setLoading] = useState(true);
+
   const [isPlayerInitialized, setIsPlayerInitialized] = useState(false);
 
   const carouselTranslateX = new Animated.Value(
@@ -114,7 +112,7 @@ export const HomeScreen = () => {
             data={categories}
             renderItem={({item}) => (
               //@ts-ignore
-              <CategoryView category={item} loading={loading} />
+              <CategoryView category={item} />
             )}
             sliderWidth={Dimensions.get('screen').width}
             itemWidth={225}

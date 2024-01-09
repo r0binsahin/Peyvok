@@ -1,5 +1,7 @@
 import React from 'react';
+
 import {Dimensions, PixelRatio, StyleSheet, View} from 'react-native';
+
 import TopWave from './TopWave';
 import Cloud from './Cloud';
 import BottomWave from './BottomWave';

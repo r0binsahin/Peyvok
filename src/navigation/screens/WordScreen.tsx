@@ -1,12 +1,13 @@
+import React from 'react';
+
+import {StyleSheet, View} from 'react-native';
+
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
+
+import Slider from '../../components/Slider';
 
 import {RootStackParamList} from '../../utiles/RootStackParams';
 import {RealmContext, Word} from '../../models/Word';
-
-import Slider from '../../components/Slider';
-import {StyleSheet, Text, View} from 'react-native';
-import React from 'react';
-import GlobalStyles from '../../utiles/GlobalStyles';
 
 type propsType = NativeStackScreenProps<RootStackParamList, 'WordScreen'>;
 

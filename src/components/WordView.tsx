@@ -1,24 +1,17 @@
-import {
-  Dimensions,
-  Image,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
 import React from 'react';
-import {Word} from '../models/Word';
-import {playTrack} from '../utiles/audioFunctions';
-import GlobalStyles from '../utiles/GlobalStyles';
-import Skeleton from './Skeleton';
+
+import {StyleSheet, Text, View} from 'react-native';
+
 import FastImage from 'react-native-fast-image';
+
+import {Word} from '../models/Word';
+import GlobalStyles from '../utiles/GlobalStyles';
 
 interface IWordViewProps {
   word: Word;
-  loading: boolean;
 }
 
-const WordView = ({word, loading}: IWordViewProps) => {
+const WordView = ({word}: IWordViewProps) => {
   return (
     <View style={styles.container}>
       <FastImage
