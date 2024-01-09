@@ -4,7 +4,7 @@ import {Fonts} from './Fonts';
 export default StyleSheet.create({
   categoryTitle: {
     fontFamily: Fonts.QSBold,
-    fontSize: 16,
+    fontSize: 15,
     letterSpacing: 1.5,
     marginHorizontal: 20,
     marginVertical: 4,
