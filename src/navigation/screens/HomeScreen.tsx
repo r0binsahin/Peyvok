@@ -95,10 +95,7 @@ export const HomeScreen = () => {
         flex: 1,
       }}>
       {isAvatar ? (
-        <Intro
-          bounceValue={bounceValue}
-          startBounceAnimation={startBounceAnimation}
-        />
+        <Intro bounceValue={bounceValue} />
       ) : (
         <Animated.View
           style={{
