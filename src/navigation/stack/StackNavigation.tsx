@@ -12,23 +12,26 @@ import {InfoScreen} from '../screens/InfoScreen';
 import {WordScreen} from '../screens/WordScreen';
 import {Header} from '../../components/Header';
 import Background from '../../components/backgroundComponents/Background';
+import {Layout} from '@react-navigation/stack/lib/typescript/src/types';
 
 const Stack = createStackNavigator<RootStackParamList>();
 
 const StackNavigation = () => {
   return (
-    <Stack.Navigator
-      initialRouteName="HomeScreen"
-      screenOptions={{
-        headerShown: true,
-        header: () => <Header />,
-        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
-      }}>
-      <Stack.Screen name="HomeScreen" component={HomeScreen} />
-      <Stack.Screen name="CategoryScreen" component={CategoryScreen} />
-      <Stack.Screen name="WordScreen" component={WordScreen} />
-      <Stack.Screen name="InfoScreen" component={InfoScreen} />
-    </Stack.Navigator>
+    <Background>
+      <Stack.Navigator
+        initialRouteName="HomeScreen"
+        screenOptions={{
+          headerShown: true,
+          header: () => <Header />,
+          cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+        }}>
+        <Stack.Screen name="HomeScreen" component={HomeScreen} />
+        <Stack.Screen name="CategoryScreen" component={CategoryScreen} />
+        <Stack.Screen name="WordScreen" component={WordScreen} />
+        <Stack.Screen name="InfoScreen" component={InfoScreen} />
+      </Stack.Navigator>
+    </Background>
   );
 };
 export default StackNavigation;
