@@ -19,11 +19,7 @@ import FastImage from 'react-native-fast-image';
 import {Fonts} from '../utiles/Fonts';
 import {playTrack} from '../utiles/audioFunctions';
 
-interface IHeaderProps {
-  isHeaderShown: boolean;
-}
-
-export const Header = ({isHeaderShown}: IHeaderProps) => {
+export const Header = () => {
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
   const route = useRoute();
   const isHomeScreen = route.name === 'HomeScreen' ? true : false;
@@ -40,16 +36,14 @@ export const Header = ({isHeaderShown}: IHeaderProps) => {
   };
 
   useEffect(() => {
-    if (isHeaderShown) {
-      animateHeader();
-    }
-  }, [isHeaderShown]);
+    animateHeader();
+  }, []);
 
   return (
-    <Animated.View
-      style={[styles.container, {transform: [{translateY: translateY}]}]}>
+    <View style={styles.container}>
       {isHomeScreen ? (
-        <View style={styles.avatarBox}>
+        <Animated.View
+          style={[styles.avatarBox, {transform: [{translateY: translateY}]}]}>
           <TouchableOpacity
             onPress={() =>
               playTrack(
@@ -62,7 +56,7 @@ export const Header = ({isHeaderShown}: IHeaderProps) => {
             style={styles.image}
             source={require('../../assets/avatar/avatar_half.png')}
           />
-        </View>
+        </Animated.View>
       ) : (
         <View>
           <TouchableOpacity onPress={() => navigation.goBack()}>
@@ -88,7 +82,7 @@ export const Header = ({isHeaderShown}: IHeaderProps) => {
       ) : (
         ''
       )}
-    </Animated.View>
+    </View>
   );
 };
 

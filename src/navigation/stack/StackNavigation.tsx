@@ -13,20 +13,12 @@ import Background from '../../components/backgroundComponents/Background';
 const Stack = createStackNavigator<RootStackParamList>();
 
 const StackNavigation = () => {
-  const [isHeaderShown, setIsHeaderShown] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsHeaderShown(true);
-    }, 6000);
-  });
-
   return (
     <Stack.Navigator
       initialRouteName="HomeScreen"
       screenOptions={{
-        headerShown: isHeaderShown,
-        header: () => <Header isHeaderShown={isHeaderShown} />,
+        headerShown: true,
+        header: () => <Header />,
       }}>
       <Stack.Screen name="HomeScreen" component={HomeScreen} />
       <Stack.Screen name="CategoryScreen" component={CategoryScreen} />
