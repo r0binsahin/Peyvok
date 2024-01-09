@@ -1,6 +1,9 @@
 import {Dimensions, StyleSheet, Text, View} from 'react-native';
 import React, {useEffect, useState} from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
+import {
+  createStackNavigator,
+  CardStyleInterpolators,
+} from '@react-navigation/stack';
 import {RootStackParamList} from '../../utiles/RootStackParams';
 
 import {HomeScreen} from '../screens/HomeScreen';
@@ -19,6 +22,7 @@ const StackNavigation = () => {
       screenOptions={{
         headerShown: true,
         header: () => <Header />,
+        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
       }}>
       <Stack.Screen name="HomeScreen" component={HomeScreen} />
       <Stack.Screen name="CategoryScreen" component={CategoryScreen} />

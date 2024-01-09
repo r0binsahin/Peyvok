@@ -25,7 +25,9 @@ export const HomeScreen = () => {
   const [loading, setLoading] = useState(true);
   const [isPlayerInitialized, setIsPlayerInitialized] = useState(false);
 
-  const carouselTranslateY = new Animated.Value(Dimensions.get('screen').width);
+  const carouselTranslateX = new Animated.Value(
+    Dimensions.get('screen').height,
+  );
 
   const setPlayer = async () => {
     if (!isPlayerInitialized) {
@@ -68,7 +70,7 @@ export const HomeScreen = () => {
   };
 
   const startCarouselAnimation = () => {
-    Animated.timing(carouselTranslateY, {
+    Animated.timing(carouselTranslateX, {
       toValue: 1,
       duration: 700,
       easing: Easing.out(Easing.ease),
@@ -118,7 +120,7 @@ export const HomeScreen = () => {
         <Animated.View
           style={{
             flex: 1,
-            transform: [{translateY: carouselTranslateY}],
+            transform: [{translateX: carouselTranslateX}],
           }}>
           <Carousel
             ref={carouselRef}
