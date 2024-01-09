@@ -17,15 +17,10 @@ export const setupTrackPlayer = async () => {
 
 export const playTrack = async (audio: string) => {
   try {
-    await TrackPlayer.stop();
+    /*  await TrackPlayer.stop(); */
     await TrackPlayer.reset();
     await TrackPlayer.add({url: audio});
-    const playBackstate1 = await TrackPlayer.getPlaybackState();
-    console.log(playBackstate1);
     await TrackPlayer.play();
-    console.log('audio played');
-    const playBackstate2 = await TrackPlayer.getPlaybackState();
-    console.log(playBackstate2);
   } catch (error) {
     console.log(error);
   }
