@@ -1,4 +1,3 @@
-import {createRealmContext} from '@realm/react';
 import Realm, {BSON, ObjectSchema} from 'realm';
 
 export class Category extends Realm.Object<Category> {

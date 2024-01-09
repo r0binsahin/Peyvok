@@ -1,5 +1,5 @@
-import {Dimensions, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+
 import Svg, {Defs, LinearGradient, Path, Stop} from 'react-native-svg';
 
 const Cloud = () => {
@@ -26,5 +26,3 @@ const Cloud = () => {
 };
 
 export default Cloud;
-
-const styles = StyleSheet.create({});

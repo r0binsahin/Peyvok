@@ -1,5 +1,7 @@
-import {Dimensions, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+
+import {Dimensions, StyleSheet} from 'react-native';
+
 import Svg, {Defs, LinearGradient, Path, Stop} from 'react-native-svg';
 
 const BottomWave = () => {

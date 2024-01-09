@@ -1,25 +1,22 @@
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import FastImage from 'react-native-fast-image';
 
-import {ICategory} from '../models/ICategory';
-
-import {playTrack, setupTrackPlayer} from '../utiles/audioFunctions';
+import {playTrack} from '../utiles/audioFunctions';
 
 import {StackNavigationProp} from '@react-navigation/stack';
 import {RootStackParamList} from '../utiles/RootStackParams';
 import {useNavigation} from '@react-navigation/native';
-import {useEffect, useState} from 'react';
+
 import React from 'react';
 import GlobalStyles from '../utiles/GlobalStyles';
-import Skeleton from './Skeleton';
+
 import {Category} from '../models/Category';
 
 interface ICategoryViewProps {
   category: Category;
-  loading: boolean;
 }
 
-const CategoryView = ({category, loading}: ICategoryViewProps) => {
+const CategoryView = ({category}: ICategoryViewProps) => {
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
 
   const colors = ['#7571E6', '#8481EE'];

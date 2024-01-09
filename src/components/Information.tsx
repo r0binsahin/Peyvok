@@ -1,6 +1,9 @@
-import {StyleSheet, Text, View} from 'react-native';
 import React, {useState} from 'react';
+
+import {StyleSheet, Text, View} from 'react-native';
+
 import {TouchableOpacity} from 'react-native-gesture-handler';
+
 import {Fonts} from '../utiles/Fonts';
 
 const Information = () => {

@@ -1,9 +1,8 @@
-import {Dimensions, StyleSheet, Text, View} from 'react-native';
-import React, {useEffect, useState} from 'react';
-import {
-  createStackNavigator,
-  CardStyleInterpolators,
-} from '@react-navigation/stack';
+import React from 'react';
+
+import {Dimensions} from 'react-native';
+
+import {createStackNavigator} from '@react-navigation/stack';
 import {RootStackParamList} from '../../utiles/RootStackParams';
 
 import {HomeScreen} from '../screens/HomeScreen';
@@ -51,9 +50,3 @@ const StackNavigation = () => {
   );
 };
 export default StackNavigation;
-
-const styles = StyleSheet.create({
-  cover: {
-    flex: 1,
-  },
-});

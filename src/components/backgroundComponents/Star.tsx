@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
 import React from 'react';
+
 import Svg, {Path} from 'react-native-svg';
 
 interface IStarProps {
@@ -18,5 +18,3 @@ const Star = ({color}: IStarProps) => {
 };
 
 export default Star;
-
-const styles = StyleSheet.create({});

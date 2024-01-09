@@ -1,8 +1,10 @@
-import React, {useEffect, useRef, useState} from 'react';
-import Carousel from 'react-native-snap-carousel';
-import {Animated, Dimensions, View} from 'react-native';
-import {Word} from '../models/Word';
+import React, {useRef} from 'react';
 
+import {Animated, Dimensions, View} from 'react-native';
+
+import Carousel from 'react-native-snap-carousel';
+
+import {Word} from '../models/Word';
 import SlideItem from './SlideItem';
 
 interface ISliderProps {
@@ -13,6 +15,7 @@ const {width} = Dimensions.get('screen');
 
 const Slider = ({words}: ISliderProps) => {
   const carouselRef = useRef(null);
+
   const animatedStyle = (index: number, animatedValue: Animated.Value) => {
     const scale = animatedValue.interpolate({
       inputRange: [-1, 0, 1],
@@ -25,14 +28,6 @@ const Slider = ({words}: ISliderProps) => {
     };
   };
 
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-  }, []);
   return (
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
       <Carousel
@@ -40,9 +35,7 @@ const Slider = ({words}: ISliderProps) => {
         layoutCardOffset={3}
         data={words}
         //@ts-ignore
-        renderItem={({item, index}) => (
-          <SlideItem word={item} index={index} loading={loading} />
-        )}
+        renderItem={({item, index}) => <SlideItem word={item} index={index} />}
         sliderWidth={width}
         itemWidth={225}
         inactiveSlideShift={0}

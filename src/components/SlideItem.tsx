@@ -1,22 +1,22 @@
-import {StyleSheet, Text, TouchableOpacity, View, Image} from 'react-native';
-import {Word} from '../models/Word';
-import {playTrack} from '../utiles/audioFunctions';
+import React from 'react';
+
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import React from 'react';
-import GlobalStyles from '../utiles/GlobalStyles';
-import {load} from 'react-native-track-player/lib/trackPlayer';
-import Skeleton from './Skeleton';
 import FastImage from 'react-native-fast-image';
-MaterialCommunityIcons.loadFont();
+
+import GlobalStyles from '../utiles/GlobalStyles';
+import {playTrack} from '../utiles/audioFunctions';
+import {Word} from '../models/Word';
+
+//MaterialCommunityIcons.loadFont();
 
 interface ISlideItemProps {
   word: Word;
   index: number;
-  loading: boolean;
 }
 
-const SlideItem = ({word, index, loading}: ISlideItemProps) => {
+const SlideItem = ({word, index}: ISlideItemProps) => {
   return (
     <View style={styles.container} key={index}>
       <TouchableOpacity onPress={() => playTrack(word.audio)}>
