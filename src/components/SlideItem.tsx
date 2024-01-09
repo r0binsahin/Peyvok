@@ -19,7 +19,9 @@ interface ISlideItemProps {
 const SlideItem = ({word, index, loading}: ISlideItemProps) => {
   return (
     <View style={styles.container} key={index}>
-      <FastImage source={{uri: word.image}} style={styles.image} />
+      <TouchableOpacity onPress={() => playTrack(word.audio)}>
+        <FastImage source={{uri: word.image}} style={styles.image} />
+      </TouchableOpacity>
 
       <View style={styles.content}>
         <View style={styles.titleBox}>
