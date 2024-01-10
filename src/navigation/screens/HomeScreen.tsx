@@ -10,6 +10,7 @@ import Carousel from 'react-native-snap-carousel';
 import {RealmContext} from '../../models/Word';
 import {Category} from '../../models/Category';
 import Intro from '../../components/Intro';
+import {playTrack} from '../../utiles/audioFunctions';
 
 export const HomeScreen = () => {
   const {useQuery} = RealmContext;

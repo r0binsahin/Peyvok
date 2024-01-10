@@ -34,6 +34,7 @@ export const Header = () => {
     const delay = 6100;
 
     const timeoutId = setTimeout(() => {
+      playTrack(require('../../assets/intro/bell.wav'));
       animateHeader();
     }, delay);
 
