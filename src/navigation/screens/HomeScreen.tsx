@@ -69,9 +69,6 @@ export const HomeScreen = () => {
   };
 
   useEffect(() => {
-    playTrack(
-      'https://www.dl.dropboxusercontent.com/scl/fi/2zv9b5oqezk82yv3dh007/mixkit-happy-bell-alert-601.wav?rlkey=ynxwjxesh311l9g3y5wsw21nf&dl=0',
-    );
     startBounceAnimation();
   }, []);
 
