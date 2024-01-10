@@ -22,18 +22,9 @@ export const HomeScreen = () => {
 
   const [isAvatar, setIsAvatar] = useState(true);
 
-  const [isPlayerInitialized, setIsPlayerInitialized] = useState(false);
-
   const carouselTranslateX = new Animated.Value(
     Dimensions.get('screen').height,
   );
-
-  const setPlayer = async () => {
-    if (!isPlayerInitialized) {
-      await setupTrackPlayer();
-      setIsPlayerInitialized(true);
-    }
-  };
 
   const startBounceAnimation = () => {
     Animated.spring(bounceValue, {
@@ -79,7 +70,6 @@ export const HomeScreen = () => {
   };
 
   useEffect(() => {
-    setPlayer();
     startBounceAnimation();
   }, []);
 
