@@ -10,6 +10,7 @@ import Carousel from 'react-native-snap-carousel';
 import {RealmContext} from '../../models/Word';
 import {Category} from '../../models/Category';
 import Intro from '../../components/Intro';
+import {playTrack} from '../../utiles/audioFunctions';
 
 export const HomeScreen = () => {
   const {useQuery} = RealmContext;
@@ -68,6 +69,9 @@ export const HomeScreen = () => {
   };
 
   useEffect(() => {
+    playTrack(
+      'https://www.dl.dropboxusercontent.com/scl/fi/2zv9b5oqezk82yv3dh007/mixkit-happy-bell-alert-601.wav?rlkey=ynxwjxesh311l9g3y5wsw21nf&dl=0',
+    );
     startBounceAnimation();
   }, []);
 
