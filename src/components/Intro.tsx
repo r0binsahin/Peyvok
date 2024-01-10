@@ -8,16 +8,14 @@ import GlobalStyles from '../utiles/GlobalStyles';
 
 interface IIntroProps {
   bounceValue: Animated.Value;
-  startBounceAnimation: () => void;
 }
 
-const Intro = ({bounceValue, startBounceAnimation}: IIntroProps) => {
+const Intro = ({bounceValue}: IIntroProps) => {
   return (
     <View style={styles.container}>
       <Text style={GlobalStyles.startWelcomeText}>Tu bi xêr hatî Peyvokê!</Text>
       <Animated.View
-        style={[styles.animatedContainer, {transform: [{scale: bounceValue}]}]}
-        onTouchStart={startBounceAnimation}>
+        style={[styles.animatedContainer, {transform: [{scale: bounceValue}]}]}>
         <FastImage
           style={styles.img}
           source={require('../../assets/avatar/avatar.png')}

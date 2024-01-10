@@ -7,8 +7,6 @@ import CategoryView from '../../components/CategoryView';
 
 import Carousel from 'react-native-snap-carousel';
 
-import {setupTrackPlayer} from '../../utiles/audioFunctions';
-
 import {RealmContext} from '../../models/Word';
 import {Category} from '../../models/Category';
 import Intro from '../../components/Intro';
@@ -22,18 +20,9 @@ export const HomeScreen = () => {
 
   const [isAvatar, setIsAvatar] = useState(true);
 
-  const [isPlayerInitialized, setIsPlayerInitialized] = useState(false);
-
   const carouselTranslateX = new Animated.Value(
     Dimensions.get('screen').height,
   );
-
-  const setPlayer = async () => {
-    if (!isPlayerInitialized) {
-      await setupTrackPlayer();
-      setIsPlayerInitialized(true);
-    }
-  };
 
   const startBounceAnimation = () => {
     Animated.spring(bounceValue, {
@@ -72,14 +61,13 @@ export const HomeScreen = () => {
   const startCarouselAnimation = () => {
     Animated.timing(carouselTranslateX, {
       toValue: 1,
-      duration: 700,
+      duration: 1000,
       easing: Easing.out(Easing.ease),
       useNativeDriver: true,
     }).start();
   };
 
   useEffect(() => {
-    setPlayer();
     startBounceAnimation();
   }, []);
 
@@ -95,10 +83,7 @@ export const HomeScreen = () => {
         flex: 1,
       }}>
       {isAvatar ? (
-        <Intro
-          bounceValue={bounceValue}
-          startBounceAnimation={startBounceAnimation}
-        />
+        <Intro bounceValue={bounceValue} />
       ) : (
         <Animated.View
           style={{

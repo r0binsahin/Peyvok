@@ -31,7 +31,15 @@ export const Header = () => {
   };
 
   useEffect(() => {
-    animateHeader();
+    const delay = 6100;
+
+    const timeoutId = setTimeout(() => {
+      animateHeader();
+    }, delay);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
   }, []);
 
   return (
