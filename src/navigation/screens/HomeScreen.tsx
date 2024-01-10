@@ -7,8 +7,6 @@ import CategoryView from '../../components/CategoryView';
 
 import Carousel from 'react-native-snap-carousel';
 
-import {setupTrackPlayer} from '../../utiles/audioFunctions';
-
 import {RealmContext} from '../../models/Word';
 import {Category} from '../../models/Category';
 import Intro from '../../components/Intro';
@@ -63,7 +61,7 @@ export const HomeScreen = () => {
   const startCarouselAnimation = () => {
     Animated.timing(carouselTranslateX, {
       toValue: 1,
-      duration: 700,
+      duration: 1000,
       easing: Easing.out(Easing.ease),
       useNativeDriver: true,
     }).start();
