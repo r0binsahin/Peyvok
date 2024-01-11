@@ -4,8 +4,8 @@ import {StyleSheet, Text, View} from 'react-native';
 
 import FastImage from 'react-native-fast-image';
 
-import {Word} from '../models/Word';
 import GlobalStyles from '../utiles/GlobalStyles';
+import {Word} from '../models/Word';
 
 interface IWordViewProps {
   word: Word;
