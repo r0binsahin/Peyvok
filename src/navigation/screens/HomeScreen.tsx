@@ -75,6 +75,7 @@ export const HomeScreen = () => {
   useEffect(() => {
     if (!isAvatar) {
       startCarouselAnimation();
+      playTrack(require('../../../assets/intro/bell.wav'));
     }
   }, [isAvatar]);
 
